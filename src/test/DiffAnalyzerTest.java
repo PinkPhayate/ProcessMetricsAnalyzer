@@ -1,8 +1,16 @@
 package test;
+
+import static org.junit.Assert.*;
+
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+
+import main.DiffAnalyzer;
+import main.Module;
+
+import org.junit.Test;
 
 import difflib.Chunk;
 import difflib.Delta;
@@ -11,37 +19,20 @@ import difflib.Patch;
 import difflib.Delta.TYPE;
 import lib.FileListGetter;
 import lib.FileReading;
-import main.Module;
-import main.DiffAnalyzation;
 
-public class DiffAnalyzer {
-	public static void main (String args[]) throws IOException {
-		testDiffUtils();
-		
+public class DiffAnalyzerTest {
+
+	@Test
+	public void test() {
+		fail("Not yet implemented");
 	}
-
-	public void testDiffUtil () throws IOException {
-
+	public void testGetDifference () {
+		DiffAnalyzer diffAnalyzer = new DiffAnalyzer();
 		String prev_file = "/Users/phayate/src/Eclipse-Java/ProcessMetricsAnalyzer/test-data/prev/single_test.java";
 		String crnt_file = "/Users/phayate/src/Eclipse-Java/ProcessMetricsAnalyzer/test-data/curr/single_test.java";
-		List<String> prevFileStrs = FileReading.readFile(prev_file);
-		List<String> currentFileStrs = FileReading.readFile(crnt_file);
-
-		Patch diff = DiffUtils.diff(prevFileStrs, currentFileStrs);
-
-		List<Delta> deltas = diff.getDeltas();
-		for (Delta delta : deltas) {
-			TYPE type = delta.getType();
-			System.out.println(type);
-			Chunk oc = delta.getOriginal();
-			System.out.printf("del: position=%d, lines=%s%n", oc.getPosition(), oc.getLines());
-			Chunk rc = delta.getRevised();
-			System.out.printf("add: position=%d, lines=%s%n", rc.getPosition(), rc.getLines());
-		}
-
+		diffAnalyzer.getDifference(prev_file, crnt_file);
 	}
-
-	public static void testDiffUtils () throws IOException {
+	public void testDiffUtils () throws IOException {
 
 		String path = "/Users/phayate/src/ApacheDerby/";
 		String currentVersion = "10.12";
@@ -60,7 +51,7 @@ public class DiffAnalyzer {
 		search.clear();
 
 		ArrayList<String> metricsList = new ArrayList<String>(); 
-		DiffAnalyzation diffAnalyzation = new DiffAnalyzation();
+		DiffAnalyzer diffAnalyzation = new DiffAnalyzer();
 		/**find same file from previous version*/
 		for ( String currFileStr: currFileStrs ) {
 
@@ -76,11 +67,7 @@ public class DiffAnalyzer {
 			/** if there was no file in previous file, set 0 to all*/
 			else {
 				System.out.println("This is new file!");
-				module.isNew();
 			}
-			String line = module.getMetrics();
-			System.out.println(line);
-			metricsList.add(line);
 		}
 	}
 	private static void printFileList(File[] files) {
@@ -88,6 +75,26 @@ public class DiffAnalyzer {
 			System.out.println(file);
 
 		}
+	}
+	public static void testDiffUtil () throws IOException {
+
+		String prev_file = "/Users/phayate/src/Eclipse-Java/ProcessMetricsAnalyzer/test-data/prev/single_test.java";
+		String crnt_file = "/Users/phayate/src/Eclipse-Java/ProcessMetricsAnalyzer/test-data/curr/single_test.java";
+		List<String> prevFileStrs = FileReading.readFile(prev_file);
+		List<String> currentFileStrs = FileReading.readFile(crnt_file);
+
+		Patch diff = DiffUtils.diff(prevFileStrs, currentFileStrs);
+
+		List<Delta> deltas = diff.getDeltas();
+		for (Delta delta : deltas) {
+			TYPE type = delta.getType();
+			System.out.println(type);
+			Chunk oc = delta.getOriginal();
+			System.out.printf("del: position=%d, lines=%s%n", oc.getPosition(), oc.getLines());
+			Chunk rc = delta.getRevised();
+			System.out.printf("add: position=%d, lines=%s%n", rc.getPosition(), rc.getLines());
+		}
+
 	}
 
 }
