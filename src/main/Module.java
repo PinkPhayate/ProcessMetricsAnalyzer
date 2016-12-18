@@ -11,6 +11,11 @@ import java.util.TreeMap;
 public class Module {
 	private String fileName;
 	private String className;
+	
+	private int begenningPosition = -1;
+	private int endingPosition = -1;
+
+	
 	private int totalLine ;
 	private int deletedLine = 0;
 	private int newLine = 0;
@@ -29,9 +34,19 @@ public class Module {
 	private static String version ;
 	private static TreeMap<String, Module> moduleMap = new TreeMap<String, Module>();	
 
-	public Module(String fileName, String className) {
+	public Module(String fileName) {
 		this.fileName = fileName;
+		this.className = "";
+	}
+	public void putPositions (int begenningPosition, int endingPosition) {
+		this.begenningPosition = begenningPosition;
+		this.endingPosition = endingPosition;
+	}
+	public void putClassName (String className) {
 		this.className = className;
+	}
+	public String getClassName() {
+		return this.className;
 	}
 
 	public void adddeletedLine(int deletedLine) {
