@@ -2,6 +2,8 @@ package main;
 
 import java.io.IOException;
 import java.util.List;
+import java.util.Map;
+import java.util.TreeMap;
 
 import difflib.Chunk;
 import difflib.Delta;
@@ -14,24 +16,24 @@ public class DiffAnalyzer {
 	private List<String> prevFileStrs = null;
 	private List<String> currentFileStrs = null;
 	
-	public void getDifference (String prev_file, String crnt_file) {
+	public TreeMap<String,Integer> getDifference (String prev_file, String crnt_file) {
 		
 		try {
 			this.prevFileStrs = FileReading.readFile(prev_file);
 			this.currentFileStrs = FileReading.readFile(crnt_file);
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		
+		/**calculate Length of Module*/
+		int tortalLine = prevFileStrs.size();
+
 		Patch diff = DiffUtils.diff(this.prevFileStrs, this.currentFileStrs);
 		List<Delta> deltas = diff.getDeltas();
-		
 		int cntNew = 0;
-		int cntDelete = 0;
 		int cntChange = 0;	
-		
-		
+		int cntDelete = 0;
+
 		for (Delta delta : deltas) {
 			TYPE type = delta.getType();
 			if (type.toString() == "INSERT") {
@@ -47,5 +49,13 @@ public class DiffAnalyzer {
 		}
 		System.out.println(cntNew+", "+cntChange+", "+cntDelete);
 
+		/**translate <key,value>*/
+		TreeMap<String,Integer> differences = new TreeMap<String,Integer>();
+		differences.put("totalLine", tortalLine);
+		differences.put("newLine", cntNew);
+		differences.put("changedLine", cntChange);
+		differences.put("deletedLine", cntDelete);
+		
+		return differences;
 	}
 }

@@ -32,44 +32,6 @@ public class DiffAnalyzerTest {
 		String crnt_file = "/Users/phayate/src/Eclipse-Java/ProcessMetricsAnalyzer/test-data/curr/single_test.java";
 		diffAnalyzer.getDifference(prev_file, crnt_file);
 	}
-	public void testDiffUtils () throws IOException {
-
-		String path = "/Users/phayate/src/ApacheDerby/";
-		String currentVersion = "10.12";
-		String previousVersion = "10.11";
-
-		String listFileName = "diff_fileDirectory_containment.txt";
-		FileListGetter search = new FileListGetter();
-		File[] files = search.listFiles( path+currentVersion, null );
-		files = search.listFiles(path, "*.java");
-		ArrayList<String> currFileStrs = search.printFileList(files);
-		search.clear();
-
-		files = search.listFiles(path+previousVersion, null);
-		files = search.listFiles(path, "*.java");		
-		ArrayList<String> prevFileStrs = search.printFileList(files);
-		search.clear();
-
-		ArrayList<String> metricsList = new ArrayList<String>(); 
-		DiffAnalyzer diffAnalyzation = new DiffAnalyzer();
-		/**find same file from previous version*/
-		for ( String currFileStr: currFileStrs ) {
-
-			Module module = new Module( currentVersion );
-			int index = prevFileStrs.indexOf(currFileStr);
-			/**get process metrics*/
-			if (index != -1) {
-				String prevFileStr = prevFileStrs.get ( index );
-				ArrayList<String> currFileCont = FileReading.readFile( currFileStr );
-				ArrayList<String> prevFileCont = FileReading.readFile( prevFileStr );
-				diffAnalyzation.getDifference( currFileStr, prevFileStr );
-			}
-			/** if there was no file in previous file, set 0 to all*/
-			else {
-				System.out.println("This is new file!");
-			}
-		}
-	}
 	private static void printFileList(File[] files) {
 		for (File file: files) {
 			System.out.println(file);

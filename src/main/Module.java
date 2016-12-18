@@ -9,28 +9,33 @@ import java.io.IOException;
 import java.util.TreeMap;
 
 public class Module {
-	String name;
-	private int numOfBug = 0;
+	private String fileName;
+	private String className;
 	private int totalLine ;
+	private int deletedLine = 0;
+	private int newLine = 0;
+	private int changedLine = 0;
+	
 	private double chum = 0;
 	private double relativeChum = 0;
 	private double deletedChum = 0;
 	private double ncdChum = 0;
-	int deleteLine = 0;
-	int newLine = 0;
-	int changedLine = 0;
+
 	private int isNewModule = 0;
+	private int numOfBug = 0;
 	
 	private static String mainDir ;
 	
 	private static String version ;
 	private static TreeMap<String, Module> moduleMap = new TreeMap<String, Module>();	
-	public Module(String version) {
-		this.version = version;
+
+	public Module(String fileName, String className) {
+		this.fileName = fileName;
+		this.className = className;
 	}
 
-	public void addDeleteLine(int deleteLine) {
-		this.deleteLine += deleteLine ;
+	public void adddeletedLine(int deletedLine) {
+		this.deletedLine += deletedLine ;
 	}
 	public void addTotalLine(int totalLine) {
 		this.totalLine = totalLine+1 ;
@@ -69,7 +74,7 @@ public class Module {
 //				
 //}
 	public String getMetrics() {
-		this.circulateMetricses();
+//		this.circulateMetricses();
 		String metricses = 
 				String.valueOf(this.totalLine) + ","
 				+ String.valueOf(this.chum) + ","
@@ -80,17 +85,23 @@ public class Module {
 		return metricses ;
 		
 	}
-	private void circulateMetricses () {
+	public void circulateMetricses (TreeMap<String,Integer> differences) {
+		this.totalLine = differences.get("totalLine");
+		this.newLine = differences.get("newLine");
+		this.changedLine = differences.get("changedLine");
+		this.deletedLine = differences.get("deletedLine");
+
 		if ( this.changedLine != 0 ) {
 			this.chum = this.newLine + this.changedLine;
 		}
 		if ( this.totalLine != 0 ) {
 			this.relativeChum = (double) (this.newLine + this.changedLine) / this.totalLine ;
-			this.deletedChum = (double) this.deleteLine / this.totalLine ;
+			this.deletedChum = (double) this.deletedLine / this.totalLine ;
 		}
-		if ( this.deleteLine != 0 ) {
-			this.ncdChum = (double) (this.newLine + this.changedLine) / this.deleteLine ;
+		if ( this.deletedLine != 0 ) {
+			this.ncdChum = (double) (this.newLine + this.changedLine) / this.deletedLine ;
 		}
+
 	}
 	
 //	public Module(String version, String mainDir) {
