@@ -73,17 +73,27 @@ public class FileAnalyzer {
 		}
 
 	}
-	private int countChar(String line, String string) {
-		String tmp[] = line.split("string", 0);
-		return tmp.length -1;
+	private int countChar(String line, String str) {
+		int count = 0;
+		int fromIndex = 0;
+		while(line.indexOf(str, fromIndex)!= -1) {
+			count ++;
+			fromIndex = line.indexOf(str, fromIndex);
+		}
+		return count;
 	}
 	private String extractClassName(String line) {
-		// TODO Auto-generated method stub
+		String[] array = line.split(" ");
+		for(int i=0; i<array.length; i++) {
+			if (array[i].equals("class")) {
+				return array[i+1];
+			}
+		}
 		return null;
 	}
 	private String extractFileName(String filename) {
-		// TODO Auto-generated method stub
-		return null;
+		String[] array = filename.split("/");
+		return array[array.length - 1];
 	}
 
 }
