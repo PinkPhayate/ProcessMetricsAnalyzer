@@ -10,25 +10,41 @@ import org.junit.Test;
 import main.FileAnalyzer;
 
 public class TestFileAnalizer {
-
+	Method method;
+	FileAnalyzer fileAnalyzer ;
+	protected void setUp(){
+		this.fileAnalyzer = new FileAnalyzer();
+		method.setAccessible(true);
+	}	
 	@Test
 	public void test() {
 		fail("Not yet implemented");
 	}
 	@Test
 	public void testÉxtractClassName() {
-		
+
 		String filename = "";
 		String  expected = "";
-		FileAnalyzer fileAnalyzer = new FileAnalyzer();
+
 		try {
-			Method method = FileAnalyzer.class.getDeclaredMethod("extractClassName",String.class);
-			method.setAccessible(true);
-			String actual = (String)method.invoke(fileAnalyzer, filename);
+			this.method = FileAnalyzer.class.getDeclaredMethod("extractClassName",String.class);
+			String actual = (String)this.method.invoke(fileAnalyzer, filename);
 			assertEquals(expected, actual);
-		}catch (Exception e) {
-			e.printStackTrace();			
+		} catch (Exception e) {
+			e.printStackTrace();
 		}
 	}
 
+	@Test
+	public void testTextractFileName() {
+		String filename = "";
+		String expected = "";
+		try {
+			this.method = FileAnalyzer.class.getDeclaredMethod("extractFileName",String.class);
+			String actual = (String)this.method.invoke(fileAnalyzer, filename);
+			assertEquals(expected, actual);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
 }
