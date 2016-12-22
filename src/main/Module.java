@@ -6,7 +6,10 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.TreeMap;
+
+import lib.FileReading;
 
 public class Module {
 	private String fileName;
@@ -47,6 +50,12 @@ public class Module {
 	}
 	public String getClassName() {
 		return this.className;
+	}
+	public int getBegenningPostion() {
+		return this.begenningPosition;
+	}
+	public int getEndingPostion() {
+		return this.endingPosition;
 	}
 
 	public void adddeletedLine(int deletedLine) {
@@ -118,6 +127,7 @@ public class Module {
 		}
 
 	}
+
 	
 //	public Module(String version, String mainDir) {
 //		this.version = version ;

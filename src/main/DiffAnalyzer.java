@@ -1,11 +1,10 @@
 package main;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 import java.util.TreeMap;
 
-import difflib.Chunk;
 import difflib.Delta;
 import difflib.DiffUtils;
 import difflib.Patch;
@@ -13,8 +12,8 @@ import difflib.Delta.TYPE;
 import lib.FileReading;
 
 public class DiffAnalyzer {
-	private List<String> prevFileStrs = null;
-	private List<String> currentFileStrs = null;
+	private ArrayList<String> prevFileStrs = null;
+	private ArrayList<String> currentFileStrs = null;
 	
 	public TreeMap<String,Integer> getDifference (String prev_file, String crnt_file) {
 		
@@ -24,6 +23,9 @@ public class DiffAnalyzer {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
+		return getDifference(prevFileStrs, currentFileStrs);
+	}
+	public TreeMap<String,Integer> getDifference (ArrayList<String> prevs, ArrayList<String> currs) {
 		
 		/**calculate Length of Module*/
 		int tortalLine = prevFileStrs.size();
@@ -57,5 +59,15 @@ public class DiffAnalyzer {
 		differences.put("deletedLine", cntDelete);
 		
 		return differences;
+		
+	}
+	public Module searchModuleByClassName( ArrayList<Module> targetArrayList, String key ) {
+		for(Module module: targetArrayList) {
+			if( module.getClassName() .equals(key)) {
+				return module;
+			}
+		}
+//TODO		Logger
+		return null;
 	}
 }

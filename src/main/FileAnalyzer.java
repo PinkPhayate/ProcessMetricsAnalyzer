@@ -1,12 +1,10 @@
 package main;
 
-import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Logger;
 
-import javax.sound.sampled.Line;
 
 import lib.FileReading;
 import lib.FileWriting;
@@ -85,6 +83,7 @@ public class FileAnalyzer {
 			}
 			numberOfLine++;
 		}
+		logger.info("All file has been read");
 	}
 	private int countChar(String line, String str) {
 		int count = 0;
@@ -116,7 +115,7 @@ public class FileAnalyzer {
 		return this.modules;
 	}
 	
-	public void saveModules(String saveFileName) {
+	public ArrayList<String> saveModules(String saveFileName) {
 		ArrayList<String> classNameList = new ArrayList<String> ();
 		// save class name only
 		for(Module module: this.modules) {
@@ -129,5 +128,6 @@ public class FileAnalyzer {
 			logger.warning("IOException occured");
 			e.printStackTrace();
 		}
+		return classNameList;
 	}
 }
