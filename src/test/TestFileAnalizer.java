@@ -23,12 +23,12 @@ public class TestFileAnalizer {
 	@Test
 	public void testÉxtractClassName() {
 
-		String filename = "";
+		String line = "";
 		String  expected = "";
 
 		try {
 			this.method = FileAnalyzer.class.getDeclaredMethod("extractClassName",String.class);
-			String actual = (String)this.method.invoke(fileAnalyzer, filename);
+			String actual = (String)this.method.invoke(fileAnalyzer, line);
 			assertEquals(expected, actual);
 		} catch (Exception e) {
 			e.printStackTrace();

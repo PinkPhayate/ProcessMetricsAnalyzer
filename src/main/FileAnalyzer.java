@@ -1,22 +1,33 @@
 package main;
 
+import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Logger;
 
 import javax.sound.sampled.Line;
 
 import lib.FileReading;
+import lib.FileWriting;
 
 public class FileAnalyzer {
 	private String MODULE_START = "public class";
+	private ArrayList<Module> modules = new ArrayList<Module>();
+    private Logger logger;
+    
+    public FileAnalyzer(Logger logger) {
+    	this.logger = logger;
+    }
+    
 	public void extractClassModule (String filename) {
 		List<String> FileStrs = null;
 
 		try {
 			FileStrs = FileReading.readFile(filename);
 		} catch (IOException e) {
-			e.printStackTrace();
+			logger.warning("IOException occured");
+			return ;
 		}
 		
 		// count line of code
@@ -65,13 +76,15 @@ public class FileAnalyzer {
 					// if module has class name
 					if(module.getClassName() != "") {
 						module.putPositions(begenningPosition, endingPosition);
+						// put module to ArrayList
+						this.modules.add(module);
+						//initialize module
+						module = new Module( filename );
 					}
 				}
 			}
-
 			numberOfLine++;
 		}
-
 	}
 	private int countChar(String line, String str) {
 		int count = 0;
@@ -95,5 +108,26 @@ public class FileAnalyzer {
 		String[] array = filename.split("/");
 		return array[array.length - 1];
 	}
-
+	public ArrayList<Module> getModules(ArrayList<String> module) {
+		for(String filename: module) {
+			this.extractClassModule(filename);
+		}
+		
+		return this.modules;
+	}
+	
+	public void saveModules(String saveFileName) {
+		ArrayList<String> classNameList = new ArrayList<String> ();
+		// save class name only
+		for(Module module: this.modules) {
+			classNameList.add( module.getClassName() );
+		}
+		try {
+			FileWriting.writeFile(classNameList, saveFileName);
+			logger.info("to record" + saveFileName + " has finished");
+		} catch (IOException e) {
+			logger.warning("IOException occured");
+			e.printStackTrace();
+		}
+	}
 }

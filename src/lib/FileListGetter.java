@@ -10,13 +10,13 @@ public class FileListGetter {
     public static final int TYPE_FILE_OR_DIR = 1;
     public static final int TYPE_FILE = 2;
     public static final int TYPE_DIR = 3;
-    public File[] listFiles(String directoryPath, String fileName) {
+    private File[] listFiles(String directoryPath, String fileName) {
         // ワイルドカード文字として*を正規表現に変換
         if (fileName != null) {
             fileName = fileName.replace(".", "\\.");
             fileName = fileName.replace("*", ".*");
         }
-        return listFiles(directoryPath, fileName, TYPE_FILE, true, 0);
+		return listFiles(directoryPath, fileName, TYPE_FILE, true, 0);
     }
 
     /**
@@ -48,7 +48,7 @@ public class FileListGetter {
      *                -1以下の場合、指定日数以前のファイルを検索対象とする
      * @return 検索にマッチしたファイルオブジェクト
      */
-    public File[] listFiles(String directoryPath, 
+    private File[] listFiles(String directoryPath, 
             String fileNamePattern, int type, 
             boolean isRecursive, int period) {
         
@@ -138,9 +138,13 @@ public class FileListGetter {
 		for (int i = 0; i < files.length; i++) {
 			File file = files[i];
 			fileStrs.add(file.toString());
-			System.out.println((i + 1) + ":    " + file);
+//			System.out.println((i + 1) + ":    " + file);
 		}
 		return fileStrs;
+	}
+	public ArrayList<String> getFileList(String path) {
+		File[] files = this.listFiles(path, "*.java");
+		return this.printFileList(files);
 	}
 
 }
