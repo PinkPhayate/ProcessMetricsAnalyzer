@@ -59,11 +59,12 @@ public class DiffAnalyzerMain {
 							FileReading.readFile(previousModule.getClassName(), 
 									previousModule.getBegenningPostion(),
 									previousModule.getEndingPostion());
+					
+					// get differences
 					TreeMap<String,Integer> differences = diffAnalyzer.getDifference(previousClass, currentClass);
-
-					// HashMap = getDifference(ArrayList, ArrayList)
+					// calculate process metrics
+					currentModule.calculateMetrics(differences);
 				} catch (IOException e) {
-					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
 

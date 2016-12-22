@@ -109,6 +109,15 @@ public class Module {
 		return metricses ;
 		
 	}
+	public void calculateMetrics(TreeMap<String,Integer> differences) {
+		int totalLine = differences.get("totalLine");
+		int newLine = differences.get("cntNew");
+		int changedLine = differences.get("cntChange");
+		int deletedLine = differences.get("cntDelete");
+// TODO	calculate process metrics
+
+		
+	}
 	public void circulateMetricses (TreeMap<String,Integer> differences) {
 		this.totalLine = differences.get("totalLine");
 		this.newLine = differences.get("newLine");

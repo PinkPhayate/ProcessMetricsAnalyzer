@@ -70,4 +70,5 @@ public class DiffAnalyzer {
 //TODO		Logger
 		return null;
 	}
+	
 }
