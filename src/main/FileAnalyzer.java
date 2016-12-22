@@ -13,7 +13,9 @@ public class FileAnalyzer {
 	private String MODULE_START = "public class";
 	private ArrayList<Module> modules = new ArrayList<Module>();
     private Logger logger;
-    
+    public FileAnalyzer() {
+    	//for unit test
+    }
     public FileAnalyzer(Logger logger) {
     	this.logger = logger;
     }

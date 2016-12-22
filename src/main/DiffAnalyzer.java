@@ -12,25 +12,27 @@ import difflib.Delta.TYPE;
 import lib.FileReading;
 
 public class DiffAnalyzer {
-	private ArrayList<String> prevFileStrs = null;
-	private ArrayList<String> currentFileStrs = null;
-	
+	//	private ArrayList<String> prevFileStrs = null;
+	//	private ArrayList<String> currentFileStrs = null;
+
 	public TreeMap<String,Integer> getDifference (String prev_file, String crnt_file) {
-		
+
 		try {
-			this.prevFileStrs = FileReading.readFile(prev_file);
-			this.currentFileStrs = FileReading.readFile(crnt_file);
+			ArrayList<String> prevFileStrs = FileReading.readFile(prev_file);
+			ArrayList<String> currentFileStrs = FileReading.readFile(crnt_file);
+			return getDifference(prevFileStrs, currentFileStrs);
+
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		return getDifference(prevFileStrs, currentFileStrs);
+		return null;
 	}
-	public TreeMap<String,Integer> getDifference (ArrayList<String> prevs, ArrayList<String> currs) {
-		
-		/**calculate Length of Module*/
-		int tortalLine = prevFileStrs.size();
+	private TreeMap<String,Integer> getDifference (ArrayList<String> prevs, ArrayList<String> currs) {
 
-		Patch diff = DiffUtils.diff(this.prevFileStrs, this.currentFileStrs);
+		/**calculate Length of Module*/
+		int tortalLine = prevs.size();
+
+		Patch diff = DiffUtils.diff(prevs, currs);
 		List<Delta> deltas = diff.getDeltas();
 		int cntNew = 0;
 		int cntChange = 0;	
@@ -40,7 +42,7 @@ public class DiffAnalyzer {
 			TYPE type = delta.getType();
 			if (type.toString() == "INSERT") {
 				cntNew++;
-				
+
 			}
 			if (type.toString() == "CHANGE") {
 				cntChange++;
@@ -57,18 +59,47 @@ public class DiffAnalyzer {
 		differences.put("newLine", cntNew);
 		differences.put("changedLine", cntChange);
 		differences.put("deletedLine", cntDelete);
-		
+
 		return differences;
-		
+
 	}
-	public Module searchModuleByClassName( ArrayList<Module> targetArrayList, String key ) {
+	private Module searchModuleByClassName( ArrayList<Module> targetArrayList, String key ) {
 		for(Module module: targetArrayList) {
 			if( module.getClassName() .equals(key)) {
 				return module;
 			}
 		}
-//TODO		Logger
+		//TODO		Logger
 		return null;
 	}
-	
+	public void compareTwoVersion(ArrayList<Module> currentModules, ArrayList<Module> previousModules) {
+		for (Module currentModule: currentModules) {
+			// get module with same class name as same as current version
+			Module previousModule =
+					this.searchModuleByClassName( previousModules, currentModule.getClassName() );
+			if (previousModule != null) {
+				try {
+					//get ArrayList about current version by beginning, end line number
+					ArrayList<String> currentClass = this.getClassText( currentModule );
+					// get ArrayList about previous version by beginning, end line number
+					ArrayList<String> previousClass = this.getClassText( previousModule );
+
+					// get differences
+					TreeMap<String,Integer> differences = this.getDifference(previousClass, currentClass);
+					// calculate process metrics
+					currentModule.calculateMetrics(differences);
+				} catch (IOException e) {
+					e.printStackTrace();
+				}				
+			}
+			else {
+//				TODO if there are no file
+			}
+		}
+	}
+	private ArrayList<String> getClassText(Module module) throws IOException {
+		return FileReading.readFile( module.getClassName(),
+				module.getBegenningPostion(),
+				module.getEndingPostion() );
+	}
 }

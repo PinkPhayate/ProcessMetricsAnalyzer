@@ -43,33 +43,7 @@ public class DiffAnalyzerMain {
 		
 		/**	Step 3 */
 		DiffAnalyzer diffAnalyzer = new DiffAnalyzer();
-		for (Module currentModule: currentModules) {
-			if(prevClassStrs.indexOf( currentModule.getClassName()) != -1) {
-				// get module with same class name as same as current version
-				Module previousModule =
-						diffAnalyzer.searchModuleByClassName( previousModules, currentModule.getClassName() );
-				try {
-					//get ArrayList about current version by beginning, end line number
-					ArrayList<String> currentClass = 
-							FileReading.readFile(currentModule.getClassName(), 
-									currentModule.getBegenningPostion(),
-									currentModule.getEndingPostion());
-					// get ArrayList about previous version by beginning, end line number
-					ArrayList<String> previousClass =
-							FileReading.readFile(previousModule.getClassName(), 
-									previousModule.getBegenningPostion(),
-									previousModule.getEndingPostion());
-					
-					// get differences
-					TreeMap<String,Integer> differences = diffAnalyzer.getDifference(previousClass, currentClass);
-					// calculate process metrics
-					currentModule.calculateMetrics(differences);
-				} catch (IOException e) {
-					e.printStackTrace();
-				}
-
-			}
-		}
-		
+		diffAnalyzer.compareTwoVersion(currentModules, previousModules);
 	}
+
 }
