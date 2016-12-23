@@ -3,7 +3,6 @@ package main;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.logging.Logger;
 
 
 import lib.FileReading;
@@ -12,12 +11,8 @@ import lib.FileWriting;
 public class FileAnalyzer {
 	private String MODULE_START = "public class";
 	private ArrayList<Module> modules = new ArrayList<Module>();
-    private Logger logger;
     public FileAnalyzer() {
     	//for unit test
-    }
-    public FileAnalyzer(Logger logger) {
-    	this.logger = logger;
     }
     
 	public void extractClassModule (String filename) {
@@ -26,7 +21,7 @@ public class FileAnalyzer {
 		try {
 			FileStrs = FileReading.readFile(filename);
 		} catch (IOException e) {
-			logger.warning("IOException occured");
+			DiffAnalyzerMain.logger.warning("IOException occured");
 			return ;
 		}
 		
@@ -85,7 +80,7 @@ public class FileAnalyzer {
 			}
 			numberOfLine++;
 		}
-		logger.info("All file has been read");
+		DiffAnalyzerMain.logger.info("All file has been read");
 	}
 	private int countChar(String line, String str) {
 		int count = 0;
@@ -125,9 +120,9 @@ public class FileAnalyzer {
 		}
 		try {
 			FileWriting.writeFile(classNameList, saveFileName);
-			logger.info("to record" + saveFileName + " has finished");
+			DiffAnalyzerMain.logger.info("to record" + saveFileName + " has finished");
 		} catch (IOException e) {
-			logger.warning("IOException occured");
+			DiffAnalyzerMain.logger.warning("IOException occured");
 			e.printStackTrace();
 		}
 		return classNameList;

@@ -69,7 +69,7 @@ public class DiffAnalyzer {
 				return module;
 			}
 		}
-		//TODO		Logger
+		DiffAnalyzerMain.logger.warning( "There are no module named: " + key );
 		return null;
 	}
 	public void compareTwoVersion(ArrayList<Module> currentModules, ArrayList<Module> previousModules) {
@@ -91,10 +91,10 @@ public class DiffAnalyzer {
 				} catch (IOException e) {
 					e.printStackTrace();
 				}				
+			}else {
+				currentModule.isNew();				
 			}
-			else {
-//				TODO if there are no file
-			}
+
 		}
 	}
 	private ArrayList<String> getClassText(Module module) throws IOException {

@@ -22,8 +22,9 @@ public class DiffAnalyzerMain {
  * 
  * 
  * */
+	static final Logger logger = Logger.getLogger( DiffAnalyzerMain.class.getName() );
 	public static void main (String args[]) {
-		final Logger logger = Logger.getLogger("SampleLogging");
+		
 		String path = "/Users/phayate/src/ApacheDerby/";
 		String currentVersion = "10.12";
 		String previousVersion = "10.11";
@@ -31,15 +32,14 @@ public class DiffAnalyzerMain {
 		/** Step 1	get class module in current version*/
 		FileListGetter search = new FileListGetter();
 		ArrayList<String> currFileStrs = search.getFileList( path+currentVersion );
-		FileAnalyzer fileAnalyzer = new FileAnalyzer(logger);
+		FileAnalyzer fileAnalyzer = new FileAnalyzer();
 		ArrayList<Module> currentModules = fileAnalyzer.getModules( currFileStrs );
 		fileAnalyzer.saveModules("current-modules.txt");
 		
 		/**	Step 2	get class module in previous version*/
 		ArrayList<String> prevFileStrs = search.getFileList( path+previousVersion );
-		fileAnalyzer = new FileAnalyzer(logger);
+		fileAnalyzer = new FileAnalyzer();
 		ArrayList<Module> previousModules = fileAnalyzer.getModules( prevFileStrs );
-		ArrayList<String> prevClassStrs = fileAnalyzer.saveModules("previous-modules.txt");
 		
 		/**	Step 3 */
 		DiffAnalyzer diffAnalyzer = new DiffAnalyzer();
