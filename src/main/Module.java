@@ -7,8 +7,8 @@ public class Module {
 	private String fileName;
 	private String className;
 	
-	private int begenningPosition = -1;
-	private int endingPosition = -1;
+	protected int begenningPosition = -1;
+	protected int endingPosition = -1;
 	
 	private double M1 = 0;
 	private double M2 = 0;
@@ -58,9 +58,13 @@ public class Module {
 		int deletedLine = differences.get("cntDelete");
 		
 		this.M1 = newLine + changedLine;
-		this.M2 = deletedLine / totalLine;
+		if (totalLine!= 0) {
+			this.M2 = deletedLine / totalLine;
+		}
 		this.M6 = (newLine + changedLine + deletedLine);
-		this.M7 = (newLine + changedLine) / deletedLine;
+		if (deletedLine != 0) {
+			this.M7 = (newLine + changedLine) / deletedLine;			
+		}
 		
 	}
 	public String getMetricsList () {

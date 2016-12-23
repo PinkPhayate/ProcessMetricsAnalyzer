@@ -27,13 +27,6 @@ public class DiffAnalyzerTest {
 		fail("Not yet implemented");
 	}
 	
-	@Test
-	public void testGetDifference () {
-		DiffAnalyzer diffAnalyzer = new DiffAnalyzer();
-		String prev_file = "/Users/phayate/src/Eclipse-Java/ProcessMetricsAnalyzer/test-data/prev/single_test.java";
-		String crnt_file = "/Users/phayate/src/Eclipse-Java/ProcessMetricsAnalyzer/test-data/curr/single_test.java";
-		diffAnalyzer.getDifference(prev_file, crnt_file);
-	}
 	
 	private static void printFileList(File[] files) {
 		for (File file: files) {
@@ -42,7 +35,7 @@ public class DiffAnalyzerTest {
 		}
 	}
 	
-	@Test
+	
 	public static void testDiffUtil () throws IOException {
 
 		String prev_file = "/Users/phayate/src/Eclipse-Java/ProcessMetricsAnalyzer/test-data/prev/single_test.java";

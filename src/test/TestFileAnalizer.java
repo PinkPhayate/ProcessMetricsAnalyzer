@@ -4,10 +4,12 @@ import static org.junit.Assert.*;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
+import java.util.ArrayList;
 
 import org.junit.Test;
 
 import main.FileAnalyzer;
+import main.Module;
 
 public class TestFileAnalizer {
 	Method method;
@@ -45,6 +47,19 @@ public class TestFileAnalizer {
 			assertEquals(expected, actual);
 		} catch (Exception e) {
 			e.printStackTrace();
+		}
+	}
+	@Test
+	public void testExtractClassModule() {
+		this.fileAnalyzer = new FileAnalyzer();
+		String filename = "";
+		this.fileAnalyzer.extractClassModule(filename);
+		ArrayList<Module> modules = this.fileAnalyzer.getTestModules();
+		for (int index=0;index<modules.size(); index++) {
+			TestModule testModule = (TestModule) modules.get(index);
+			System.out.println("ClassName: " + testModule.getClassName() );
+			System.out.println("BeginningPosition: " + testModule.getBegenningPosition() );
+			System.out.println("EndingPosition: " + testModule.getEndingPosition() );
 		}
 	}
 }

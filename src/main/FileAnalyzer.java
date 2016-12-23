@@ -14,7 +14,14 @@ public class FileAnalyzer {
     public FileAnalyzer() {
     	//for unit test
     }
-    
+	public ArrayList<Module> getModules(ArrayList<String> module) {
+		for(String filename: module) {
+			this.extractClassModule(filename);
+		}
+		
+		return this.modules;
+	}
+	
 	public void extractClassModule (String filename) {
 		List<String> FileStrs = null;
 
@@ -104,13 +111,6 @@ public class FileAnalyzer {
 		String[] array = filename.split("/");
 		return array[array.length - 1];
 	}
-	public ArrayList<Module> getModules(ArrayList<String> module) {
-		for(String filename: module) {
-			this.extractClassModule(filename);
-		}
-		
-		return this.modules;
-	}
 	
 	public ArrayList<String> saveModules(String saveFileName) {
 		ArrayList<String> classNameList = new ArrayList<String> ();
@@ -127,4 +127,10 @@ public class FileAnalyzer {
 		}
 		return classNameList;
 	}
+	
+	/** Method for test*/
+	public ArrayList<Module> getTestModules () {
+		return this.modules;
+	}
+
 }
