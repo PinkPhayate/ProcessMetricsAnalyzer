@@ -43,7 +43,8 @@ public class DiffAnalyzerMain {
 		
 		/**	Step 3 */
 		DiffAnalyzer diffAnalyzer = new DiffAnalyzer();
-		diffAnalyzer.compareTwoVersion(currentModules, previousModules);
+		currentModules = diffAnalyzer.compareTwoVersion(currentModules, previousModules);
+		
 	}
 
 }

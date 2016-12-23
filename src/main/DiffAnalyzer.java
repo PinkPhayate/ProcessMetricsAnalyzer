@@ -10,6 +10,7 @@ import difflib.DiffUtils;
 import difflib.Patch;
 import difflib.Delta.TYPE;
 import lib.FileReading;
+import lib.FileWriting;
 
 public class DiffAnalyzer {
 	//	private ArrayList<String> prevFileStrs = null;
@@ -72,7 +73,12 @@ public class DiffAnalyzer {
 		DiffAnalyzerMain.logger.warning( "There are no module named: " + key );
 		return null;
 	}
-	public void compareTwoVersion(ArrayList<Module> currentModules, ArrayList<Module> previousModules) {
+	public void compareTwoVersion (ArrayList<Module> currentModules, ArrayList<Module> previousModules) {
+		ArrayList<String> record = new ArrayList<String> ();
+		// add header to record file
+		record.add( this.getHeader() );
+		
+		/** iterate module in current version */
 		for (Module currentModule: currentModules) {
 			// get module with same class name as same as current version
 			Module previousModule =
@@ -94,9 +100,18 @@ public class DiffAnalyzer {
 			}else {
 				currentModule.isNew();				
 			}
-
+			record.add(currentModule.getMetricsList() );
+		}
+		try {
+			FileWriting.writeFile(record, "processmetrics.csv");
+		} catch (IOException e) {
+			e.printStackTrace();
 		}
 	}
+	private String getHeader() {
+		return "fileName,className,isNewModule,M1,M2,M6,M7";
+	}
+
 	private ArrayList<String> getClassText(Module module) throws IOException {
 		return FileReading.readFile( module.getClassName(),
 				module.getBegenningPostion(),
