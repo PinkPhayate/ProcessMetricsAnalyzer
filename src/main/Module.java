@@ -66,9 +66,6 @@ public class Module {
 	public String getMetricsList () {
 		return fileName + "," +className + "," + isNewModule + "," + M1 + "," + M2 + "," + M6 + "," + M7;
 	}
-	public String getHeader() {
-		return "fileName,className,isNewModule,M1,M2,M6,M7";
-	}
 	
 
 }

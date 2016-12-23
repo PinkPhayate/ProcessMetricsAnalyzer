@@ -86,9 +86,9 @@ public class DiffAnalyzer {
 			if (previousModule != null) {
 				try {
 					//get ArrayList about current version by beginning, end line number
-					ArrayList<String> currentClass = this.getClassText( currentModule );
+					ArrayList<String> currentClass = this.putClassText( currentModule );
 					// get ArrayList about previous version by beginning, end line number
-					ArrayList<String> previousClass = this.getClassText( previousModule );
+					ArrayList<String> previousClass = this.putClassText( previousModule );
 
 					// get differences
 					TreeMap<String,Integer> differences = this.getDifference(previousClass, currentClass);
@@ -112,7 +112,7 @@ public class DiffAnalyzer {
 		return "fileName,className,isNewModule,M1,M2,M6,M7";
 	}
 
-	private ArrayList<String> getClassText(Module module) throws IOException {
+	private ArrayList<String> putClassText(Module module) throws IOException {
 		return FileReading.readFile( module.getClassName(),
 				module.getBegenningPostion(),
 				module.getEndingPostion() );
