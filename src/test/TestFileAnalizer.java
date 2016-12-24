@@ -25,8 +25,8 @@ public class TestFileAnalizer {
 	@Test
 	public void testÉxtractClassName() {
 
-		String line = "";
-		String  expected = "";
+		String line = "public class ClientJDBCObjectFactoryImpl implements ClientJDBCObjectFactory{";
+		String  expected = "ClientJDBCObjectFactoryImpl";
 
 		try {
 			this.method = FileAnalyzer.class.getDeclaredMethod("extractClassName",String.class);
@@ -39,8 +39,8 @@ public class TestFileAnalizer {
 
 	@Test
 	public void testTextractFileName() {
-		String filename = "";
-		String expected = "";
+		String filename = "/Users/phayate/src/Eclipse-Java/ProcessMetricsAnalyzer/test-data/curr/net/ClientJDBCObjectFactoryImpl.java";
+		String expected = "ClientJDBCObjectFactoryImpl.java";
 		try {
 			this.method = FileAnalyzer.class.getDeclaredMethod("extractFileName",String.class);
 			String actual = (String)this.method.invoke(fileAnalyzer, filename);
@@ -52,14 +52,12 @@ public class TestFileAnalizer {
 	@Test
 	public void testExtractClassModule() {
 		this.fileAnalyzer = new FileAnalyzer();
-		String filename = "";
+		String filename = "/Users/phayate/src/Eclipse-Java/ProcessMetricsAnalyzer/test-data/curr/net/ClientJDBCObjectFactoryImpl.java";
 		this.fileAnalyzer.extractClassModule(filename);
 		ArrayList<Module> modules = this.fileAnalyzer.getTestModules();
-		for (int index=0;index<modules.size(); index++) {
-			TestModule testModule = (TestModule) modules.get(index);
-			System.out.println("ClassName: " + testModule.getClassName() );
-			System.out.println("BeginningPosition: " + testModule.getBegenningPosition() );
-			System.out.println("EndingPosition: " + testModule.getEndingPosition() );
-		}
+		
+		TestModule testModule = (TestModule) modules.get(0);
+		assertEquals(64, testModule.getBegenningPosition());
+		assertEquals(465, testModule.getEndingPosition());
 	}
 }

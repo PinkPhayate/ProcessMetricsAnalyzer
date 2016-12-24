@@ -49,8 +49,6 @@ public class FileAnalyzer {
 		Module module = new Module( filename );
 		for(String line: FileStrs) {
 			
-			//count number of '{'
-			numStart++;
 			/** Class Module is beginning*/
 			if (line.indexOf( MODULE_START) != -1) {
 				// put beginning position
@@ -63,10 +61,12 @@ public class FileAnalyzer {
 //				Module module = new Module( filename, classname );
 			}
 			if (line.indexOf("{") != -1) {
+				//count number of '{'
 				numStart += this.countChar(line, "{");
 			}
 			if (line.indexOf("}") != -1) {
-				numEnd += this.countChar(line, "{");
+				//count number of '}'
+				numEnd += this.countChar(line, "}");
 				// if number of '{' is same number of '}' -> class be over
 				if (numStart == numEnd) {
 					/** Class module was over */
@@ -89,12 +89,17 @@ public class FileAnalyzer {
 		}
 		DiffAnalyzerMain.logger.info("All file has been read");
 	}
+	/**
+	 * @param line: line
+	 * @param str : target signature
+	 * */
 	private int countChar(String line, String str) {
 		int count = 0;
 		int fromIndex = 0;
-		while(line.indexOf(str, fromIndex)!= -1) {
+		while(line.indexOf(str)!= -1) {
 			count ++;
-			fromIndex = line.indexOf(str, fromIndex);
+			fromIndex = line.indexOf(str);
+			line = line.substring( fromIndex+1 );
 		}
 		return count;
 	}
