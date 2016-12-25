@@ -8,9 +8,14 @@ import java.util.logging.Logger;
 
 import lib.FileListGetter;
 import lib.FileReading;
+import lib.FileWriting;
 
 public class DiffAnalyzerMain {
 /**
+ * mainDirecotory	:比較するバージョンが双方置いてあるフォルダ
+ * cvDirectory		：最新バージョンが置かれているディレクトリ名
+ * pvDirectory		：過去のバージョンが置かれているディレクトリ名
+ * suffix			：プログラミング言語。ソースコードの語尾を書く。
  * 
  * 1. classModuleを全て取得する。
  * 	・クラスが書かれているファイル名
@@ -24,31 +29,37 @@ public class DiffAnalyzerMain {
  * */
 	static final Logger logger = Logger.getLogger( DiffAnalyzerMain.class.getName() );
 	public static void main (String args[]) {
-		//TODO ファイル名制約を.csに変更する
 		
-		String path = "/Users/phayate/src/ApacheDerby/";
-		String currentVersion = "10.12";
-		String previousVersion = "10.11";
+		String mainDirecotory = "/Users/phayate/src/TestDate/";
+		String cvDirectory= "/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet";
+		String pvDirectory= "/Users/phayate/src/TestDate/Glimpse-1.7.3-ado";
+		String suffix = "cs";
 		
 		/** Step 1	get class module in current version*/
-		FileListGetter search = new FileListGetter();
+		FileListGetter search = new FileListGetter(suffix);
 		
 		// file list in directory about later version
-		ArrayList<String> currFileStrs = search.getFileList( path+currentVersion );
+		ArrayList<String> currFileStrs = search.getFileList( cvDirectory );
 		FileAnalyzer fileAnalyzer = new FileAnalyzer();
 		ArrayList<Module> currentModules = fileAnalyzer.getModules( currFileStrs );
 		fileAnalyzer.saveModules("current-modules.txt");
 		DiffAnalyzerMain.logger.info( "Step 1 has finished" );
 		
 		/**	Step 2	get class module in previous version*/
-		ArrayList<String> prevFileStrs = search.getFileList( path+previousVersion );
+		ArrayList<String> prevFileStrs = search.getFileList( pvDirectory );
 		fileAnalyzer = new FileAnalyzer();
 		ArrayList<Module> previousModules = fileAnalyzer.getModules( prevFileStrs );
 		DiffAnalyzerMain.logger.info( "Step 2 has finished" );
 		
 		/**	Step 3 */
 		DiffAnalyzer diffAnalyzer = new DiffAnalyzer();
-		diffAnalyzer.compareTwoVersion(currentModules, previousModules);
+		ArrayList<String> record = diffAnalyzer.compareTwoVersion(currentModules, previousModules);
+		try {
+			FileWriting.writeFile(record, mainDirecotory+"processmetrics.csv");
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+
 		DiffAnalyzerMain.logger.info( "Step 3 has finished" );
 		
 	}

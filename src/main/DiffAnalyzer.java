@@ -73,7 +73,7 @@ public class DiffAnalyzer {
 		DiffAnalyzerMain.logger.warning( "There are no module named: " + key );
 		return null;
 	}
-	public void compareTwoVersion (ArrayList<Module> currentModules, ArrayList<Module> previousModules) {
+	public ArrayList<String> compareTwoVersion (ArrayList<Module> currentModules, ArrayList<Module> previousModules) {
 		ArrayList<String> record = new ArrayList<String> ();
 		// add header to record file
 		record.add( this.getHeader() );
@@ -104,11 +104,7 @@ public class DiffAnalyzer {
 			record.add(currentModule.getMetricsList() );
 			DiffAnalyzerMain.logger.info( currentModule.getMetricsList()  );
 		}
-		try {
-			FileWriting.writeFile(record, "processmetrics.csv");
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
+		return record;
 	}
 	private String getHeader() {
 		return "fileName,className,isNewModule,M1,M2,M6,M7";

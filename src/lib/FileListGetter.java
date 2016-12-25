@@ -6,7 +6,10 @@ import java.util.Date;
 import java.util.TreeSet;
 
 public class FileListGetter {
-
+	private String construct;
+	public FileListGetter(String construct) {
+		this.construct = construct;
+	}
     public static final int TYPE_FILE_OR_DIR = 1;
     public static final int TYPE_FILE = 2;
     public static final int TYPE_DIR = 3;
@@ -143,7 +146,7 @@ public class FileListGetter {
 		return fileStrs;
 	}
 	public ArrayList<String> getFileList(String path) {
-		File[] files = this.listFiles(path, "*.java");
+		File[] files = this.listFiles(path, "*."+construct);	
 		return this.printFileList(files);
 	}
 
