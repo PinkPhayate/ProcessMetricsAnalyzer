@@ -37,15 +37,18 @@ public class DiffAnalyzerMain {
 		FileAnalyzer fileAnalyzer = new FileAnalyzer();
 		ArrayList<Module> currentModules = fileAnalyzer.getModules( currFileStrs );
 		fileAnalyzer.saveModules("current-modules.txt");
+		DiffAnalyzerMain.logger.info( "Step 1 has finished" );
 		
 		/**	Step 2	get class module in previous version*/
 		ArrayList<String> prevFileStrs = search.getFileList( path+previousVersion );
 		fileAnalyzer = new FileAnalyzer();
 		ArrayList<Module> previousModules = fileAnalyzer.getModules( prevFileStrs );
+		DiffAnalyzerMain.logger.info( "Step 2 has finished" );
 		
 		/**	Step 3 */
 		DiffAnalyzer diffAnalyzer = new DiffAnalyzer();
 		diffAnalyzer.compareTwoVersion(currentModules, previousModules);
+		DiffAnalyzerMain.logger.info( "Step 3 has finished" );
 		
 	}
 

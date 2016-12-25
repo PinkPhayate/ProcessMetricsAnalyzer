@@ -83,6 +83,7 @@ public class DiffAnalyzer {
 			// get module with same class name as same as current version
 			Module previousModule =
 					this.searchModuleByClassName( previousModules, currentModule.getClassName() );
+			DiffAnalyzerMain.logger.info( currentModule.getClassName()  );
 			if (previousModule != null) {
 				try {
 					//get ArrayList about current version by beginning, end line number
@@ -101,6 +102,7 @@ public class DiffAnalyzer {
 				currentModule.isNew();				
 			}
 			record.add(currentModule.getMetricsList() );
+//			DiffAnalyzerMain.logger.info( currentModule.getMetricsList()  );
 		}
 		try {
 			FileWriting.writeFile(record, "processmetrics.csv");
