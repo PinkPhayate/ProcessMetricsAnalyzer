@@ -61,4 +61,16 @@ public class TestDiffAnalyze {
 		FileAnalyzer fileAnalyzer = new FileAnalyzer();
 		return fileAnalyzer.getModules( currFileStrs );
 	}
+	@Test
+	public void testCompareTwoVersion () {
+		FileAnalyzer fileAnalyzer = new FileAnalyzer();
+		diffAnalyzer = new DiffAnalyzer();
+		FileListGetter search = new FileListGetter();
+		ArrayList<String> currFileStrs = search.getFileList( "/Users/phayate/src/Eclipse-Java/ProcessMetricsAnalyzer/test-data/curr/net" );
+		ArrayList<String> prevFileStrs = search.getFileList( "/Users/phayate/src/Eclipse-Java/ProcessMetricsAnalyzer/test-data/curr/net" );
+		ArrayList<Module> currentModules = fileAnalyzer.getModules( currFileStrs );
+		ArrayList<Module> previousModules = fileAnalyzer.getModules( prevFileStrs );
+		this.diffAnalyzer.compareTwoVersion(currentModules, previousModules);
+		assertTrue( true );
+	}
 }

@@ -35,7 +35,7 @@ public class FileAnalyzer {
 		// count line of code
 		int numberOfLine = 0;
 		//extract filename
-		filename = this.extractFileName(filename);
+//		filename = this.extractFileName(filename);
 		
 		// indicator to position
 		int begenningPosition = -1;
@@ -55,6 +55,9 @@ public class FileAnalyzer {
 				begenningPosition = numberOfLine;
 				// extract class name
 				String className = this.extractClassName(line);
+				if(className == null) 
+					DiffAnalyzerMain.logger.warning(filename + ": class module name was not found");		
+
 				module.putClassName(className);
 				
 				// put class name
@@ -105,7 +108,7 @@ public class FileAnalyzer {
 	}
 	private String extractClassName(String line) {
 		String[] array = line.split(" ");
-		for(int i=0; i<array.length; i++) {
+		for(int i=0; i<array.length-1; i++) {
 			if (array[i].equals("class")) {
 				return array[i+1];
 			}

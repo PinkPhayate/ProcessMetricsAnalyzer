@@ -102,7 +102,7 @@ public class DiffAnalyzer {
 				currentModule.isNew();				
 			}
 			record.add(currentModule.getMetricsList() );
-//			DiffAnalyzerMain.logger.info( currentModule.getMetricsList()  );
+			DiffAnalyzerMain.logger.info( currentModule.getMetricsList()  );
 		}
 		try {
 			FileWriting.writeFile(record, "processmetrics.csv");
@@ -115,7 +115,7 @@ public class DiffAnalyzer {
 	}
 
 	private ArrayList<String> putClassText(Module module) throws IOException {
-		return FileReading.readFile( module.getClassName(),
+		return FileReading.readFile( module.getFileName(),
 				module.getBegenningPostion(),
 				module.getEndingPostion() );
 	}

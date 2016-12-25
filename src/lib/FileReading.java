@@ -25,7 +25,7 @@ public class FileReading {
 	public static ArrayList<String> readFile(String fileName, int begenningPosition, int endingPosition ) throws IOException {
 		ArrayList<String> fileContainment = readFile(fileName);
 		for(int index=0; index<begenningPosition; index ++) {
-			fileContainment.remove(index);
+			fileContainment.remove(0);
 		}
 		for(int index=endingPosition; index<fileContainment.size(); index ++) {
 			fileContainment.remove(index);

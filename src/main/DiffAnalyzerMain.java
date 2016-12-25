@@ -24,6 +24,7 @@ public class DiffAnalyzerMain {
  * */
 	static final Logger logger = Logger.getLogger( DiffAnalyzerMain.class.getName() );
 	public static void main (String args[]) {
+		//TODO ファイル名制約を.csに変更する
 		
 		String path = "/Users/phayate/src/ApacheDerby/";
 		String currentVersion = "10.12";

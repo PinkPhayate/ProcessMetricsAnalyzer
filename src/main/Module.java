@@ -40,6 +40,9 @@ public class Module {
 	public String getClassName() {
 		return this.className;
 	}
+	public String getFileName() {
+		return this.fileName;
+	}
 	public int getBegenningPostion() {
 		return this.begenningPosition;
 	}
@@ -53,9 +56,9 @@ public class Module {
 
 	public void calculateMetrics(TreeMap<String,Integer> differences) {
 		int totalLine = differences.get("totalLine");
-		int newLine = differences.get("cntNew");
-		int changedLine = differences.get("cntChange");
-		int deletedLine = differences.get("cntDelete");
+		int newLine = differences.get("newLine");
+		int changedLine = differences.get("changedLine");
+		int deletedLine = differences.get("deletedLine");
 		
 		this.M1 = newLine + changedLine;
 		if (totalLine!= 0) {
