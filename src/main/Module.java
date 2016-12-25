@@ -71,6 +71,14 @@ public class Module {
 		return fileName + "," +className + "," + isNewModule + "," + M1 + "," + M2 + "," + M6 + "," + M7;
 	}
 	
+	/** method for test*/
+	public int getBegenningPosition  () {
+		return this.begenningPosition;
+	}
+	public int getEndingPosition  () {
+		return this.endingPosition;
+	}
+	
 
 }
 

@@ -31,6 +31,8 @@ public class DiffAnalyzerMain {
 		
 		/** Step 1	get class module in current version*/
 		FileListGetter search = new FileListGetter();
+		
+		// file list in directory about later version
 		ArrayList<String> currFileStrs = search.getFileList( path+currentVersion );
 		FileAnalyzer fileAnalyzer = new FileAnalyzer();
 		ArrayList<Module> currentModules = fileAnalyzer.getModules( currFileStrs );

@@ -56,8 +56,8 @@ public class TestFileAnalizer {
 		this.fileAnalyzer.extractClassModule(filename);
 		ArrayList<Module> modules = this.fileAnalyzer.getTestModules();
 		
-		TestModule testModule = (TestModule) modules.get(0);
-		assertEquals(64, testModule.getBegenningPosition());
-		assertEquals(465, testModule.getEndingPosition());
+		Module module = modules.get(0);
+		assertEquals(64, module.getBegenningPosition());
+		assertEquals(465, module.getEndingPosition());
 	}
 }
