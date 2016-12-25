@@ -9,7 +9,7 @@ ReleaseNoteReader
 ReleaseNotesGenerator
 ReleaseNotesTransformer
 TagReader
-null
+classlister
 DerbyEclipsePlugin{
 DiskLayoutTaglet
 EndFormatTaglet
@@ -285,7 +285,6 @@ Constants
 D_LockControl
 TableNameInfo
 UpdateServiceProperties
-null
 ReflectClassesJava2
 RollingFileStream
 RollingFileStreamProvider
@@ -1065,7 +1064,6 @@ StressMulti50x59
 StressMultiTest
 StartupExistingDBTest
 StartupNewDBTest
-ClientRunner
 Derby5937SlaveShutdownTest
 DestroySlaveDB
 KillMaster
@@ -1243,7 +1241,7 @@ PrivilegedFileOpsForTests
 SQLStateConstants
 SQLToJUnit
 SampleVTI
-null
+SecurityCheck
 ShortHolder
 SimpleProcedureTest
 StatParser
@@ -1497,7 +1495,6 @@ utilMain
 AccessDatabase
 CreateHTMLFile
 CreateXMLFile
-ZipInfoProperties
 JDBCDisplayUtil
 PlanExporter
 SignatureChecker

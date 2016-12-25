@@ -2,6 +2,7 @@ package test;
 
 import static org.junit.Assert.*;
 
+import java.io.IOException;
 import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.TreeMap;
@@ -9,6 +10,7 @@ import java.util.TreeMap;
 import org.junit.Test;
 
 import lib.FileListGetter;
+import lib.FileReading;
 import main.DiffAnalyzer;
 import main.FileAnalyzer;
 import main.Module;
@@ -71,6 +73,20 @@ public class TestDiffAnalyze {
 		ArrayList<Module> currentModules = fileAnalyzer.getModules( currFileStrs );
 		ArrayList<Module> previousModules = fileAnalyzer.getModules( prevFileStrs );
 		this.diffAnalyzer.compareTwoVersion(currentModules, previousModules);
+		assertTrue( true );
+	}
+	@Test
+	public void testExtractClassName() throws IOException {
+		FileAnalyzer fileAnalyzer = new FileAnalyzer();
+		FileListGetter search = new FileListGetter();
+		String [] targetList = { "/Users/phayate/src/ApacheDerby/10.12",
+		                         "/Users/phayate/src/ApacheDerby/10.11"};
+		for( String target: targetList) {
+			ArrayList<String> currFileStrs = search.getFileList( target );
+			for(String filename: currFileStrs) {
+				fileAnalyzer.extractClassModule(filename);
+			}
+		}
 		assertTrue( true );
 	}
 }

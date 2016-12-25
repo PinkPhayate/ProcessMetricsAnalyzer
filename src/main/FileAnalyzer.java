@@ -2,6 +2,7 @@ package main;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 
@@ -55,10 +56,11 @@ public class FileAnalyzer {
 				begenningPosition = numberOfLine;
 				// extract class name
 				String className = this.extractClassName(line);
-				if(className == null) 
-					DiffAnalyzerMain.logger.warning(filename + ": class module name was not found");		
-
-				module.putClassName(className);
+				if(className == null) {
+//					DiffAnalyzerMain.logger.warning(filename + ": class module name was not found");	
+				}else {
+					module.putClassName(className);
+				}
 				
 				// put class name
 //				Module module = new Module( filename, classname );
@@ -90,7 +92,6 @@ public class FileAnalyzer {
 			}
 			numberOfLine++;
 		}
-		DiffAnalyzerMain.logger.info("All file has been read");
 	}
 	/**
 	 * @param line: line
@@ -107,13 +108,37 @@ public class FileAnalyzer {
 		return count;
 	}
 	private String extractClassName(String line) {
+		if( line.indexOf( "//") != -1) {
+			return null;
+		}
 		String[] array = line.split(" ");
+		if (!this.isClassLine( array ) ) {
+			return null;
+		}
 		for(int i=0; i<array.length-1; i++) {
 			if (array[i].equals("class")) {
 				return array[i+1];
 			}
 		}
 		return null;
+	}
+	/** confirm that line if it is beginning of class */
+	private boolean isClassLine (String[] array) {
+		List<String> list = Arrays.asList(array);
+		int PUBLIC = list.indexOf("public");
+		int CLASS = list.indexOf("class");
+		/** constrain to class line*/
+		if( PUBLIC == -1)	return false;
+		if( CLASS == -1)	return false;
+		
+		if( PUBLIC+1 == CLASS)	return true;
+
+		return false;
+
+		
+		
+		
+		
 	}
 	private String extractFileName(String filename) {
 		String[] array = filename.split("/");
