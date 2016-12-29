@@ -10,12 +10,7 @@ import lib.FileReading;
 import lib.FileWriting;
 
 public class FileAnalyzer {
-//	private String MODULE_START = "public class";
-	private List<String> MODULE_START = Arrays.asList(
-			"public class",
-			"public static class"
-			); 
-
+	private String MODULE_START = "public class";
 	private ArrayList<Module> modules = new ArrayList<Module>();
     public FileAnalyzer() {
     	//for unit test
@@ -56,7 +51,7 @@ public class FileAnalyzer {
 		for(String line: FileStrs) {
 			
 			/** Class Module is beginning*/
-			if ( this.confirmBeginningClass(line) ) {
+			if (line.indexOf( MODULE_START) != -1) {
 				// put beginning position
 				begenningPosition = numberOfLine;
 				// extract class name
@@ -98,14 +93,6 @@ public class FileAnalyzer {
 			numberOfLine++;
 		}
 	}
-	private boolean confirmBeginningClass ( String line ) {
-		for ( String formal: this.MODULE_START) {
-			if ( line.indexOf( formal ) != -1) {
-				return true;
-			}
-		}
-		return false;
-	}
 	/**
 	 * @param line: line
 	 * @param str : target signature
@@ -140,18 +127,18 @@ public class FileAnalyzer {
 		List<String> list = Arrays.asList(array);
 		int PUBLIC = list.indexOf("public");
 		int CLASS = list.indexOf("class");
-		int STATIC = list.indexOf("static");
-		
-		/** constrain to public class line*/
+		/** constrain to class line*/
 		if( PUBLIC == -1)	return false;
 		if( CLASS == -1)	return false;
+		
 		if( PUBLIC+1 == CLASS)	return true;
 
-		/** constrain to public static class line*/		
-		if( STATIC == -1)	return false;
-		if( PUBLIC+2 == CLASS)	return true;
-
 		return false;
+
+		
+		
+		
+		
 	}
 	private String extractFileName(String filename) {
 		String[] array = filename.split("/");
