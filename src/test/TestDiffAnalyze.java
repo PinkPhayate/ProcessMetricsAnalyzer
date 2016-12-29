@@ -10,7 +10,6 @@ import java.util.TreeMap;
 import org.junit.Test;
 
 import lib.FileListGetter;
-import lib.FileReading;
 import main.DiffAnalyzer;
 import main.FileAnalyzer;
 import main.Module;
@@ -58,7 +57,7 @@ public class TestDiffAnalyze {
 
 	}
 	public ArrayList<Module> getStubArrayList() {
-		FileListGetter search = new FileListGetter();
+		FileListGetter search = new FileListGetter("java");
 		ArrayList<String> currFileStrs = search.getFileList( "/Users/phayate/src/Eclipse-Java/ProcessMetricsAnalyzer/test-data/curr/net" );
 		FileAnalyzer fileAnalyzer = new FileAnalyzer();
 		return fileAnalyzer.getModules( currFileStrs );
@@ -67,7 +66,7 @@ public class TestDiffAnalyze {
 	public void testCompareTwoVersion () {
 		FileAnalyzer fileAnalyzer = new FileAnalyzer();
 		diffAnalyzer = new DiffAnalyzer();
-		FileListGetter search = new FileListGetter();
+		FileListGetter search = new FileListGetter("java");
 		ArrayList<String> currFileStrs = search.getFileList( "/Users/phayate/src/Eclipse-Java/ProcessMetricsAnalyzer/test-data/curr/net" );
 		ArrayList<String> prevFileStrs = search.getFileList( "/Users/phayate/src/Eclipse-Java/ProcessMetricsAnalyzer/test-data/curr/net" );
 		ArrayList<Module> currentModules = fileAnalyzer.getModules( currFileStrs );
@@ -78,7 +77,7 @@ public class TestDiffAnalyze {
 	@Test
 	public void testExtractClassName() throws IOException {
 		FileAnalyzer fileAnalyzer = new FileAnalyzer();
-		FileListGetter search = new FileListGetter();
+		FileListGetter search = new FileListGetter("java");
 		String [] targetList = { "/Users/phayate/src/ApacheDerby/10.12",
 		                         "/Users/phayate/src/ApacheDerby/10.11"};
 		for( String target: targetList) {
