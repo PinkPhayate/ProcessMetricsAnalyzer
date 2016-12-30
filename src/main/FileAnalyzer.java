@@ -14,7 +14,10 @@ public class FileAnalyzer {
 	//	private String MODULE_START = "public class";
 	private List<String> MODULE_START = Arrays.asList(
 			"public class",
-			"public static class"
+			"public static class",
+			"public abstract class",
+			"public partial class",
+			"public sealed class"
 			); 
 	
 	private ArrayList<Module> modules = new ArrayList<Module>();
@@ -106,27 +109,15 @@ public class FileAnalyzer {
 			}
 		}
 		// print line judge not true but contains 'class' 
-		if ( line.indexOf("class") != -1 && FileAnalizerTest.linesJudgedNotClassLogger != null) {
+		if ( line.indexOf("class") != -1
+				&& line.indexOf( "//" ) == -1
+				&& FileAnalizerTest.linesJudgedNotClassLogger != null) {
 			FileAnalizerTest.linesJudgedNotClassLogger.add(line);
 		}
 
 		return false;
 	}
 
-	/**
-	 * @param line: line
-	 * @param str : target signature
-	 * */
-	private int countChar(String line, String str) {
-		int count = 0;
-		int fromIndex = 0;
-		while(line.indexOf(str)!= -1) {
-			count ++;
-			fromIndex = line.indexOf(str);
-			line = line.substring( fromIndex+1 );
-		}
-		return count;
-	}
 	private String extractClassName(String line) {
 		// if line means comment, out
 		if( line.indexOf( "//") != -1) {
@@ -149,22 +140,41 @@ public class FileAnalyzer {
 		int PUBLIC = list.indexOf("public");
 		int CLASS = list.indexOf("class");
         int STATIC = list.indexOf("static");
-		/** constrain to class line*/
+        int ABSTRACT = list.indexOf("abstract");
+        int PARTIAL = list.indexOf("partial");
+        int SEALED = list.indexOf("sealed");
+        
+        
+		/** constrain to public class line*/
 		if( PUBLIC == -1)	return false;
 		if( CLASS == -1)	return false;
-		
 		if( PUBLIC+1 == CLASS)	return true;
+
 		/** constrain to public static class line*/		
-		if( STATIC == -1)	return false;
+		if( STATIC == -1 || ABSTRACT == -1 ||
+				PARTIAL == -1 || SEALED == -1 ) {
+			return false;
+		}
 		if( PUBLIC+2 == CLASS)	return true;
 
 		return false;
-
-		
-		
-		
-		
 	}
+	
+	/**
+	 * @param line: line
+	 * @param str : target signature
+	 * */
+	private int countChar(String line, String str) {
+		int count = 0;
+		int fromIndex = 0;
+		while(line.indexOf(str)!= -1) {
+			count ++;
+			fromIndex = line.indexOf(str);
+			line = line.substring( fromIndex+1 );
+		}
+		return count;
+	}
+
 	private String extractFileName(String filename) {
 		String[] array = filename.split("/");
 		return array[array.length - 1];

@@ -10,6 +10,7 @@ import java.util.ArrayList;
 import org.junit.Test;
 
 import lib.FileListGetter;
+import lib.FileReading;
 import lib.FileWriting;
 import main.FileAnalyzer;
 import main.Module;
@@ -79,6 +80,27 @@ public class FileAnalizerTest {
 			FileWriting.writeFile(linesJudgedNotClassLogger, "linesJudgedNotClass.txt");
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+	}
+	@Test
+	public void testConfirmBeginningClass () {
+		try {
+			FileAnalyzer fileAnalyzer  = new FileAnalyzer();
+			ArrayList<String> lines = FileReading.readFile( "linesJudgedNotClass.txt" );
+			for ( String line : lines) {
+				Method method = FileAnalyzer.class.getDeclaredMethod(
+						"confirmBeginningClass", String.class );
+				method.setAccessible(true);
+				boolean actual = (boolean)method.invoke(fileAnalyzer, line);
+				if ( !actual) {
+					if ( line.indexOf( "//" ) == -1 ) {
+						System.out.println( line );
+					}
+				}
+			}
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 
