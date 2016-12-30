@@ -104,6 +104,11 @@ public class FileAnalyzer {
 				return true;
 			}
 		}
+		// print line judge not true but contains 'class' 
+		if ( line.indexOf("class") != -1 ) {
+			System.out.println(line);
+		}
+
 		return false;
 	}
 

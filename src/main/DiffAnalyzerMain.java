@@ -1,6 +1,5 @@
 package main;
 
-import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.TreeMap;
@@ -22,7 +21,7 @@ public class DiffAnalyzerMain {
 	 * 
 	 */
 	static final Logger logger = Logger.getLogger(DiffAnalyzerMain.class.getName());
-
+	public static ArrayList<String> originRecord;
 	public static void main(String args[]) {
 
 		if (args.length != 4) {
@@ -59,6 +58,7 @@ public class DiffAnalyzerMain {
 		/** Step 3 */
 		DiffAnalyzer diffAnalyzer = new DiffAnalyzer();
 		ArrayList<String> record = diffAnalyzer.compareTwoVersion(currentModules, previousModules);
+		originRecord = record;
 		try {
 			FileWriting.writeFile(record, mainDirecotory + "processmetrics.csv");
 		} catch (IOException e) {
@@ -69,5 +69,6 @@ public class DiffAnalyzerMain {
 		return;
 
 	}
+	
 
 }

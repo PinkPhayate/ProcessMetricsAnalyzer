@@ -11,7 +11,7 @@ import org.junit.Test;
 import main.FileAnalyzer;
 import main.Module;
 
-public class TestFileAnalizer {
+public class FileAnalizerTest {
 	Method method;
 	FileAnalyzer fileAnalyzer ;
 	protected void setUp(){
