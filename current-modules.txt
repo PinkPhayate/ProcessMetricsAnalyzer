@@ -1,6 +1,0 @@
-GlimpseDbCommand
-GlimpseDbConnection
-GlimpseDbDataAdapter
-GlimpseDbDataReader
-GlimpseDbProviderFactory<TProviderFactory>
-GlimpseDbTransaction
