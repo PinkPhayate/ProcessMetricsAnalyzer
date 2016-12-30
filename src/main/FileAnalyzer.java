@@ -8,6 +8,7 @@ import java.util.List;
 
 import lib.FileReading;
 import lib.FileWriting;
+import test.FileAnalizerTest;
 
 public class FileAnalyzer {
 	//	private String MODULE_START = "public class";
@@ -105,8 +106,8 @@ public class FileAnalyzer {
 			}
 		}
 		// print line judge not true but contains 'class' 
-		if ( line.indexOf("class") != -1 ) {
-			System.out.println(line);
+		if ( line.indexOf("class") != -1 && FileAnalizerTest.linesJudgedNotClassLogger != null) {
+			FileAnalizerTest.linesJudgedNotClassLogger.add(line);
 		}
 
 		return false;

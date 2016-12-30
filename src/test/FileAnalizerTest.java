@@ -2,12 +2,15 @@ package test;
 
 import static org.junit.Assert.*;
 
+import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.util.ArrayList;
 
 import org.junit.Test;
 
+import lib.FileListGetter;
+import lib.FileWriting;
 import main.FileAnalyzer;
 import main.Module;
 
@@ -59,5 +62,25 @@ public class FileAnalizerTest {
 		Module module = modules.get(0);
 		assertEquals(64, module.getBegenningPosition());
 		assertEquals(465, module.getEndingPosition());
+	}
+	public static ArrayList<String> linesJudgedNotClassLogger ;
+	@Test
+	public void extrsctClassName () {
+		linesJudgedNotClassLogger = new ArrayList<String>();
+		String suffix = "cs";
+		String cvDirectory = "/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet";
+		FileListGetter search = new FileListGetter(suffix);
+
+		// file list in directory about later version
+		ArrayList<String> currFileStrs = search.getFileList(cvDirectory);
+		FileAnalyzer fileAnalyzer = new FileAnalyzer();
+		ArrayList<Module> currentModules = fileAnalyzer.getModules(currFileStrs);
+		try {
+			FileWriting.writeFile(linesJudgedNotClassLogger, "linesJudgedNotClass.txt");
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
 	}
 }
