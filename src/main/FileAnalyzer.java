@@ -17,7 +17,12 @@ public class FileAnalyzer {
 			"public static class",
 			"public abstract class",
 			"public partial class",
-			"public sealed class"
+			"public sealed class",
+			"internal class",
+			"internal static class",
+			"private class",
+			"partial class",
+			"sealed partial class"
 			); 
 	
 	private ArrayList<Module> modules = new ArrayList<Module>();
@@ -33,12 +38,12 @@ public class FileAnalyzer {
 	}
 	
 	public void extractClassModule (String filename) {
-		List<String> FileStrs = null;
+		List<String> fileStrs = null;
 
 		try {
-			FileStrs = FileReading.readFile(filename);
+			fileStrs = FileReading.readFile(filename);
 		} catch (IOException e) {
-			DiffAnalyzerMain.logger.warning("IOException occured");
+			DiffAnalyzerMain.logger.warning( filename + "IOException occured");
 			return ;
 		}
 		
@@ -57,7 +62,7 @@ public class FileAnalyzer {
 		
 		// create module instance
 		Module module = new Module( filename );
-		for(String line: FileStrs) {
+		for(String line: fileStrs) {
 			
 			/** Class Module is beginning*/
 			if ( this.confirmBeginningClass(line) ) {
@@ -65,8 +70,9 @@ public class FileAnalyzer {
 				begenningPosition = numberOfLine;
 				// extract class name
 				String className = this.extractClassName(line);
-				if(className == null) {
-//					DiffAnalyzerMain.logger.warning(filename + ": class module name was not found");	
+				if(className == null
+						&& FileAnalizerTest.linesJudgedNotClassLogger != null) {
+					FileAnalizerTest.linesJudgedNotClassLogger.add(line);
 				}else {
 					module.putClassName(className);
 				}
@@ -107,12 +113,6 @@ public class FileAnalyzer {
 			if ( line.indexOf( formal ) != -1) {
 				return true;
 			}
-		}
-		// print line judge not true but contains 'class' 
-		if ( line.indexOf("class") != -1
-				&& line.indexOf( "//" ) == -1
-				&& FileAnalizerTest.linesJudgedNotClassLogger != null) {
-			FileAnalizerTest.linesJudgedNotClassLogger.add(line);
 		}
 
 		return false;

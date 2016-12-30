@@ -1,0 +1,237 @@
+    public abstract class GlimpseDbProviderFactory : DbProviderFactory
+    public static class Support
+    public static class Initialize
+    internal class AdoExecutionBlock : ExecutionBlockBase
+    public abstract class AdoCommandMessage : AdoMessage
+    public abstract class AdoMessage : ITimedMessage
+    public abstract class AdoTransactionMessage : AdoMessage
+    internal class Resources {
+    internal class SqlStatistics
+    internal static class SqlStatisticsCalculator
+    internal class CommandParameterParser : ICommandParameterParser
+    internal class CommandSanitizer
+    public static class Constants
+    public abstract class AspNetTab : TabBase<HttpContextBase>
+    public static class HttpContextExtensions
+    public static class RuntimePolicyContextExtensions
+    public static class TabContextExtensions
+    public abstract class HttpApplicationBase
+    public static class HttpRuntimeShutdownMessageResolver
+    internal class Resources {
+    public static class Serialization
+    public static class ConfigurationConnectionStringModelFactory
+    public static class Net35Backport
+    public sealed class Client : IDynamicClientScript
+    public sealed class Data : IDynamicClientScript, IParameterValueProvider
+//    public sealed class Insight : IDynamicClientScript
+    public sealed class Metadata : IDynamicClientScript, IParameterValueProvider
+    public sealed class ContentTypeElementCollection : ConfigurationElementCollection
+    internal class RegexConverter : ConfigurationConverterBase
+    internal class TypeConverter : ConfigurationConverterBase
+    internal static class Constants
+    public abstract class AlternateMethod : IAlternateMethod
+    public abstract class AlternateType<T> : IAlternateType<T> where T : class
+    public abstract class LoggerBase : ILogger
+    public static class ResourceParameter
+    public abstract class ResourceResultDecorator : IResourceResult, IWrapper<IResourceResult>
+    public abstract class SerializationConverter<T> : ISerializationConverter
+    internal class Subscriber<T> : Subscriber
+    public abstract class TabBase : ITab
+    public abstract class TabBase<T> : ITab
+    public static class AlternateMethodContextExtensions
+    public static class DataStoreExtensions
+    public static class DictionaryExtensions
+    public static class EnumExtensions
+    public static class NameValueCollectionExtension
+    public static class ObjectExtensions
+    public static class TabContextExtensions
+    public static class AssemblyTypesResolver
+    internal class CastleDynamicProxyWrapper<T> : IWrapper<T>
+    internal class Crc32 : HashAlgorithm
+    public static class ReflectionBlackList
+    public abstract class ResourceEndpointConfiguration
+    public abstract class ExecutionBlockBase
+    public static class SourceMessageExtension
+    public static class TimedMessageExtension
+    public static class TimelineMessageExtension
+        private class PackageItem<T>
+        private class PackageItemDetail
+    public abstract class FileResource : IResource
+//    public class InsightResource : FileResource, IKey
+    internal class Resources {
+    public static class NuGetPackage
+    public static class Settings
+    public static class CodeTypeConverter
+    public static class Formats
+    public static class FormattingKeywords
+    public static class Plugin
+    public static class StringFormattingExtensions
+    public static class TabRowFormattingExtensions
+    internal class GlimpseDbProviderServices : DbProviderServices
+        private class ProviderInvariantName : IProviderInvariantName
+    public static class Initialize
+    internal class EntityFrameworkExecutionBlock : ExecutionBlockBase
+    internal class Resources {
+        private class UnvalidatedEnumerableValueProvider : IUnvalidatedEnumerableValueProvider
+    public static class HtmlHelperExtension
+    public static class ActionMessageExtension
+    public static class BoundedFilterMessageExtension
+    public static class CanceledBasedFilterMessageExtension
+    public static class ChildActionMessageExtension
+    public static class ExceptionBasedFilterMessageExtension
+    public static class FilterMessageExtension
+    public static class MvcTimelineExtension
+    internal class Resources {
+        public sealed class NoCacheAttribute : ActionFilterAttribute
+//    public class AdminPolicy : IRuntimePolicy
+//    public class CartTab : AspNetTab, ITabLayout, ILayoutControl
+    public static class Configuration
+//    public class ConfigurationTab : AspNetTab 
+//    public class InventoryClientScript : IStaticClientScript
+//    public class InventoryResource : IResource
+//    public class QueryClientScript : IStaticClientScript
+//    public class QueryResource : IResource
+    static partial class SqlMapper
+        partial class Link<TKey, TValue> where TKey : class
+        partial class CacheInfo
+        public partial class Identity : IEquatable<Identity>
+        partial class DontMap { }
+        sealed partial class DapperTable
+        sealed partial class DapperRowMetaObject : System.Dynamic.DynamicMetaObject
+        sealed partial class DapperRow
+        public partial class GridReader : IDisposable
+    partial class DynamicParameters : SqlMapper.IDynamicParameters
+        partial class ParamInfo
+    sealed partial class DbString
+    partial class FeatureSupport
+    sealed partial class SimpleMemberMap : SqlMapper.IMemberMap
+    sealed partial class DefaultTypeMap : SqlMapper.ITypeMap
+    sealed partial class CustomPropertyTypeMap : SqlMapper.ITypeMap
+    public partial class SqlMapper
+    public partial class DynamicParameters
+    public partial class DbString
+    public partial class SimpleMemberMap
+    public partial class DefaultTypeMap
+    public partial class CustomPropertyTypeMap
+    public partial class FeatureSupport
+//    public class SupportPolicy : IRuntimePolicy
+    public partial class Genre
+    public partial class Order
+    public partial class ShoppingCart
+    public static class AppConfig
+    public static class AuthConfig
+    public static class WebApiConfig
+        internal class ExternalLoginResult : ActionResult
+    public sealed class InitializeSimpleMembershipAttribute : ActionFilterAttribute
+        private class SimpleMembershipInitializer
+    public partial class ShoppingCart
+    public static class AppConfig
+    public static class AuthConfig
+    public static class WebApiConfig
+        internal class ExternalLoginResult : ActionResult
+    public sealed class InitializeSimpleMembershipAttribute : ActionFilterAttribute
+        private class SimpleMembershipInitializer
+    public partial class ShoppingCart
+    public abstract class GetRouteDataRouteBaseShould<T>
+    public abstract class GetRouteDataRouteShould<T>
+    internal class SerializableTestObject : ISerializable
+    internal class NonSerializableTestObject
+    internal class NonSerializableTestObjectWithToString : NonSerializableTestObject
+    public static class MoqExtensions
+    public sealed class SealedSpecialDisposable : ISpecialDisposable
+        private class GenericTab : TabBase<DummyObjectContext>
+        private class TestingTab : TabBase
+    public static class TestingExtensions
+        public sealed class SealedTestProxy : ITestProxy
+        private class ResourceExecutionAndResultingRuntimePolicyTestCase
+        private class MyResourceWithDependencies : IResource, IDependOnResources
+    internal class TestObjectWithException
+    internal class TestObjectWithJsonAttributes
+    internal class TestObjectAsISerializable : ISerializable
+	public class PluginShould
+	public class StringFormattingExtensionsShould
+	public class TabLayoutCellShould
+	public class TabLayoutRowShould
+	public class TabLayoutShould
+	public class TabRowFormattingExtensionsShould
+	public class TabRowShould
+	public class TabSectionShould
+        private class ClientResourceWithBadResourceName : ClientResource
+        private class FileResourceTester : FileResource
+        private class DummyClass
+    public static class WebDriverExtensions
+    public abstract class ActionInvokerGetFiltersShould<T> where T : class
+    public abstract class ActionInvokerInvokeActionResultShould<T> where T : class
+    public abstract class ValueProviderContainsPrefixShould<T> where T : class
+    public abstract class ValueProviderGetValueArgumentShould<T> where T : class
+    public abstract class ValueProviderGetValueShould<T> where T : class
+    public abstract class ValueProviderShould<T> where T : class
+    public partial class About : Page
+    public partial class About
+    public partial class Login : Page
+    public partial class Login {
+    public partial class Manage : System.Web.UI.Page
+    public partial class Manage
+    public partial class OpenAuthProviders : System.Web.UI.UserControl
+    public partial class OpenAuthProviders
+    public partial class Register : Page
+    public partial class Register
+    public partial class RegisterExternalLogin : System.Web.UI.Page
+    public partial class RegisterExternalLogin
+    public partial class AddToCart : System.Web.UI.Page
+    public partial class AddToCart
+    public partial class AdminPage : System.Web.UI.Page
+    public partial class AdminPage {
+    internal static class AuthConfig
+    public partial class CheckoutCancel : System.Web.UI.Page
+    public partial class CheckoutCancel
+    public partial class CheckoutComplete : System.Web.UI.Page
+    public partial class CheckoutComplete {
+    public partial class CheckoutError : System.Web.UI.Page
+    public partial class CheckoutError
+    public partial class CheckoutReview : System.Web.UI.Page
+    public partial class CheckoutReview {
+    public partial class CheckoutStart : System.Web.UI.Page
+    public partial class CheckoutStart
+    public partial class Contact : Page
+    public partial class Contact
+    public partial class ListView : Page
+    public partial class ListView {
+	public class ListViewAdapter : ControlAdapter
+    public partial class _Default : Page
+    public partial class _Default
+    public partial class ErrorPage : System.Web.UI.Page
+    public partial class ErrorPage {
+    public partial class FileUpload : System.Web.UI.Page
+    public partial class FileUpload {
+    public sealed class ExceptionUtility
+public sealed class NVPCodec : NameValueCollection
+    public partial class ProductDetails : System.Web.UI.Page
+    public partial class ProductDetails {
+    public partial class ProductList : System.Web.UI.Page
+    public partial class ProductList {
+    public partial class ShoppingCart : System.Web.UI.Page
+    public partial class ShoppingCart {
+    public partial class SiteMaster : MasterPage
+    public partial class SiteMaster {
+    public partial class EmptyControls : System.Web.UI.Page
+    public partial class EmptyControls {
+    public partial class PopulatedControls : System.Web.UI.Page
+    public partial class PopulatedControls {
+    public partial class Viewstateless : System.Web.UI.Page
+    public partial class Viewstateless {
+    internal class Resources {
+        private class TempListItem
+    public static class DataCacheEventSubscriberFactory
+    public static class LongExtensions
+    internal class Resources {
+    internal class Resources {
+    public abstract class WindowsAzureStorageInspectorBase
+    internal class IPAddressConverter : JsonConverter
+    internal class IPEndPointConverter : JsonConverter
+    public static class LongExtensions
+    public static class OperationContextFactory
+    internal class Resources {
+    public partial class Default : System.Web.UI.Page
+    public partial class Default
+    internal class Resources {

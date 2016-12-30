@@ -10,6 +10,8 @@ import org.junit.Test;
 import lib.FileListGetter;
 import lib.FileWriting;
 import main.DiffAnalyzerMain;
+import main.FileAnalyzer;
+import main.Module;
 
 public class DiffAnalyzerMainTest {
 
@@ -40,6 +42,28 @@ public class DiffAnalyzerMainTest {
 		assertEquals(expected, actual);
 		
 		
+
+	}
+	@Test
+	public void testStep2Test () {
+		FileAnalizerTest.linesJudgedNotClassLogger = new ArrayList<String>();
+
+		String cvDirectory = "/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet";
+
+		
+		FileListGetter search = new FileListGetter("cs");
+		ArrayList<String> currFileStrs = search.getFileList(cvDirectory);
+		
+		FileAnalyzer fileAnalyzer = new FileAnalyzer();
+		fileAnalyzer.getModules(currFileStrs);
+		fileAnalyzer.saveModules( "current-modules.txt" );
+		try {
+			FileWriting.writeFile(FileAnalizerTest.linesJudgedNotClassLogger, "classLineNotExtracted.txt");
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+
+
 
 	}
 

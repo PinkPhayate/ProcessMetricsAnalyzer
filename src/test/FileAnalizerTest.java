@@ -103,6 +103,28 @@ public class FileAnalizerTest {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-
 	}
+	@Test
+	public void testExtractClassName () {
+		try {
+			FileAnalyzer fileAnalyzer  = new FileAnalyzer();
+			ArrayList<String> lines = FileReading.readFile( "linesJudgedNotClass.txt" );
+			for ( String line : lines) {
+				Method method = FileAnalyzer.class.getDeclaredMethod(
+						"confirmBeginningClass", String.class );
+				method.setAccessible(true);
+				boolean isBeginning = (boolean)method.invoke(fileAnalyzer, line);
+				if ( isBeginning) {
+					method = FileAnalyzer.class.getDeclaredMethod(
+							"extractClassName", String.class );
+					method.setAccessible(true);
+					String actual = (String)method.invoke(fileAnalyzer, line);
+					System.out.println( actual);
+				}
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+
 }
