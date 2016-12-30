@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-
+import difflib.StringUtills;
 import lib.FileReading;
 import lib.FileWriting;
 import test.FileAnalizerTest;
@@ -137,6 +137,7 @@ public class FileAnalyzer {
 	/** confirm that line if it is beginning of class */
 	private boolean isClassLine (String[] array) {
 		List<String> list = Arrays.asList(array);
+		list = this.removeExtracts(list);
 		int PUBLIC = list.indexOf("public");
 		int CLASS = list.indexOf("class");
         int STATIC = list.indexOf("static");
@@ -149,6 +150,12 @@ public class FileAnalyzer {
 		if( PUBLIC == -1)	return false;
 		if( CLASS == -1)	return false;
 		if( PUBLIC+1 == CLASS)	return true;
+		if( PUBLIC+2 == CLASS) {
+			if( PUBLIC+1 == STATIC )	return true;
+			if( PUBLIC+1 == ABSTRACT )	return true;
+			if( PUBLIC+1 == PARTIAL )	return true;
+			if( PUBLIC+1 == SEALED )	return true;			
+		}
 
 		/** constrain to public static class line*/		
 		if( STATIC == -1 || ABSTRACT == -1 ||
@@ -160,6 +167,13 @@ public class FileAnalyzer {
 		return false;
 	}
 	
+	private List<String> removeExtracts(List<String> list) {
+		List<String> modifiedList = new ArrayList<String>();
+		for ( String element: list) {
+			modifiedList.add( element.replaceAll("\t", ""));
+		}
+		return modifiedList;
+	}
 	/**
 	 * @param line: line
 	 * @param str : target signature
