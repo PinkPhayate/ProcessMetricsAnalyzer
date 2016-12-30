@@ -80,7 +80,6 @@ public class FileAnalyzer {
 				String className = this.extractClassName(line);
 				if(className == null
 						&& FileAnalizerTest.linesJudgedNotClassLogger != null) {
-//					FileAnalizerTest.linesJudgedNotClassLogger.add(filename +":"+line);
 					FileAnalizerTest.linesJudgedNotClassLogger.add( line );
 				}else if ( className == null ) {
 					DiffAnalyzerMain.logger.warning( filename +" has null classname" );
@@ -131,7 +130,7 @@ public class FileAnalyzer {
 	}
 
 	private String extractClassName(String line) {
-		// if line means comment, out
+		// if line means comment, getting out!
 		if( line.indexOf( "//") != -1) {
 			return null;
 		}
@@ -212,10 +211,6 @@ public class FileAnalyzer {
 		for ( Module module : this.modules) {
 			classNameList.add( module.getFileName() +": "+module.getClassName() );
 		}
-//		for ( int i=0; i<this.modules.size(); i++) {
-//			Module module = modules.get( i );
-//			classNameList.add( module.getClassName() );
-//		}
 		try {
 			FileWriting.writeFile(classNameList, saveFileName);
 			DiffAnalyzerMain.logger.info("to record" + saveFileName + " has finished");
