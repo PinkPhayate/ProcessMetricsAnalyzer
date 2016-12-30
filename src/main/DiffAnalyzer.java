@@ -66,6 +66,9 @@ public class DiffAnalyzer {
 	}
 	private Module searchModuleByClassName( ArrayList<Module> targetArrayList, String key ) {
 		for(Module module: targetArrayList) {
+			if( module.getClassName() == null) {
+				System.out.println( module.getClassName());
+			}
 			if( module.getClassName() .equals(key)) {
 				return module;
 			}

@@ -68,12 +68,12 @@ public class FileAnalizerTest {
 	@Test
 	public void extrsctClassName () {
 		linesJudgedNotClassLogger = new ArrayList<String>();
+		
+		// get file list in directory
 		String suffix = "cs";
 		String cvDirectory = "/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet";
-		FileListGetter search = new FileListGetter(suffix);
+		ArrayList<String> currFileStrs = this.getFileList(suffix, cvDirectory);
 
-		// file list in directory about later version
-		ArrayList<String> currFileStrs = search.getFileList(cvDirectory);
 		FileAnalyzer fileAnalyzer = new FileAnalyzer();
 		ArrayList<Module> currentModules = fileAnalyzer.getModules(currFileStrs);
 		try {
@@ -118,11 +118,37 @@ public class FileAnalizerTest {
 							"extractClassName", String.class );
 					method.setAccessible(true);
 					String actual = (String)method.invoke(fileAnalyzer, line);
-					System.out.println( actual);
+//					System.out.println( actual);
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
+	}
+	public static ArrayList<String> moduleListLogger ;
+	@Test
+	public void testClassName() {
+		moduleListLogger = new ArrayList<String> ();
+		
+		// get file list in directory
+		String suffix = "cs";
+		String cvDirectory = "/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet";
+		ArrayList<String> currFileStrs = this.getFileList(suffix, cvDirectory);
+
+		FileAnalyzer fileAnalyzer = new FileAnalyzer();
+		fileAnalyzer.getModules(currFileStrs);
+		fileAnalyzer.saveModules( "current-modules.txt" );
+		try {
+			FileWriting.writeFile(moduleListLogger, "moduleListLogger.txt");
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+
+		
+	}
+	private ArrayList<String> getFileList (String suffix, String directory) {
+		FileListGetter search = new FileListGetter(suffix);
+		return search.getFileList( directory );
+
 	}
 
 }

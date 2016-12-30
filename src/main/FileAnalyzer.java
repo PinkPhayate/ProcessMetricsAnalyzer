@@ -17,12 +17,12 @@ public class FileAnalyzer {
 			"public static class",
 			"public abstract class",
 			"public partial class",
-			"public sealed class",
-			"internal class",
-			"internal static class",
-			"private class",
-			"partial class",
-			"sealed partial class"
+			"public sealed class"
+//			"internal class",
+//			"internal static class",
+//			"private class",
+//			"partial class",
+//			"sealed partial class"
 			); 
 	
 	private ArrayList<Module> modules = new ArrayList<Module>();
@@ -33,10 +33,18 @@ public class FileAnalyzer {
 		for(String filename: module) {
 			this.extractClassModule(filename);
 		}
-		
+		this.removeNullClass();
 		return this.modules;
 	}
-	
+	/**if using iteration, error occurs named "ConcurrentModificationException"*/
+	private void removeNullClass() {
+		for ( int i=0; i<this.modules.size(); i++) {
+			Module module = modules.get( i );
+			if ( module.getClassName() == null ) {
+				this.modules.remove( i );
+			}
+		}
+	}
 	public void extractClassModule (String filename) {
 		List<String> fileStrs = null;
 
@@ -72,8 +80,12 @@ public class FileAnalyzer {
 				String className = this.extractClassName(line);
 				if(className == null
 						&& FileAnalizerTest.linesJudgedNotClassLogger != null) {
-					FileAnalizerTest.linesJudgedNotClassLogger.add(line);
-				}else {
+//					FileAnalizerTest.linesJudgedNotClassLogger.add(filename +":"+line);
+					FileAnalizerTest.linesJudgedNotClassLogger.add( line );
+				}else if ( className == null ) {
+					DiffAnalyzerMain.logger.warning( filename +" has null classname" );
+				}
+				else {
 					module.putClassName(className);
 				}
 				
@@ -197,9 +209,13 @@ public class FileAnalyzer {
 	public ArrayList<String> saveModules(String saveFileName) {
 		ArrayList<String> classNameList = new ArrayList<String> ();
 		// save class name only
-		for(Module module: this.modules) {
-			classNameList.add( module.getClassName() );
+		for ( Module module : this.modules) {
+			classNameList.add( module.getFileName() +": "+module.getClassName() );
 		}
+//		for ( int i=0; i<this.modules.size(); i++) {
+//			Module module = modules.get( i );
+//			classNameList.add( module.getClassName() );
+//		}
 		try {
 			FileWriting.writeFile(classNameList, saveFileName);
 			DiffAnalyzerMain.logger.info("to record" + saveFileName + " has finished");

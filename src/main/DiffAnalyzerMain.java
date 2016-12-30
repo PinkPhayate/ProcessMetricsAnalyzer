@@ -53,7 +53,7 @@ public class DiffAnalyzerMain {
 		ArrayList<String> prevFileStrs = search.getFileList(pvDirectory);
 		fileAnalyzer = new FileAnalyzer();
 		ArrayList<Module> previousModules = fileAnalyzer.getModules(prevFileStrs);
-		DiffAnalyzerMain.logger.info("Step 2 has finished");
+		fileAnalyzer.saveModules( mainDirecotory + "previous-modules.txt" );		DiffAnalyzerMain.logger.info("Step 2 has finished");
 
 		/** Step 3 */
 		DiffAnalyzer diffAnalyzer = new DiffAnalyzer();
