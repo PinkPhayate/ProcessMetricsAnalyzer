@@ -189,6 +189,14 @@ public class FileAnalyzer {
 		String[] array = filename.split("/");
 		return array[array.length - 1];
 	}
+	public ArrayList<String> getFilenameList () {
+		ArrayList<String> filenameList = new ArrayList<String> ();
+		// save class name only
+		for ( Module module : this.modules) {
+			filenameList.add( module.getFileName() );
+		}
+		return filenameList;
+	}
 	
 	public ArrayList<String> saveModules(String saveFileName) {
 		ArrayList<String> classNameList = new ArrayList<String> ();

@@ -105,6 +105,30 @@ public class FileAnalizerTest {
 			e.printStackTrace();
 		}
 	}
+	@Test
+	public  void compareNumOfFile () {
+		/**
+		 * Number of files  vs  number of files having module
+		 * */
+		
+		ArrayList<String> numberOfFiles = this.getFileListFromTestData();
+		ArrayList<String> nonFileList = new ArrayList<String> ();
+		
+		FileAnalyzer fileAnalyzer = new FileAnalyzer();
+		fileAnalyzer.getModules(numberOfFiles);
+		ArrayList<String> numberOfFilesHavingModule  = fileAnalyzer.getFilenameList();
+		for (String filename: numberOfFiles) {
+			if ( !numberOfFilesHavingModule.contains(filename) ) {
+				System.out.println( filename );
+				nonFileList.add(filename);
+			}
+		}
+		try {
+			FileWriting.writeFile(nonFileList, "nonFileList.log");
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
 
 	@Test
 	public void testConfirmBeginningClass () {

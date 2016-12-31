@@ -46,9 +46,6 @@ public class DiffAnalyzerMainTest {
 			e.printStackTrace();
 		}
 		assertEquals(expected, actual);
-		
-		
-
 	}
 	@Test
 	public void testStep2Test () {
