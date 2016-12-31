@@ -22,6 +22,7 @@ public class DiffAnalyzerMainTest {
 	@Test
 	public void testIntegration () {
 		String cvDirectory = "/Users/phayate/src/TestDate/";
+		FileAnalizerTest.linesJudgedNotClassLogger = new ArrayList<String>();
 
 //		expect: there are 2 new files	
 		String[] args = { cvDirectory,
@@ -39,6 +40,11 @@ public class DiffAnalyzerMainTest {
 		int expected = currFileStrs.size();
 		System.out.println( "Actual: "+actual );	//745
 		System.out.println( "Expected: "+expected );	//1830
+		try {
+			FileWriting.writeFile(FileAnalizerTest.linesJudgedNotClassLogger, "linesJudgedNotClass.txt");
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 		assertEquals(expected, actual);
 		
 		

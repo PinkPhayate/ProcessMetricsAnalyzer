@@ -183,6 +183,10 @@ public class FileAnalyzer {
 		for ( String element: list) {
 			modifiedList.add( element.replaceAll("\t", ""));
 		}
+		for ( int i=0;i<modifiedList.size();i++) {
+			String element = modifiedList.get( i );
+			if ( element.length() == 0 )	modifiedList.remove( i );
+		}
 		return modifiedList;
 	}
 	/**

@@ -29,12 +29,14 @@ public class FileAnalizerTest {
 	@Test
 	public void testÉxtractClassName() {
 
-		String line = "public class ClientJDBCObjectFactoryImpl implements ClientJDBCObjectFactory{";
+		String line = "public  class  ClientJDBCObjectFactoryImpl implements ClientJDBCObjectFactory{";
 		String  expected = "ClientJDBCObjectFactoryImpl";
 
 		try {
-			this.method = FileAnalyzer.class.getDeclaredMethod("extractClassName",String.class);
-			String actual = (String)this.method.invoke(fileAnalyzer, line);
+			FileAnalyzer fileAnalyzer = new FileAnalyzer(); 
+			Method method = FileAnalyzer.class.getDeclaredMethod("extractClassName",String.class);
+			method.setAccessible(true);
+			String actual = (String)method.invoke(fileAnalyzer, line);
 			assertEquals(expected, actual);
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -105,7 +107,27 @@ public class FileAnalizerTest {
 		}
 	}
 	@Test
-	public void testExtractClassName () {
+	public void testClassLineNotExtracted () {
+		String str = "public  class  Hoge {";
+//		String [] array = str.split( " " );
+//		for (String s: array) {
+//			System.out.println( s.length() );
+//		}
+		try {
+			method = FileAnalyzer.class.getDeclaredMethod(
+					"extractClassName", String.class );
+			method.setAccessible(true);
+			String actual = (String)method.invoke(fileAnalyzer, str);
+			String expected = "Hoge";
+			assertEquals(expected, actual);
+		} catch ( Exception e) {
+			e.printStackTrace();
+		}
+
+		
+	}
+	@Test
+	public void testExtractClassNameNotExtracted () {
 		/**
 		 * after getting list named classLineNotExtracted
 		 * by implementing testStep2 in DiffAnalyzerMainTest 

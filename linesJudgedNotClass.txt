@@ -1,27 +1,5 @@
-    internal class AdoExecutionBlock : ExecutionBlockBase
-    internal class Resources {
-    internal class SqlStatistics
-    internal static class SqlStatisticsCalculator
-    internal class CommandParameterParser : ICommandParameterParser
-    internal class CommandSanitizer
-    internal class Resources {
 //    public sealed class Insight : IDynamicClientScript
-    internal class RegexConverter : ConfigurationConverterBase
-    internal class TypeConverter : ConfigurationConverterBase
-    internal static class Constants
-    internal class Subscriber<T> : Subscriber
-    internal class CastleDynamicProxyWrapper<T> : IWrapper<T>
-    internal class Crc32 : HashAlgorithm
-        private class PackageItem<T>
-        private class PackageItemDetail
 //    public class InsightResource : FileResource, IKey
-    internal class Resources {
-    internal class GlimpseDbProviderServices : DbProviderServices
-        private class ProviderInvariantName : IProviderInvariantName
-    internal class EntityFrameworkExecutionBlock : ExecutionBlockBase
-    internal class Resources {
-        private class UnvalidatedEnumerableValueProvider : IUnvalidatedEnumerableValueProvider
-    internal class Resources {
 //    public class AdminPolicy : IRuntimePolicy
 //    public class CartTab : AspNetTab, ITabLayout, ILayoutControl
 //    public class ConfigurationTab : AspNetTab 
@@ -29,44 +7,24 @@
 //    public class InventoryResource : IResource
 //    public class QueryClientScript : IStaticClientScript
 //    public class QueryResource : IResource
-    static partial class SqlMapper
-        partial class Link<TKey, TValue> where TKey : class
-        partial class CacheInfo
-        partial class DontMap { }
-        sealed partial class DapperTable
-        sealed partial class DapperRowMetaObject : System.Dynamic.DynamicMetaObject
-        sealed partial class DapperRow
-    partial class DynamicParameters : SqlMapper.IDynamicParameters
-        partial class ParamInfo
-    sealed partial class DbString
-    partial class FeatureSupport
-    sealed partial class SimpleMemberMap : SqlMapper.IMemberMap
-    sealed partial class DefaultTypeMap : SqlMapper.ITypeMap
-    sealed partial class CustomPropertyTypeMap : SqlMapper.ITypeMap
 //    public class SupportPolicy : IRuntimePolicy
-        internal class ExternalLoginResult : ActionResult
-        private class SimpleMembershipInitializer
-        internal class ExternalLoginResult : ActionResult
-        private class SimpleMembershipInitializer
-    internal class SerializableTestObject : ISerializable
-    internal class NonSerializableTestObject
-    internal class NonSerializableTestObjectWithToString : NonSerializableTestObject
-        private class GenericTab : TabBase<DummyObjectContext>
-        private class TestingTab : TabBase
-        private class ResourceExecutionAndResultingRuntimePolicyTestCase
-        private class MyResourceWithDependencies : IResource, IDependOnResources
-    internal class TestObjectWithException
-    internal class TestObjectWithJsonAttributes
-    internal class TestObjectAsISerializable : ISerializable
-        private class ClientResourceWithBadResourceName : ClientResource
-        private class FileResourceTester : FileResource
-        private class DummyClass
-    internal static class AuthConfig
-    internal class Resources {
-        private class TempListItem
-    internal class Resources {
-    internal class Resources {
-    internal class IPAddressConverter : JsonConverter
-    internal class IPEndPointConverter : JsonConverter
-    internal class Resources {
-    internal class Resources {
+//    public sealed class Insight : IDynamicClientScript
+//    public class InsightResource : FileResource, IKey
+//    public class AdminPolicy : IRuntimePolicy
+//    public class CartTab : AspNetTab, ITabLayout, ILayoutControl
+//    public class ConfigurationTab : AspNetTab 
+//    public class InventoryClientScript : IStaticClientScript
+//    public class InventoryResource : IResource
+//    public class QueryClientScript : IStaticClientScript
+//    public class QueryResource : IResource
+//    public class SupportPolicy : IRuntimePolicy
+//    public sealed class Insight : IDynamicClientScript
+//    public class InsightResource : FileResource, IKey
+//    public class AdminPolicy : IRuntimePolicy
+//    public class CartTab : AspNetTab, ITabLayout, ILayoutControl
+//    public class ConfigurationTab : AspNetTab 
+//    public class InventoryClientScript : IStaticClientScript
+//    public class InventoryResource : IResource
+//    public class QueryClientScript : IStaticClientScript
+//    public class QueryResource : IResource
+//    public class SupportPolicy : IRuntimePolicy
