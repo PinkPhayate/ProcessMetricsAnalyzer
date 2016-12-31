@@ -18,15 +18,9 @@ public class DiffAnalyzer {
 
 	public TreeMap<String,Integer> getDifference (String prev_file, String crnt_file) {
 
-		try {
-			ArrayList<String> prevFileStrs = FileReading.readFile(prev_file);
-			ArrayList<String> currentFileStrs = FileReading.readFile(crnt_file);
-			return getDifference(prevFileStrs, currentFileStrs);
-
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-		return null;
+		ArrayList<String> prevFileStrs = FileReading.readFile(prev_file);
+		ArrayList<String> currentFileStrs = FileReading.readFile(crnt_file);
+		return getDifference(prevFileStrs, currentFileStrs);
 	}
 	private TreeMap<String,Integer> getDifference (ArrayList<String> prevs, ArrayList<String> currs) {
 

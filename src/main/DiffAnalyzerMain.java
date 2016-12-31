@@ -20,7 +20,7 @@ public class DiffAnalyzerMain {
 	 * 
 	 * 
 	 */
-	static final Logger logger = Logger.getLogger(DiffAnalyzerMain.class.getName());
+	public static final Logger logger = Logger.getLogger(DiffAnalyzerMain.class.getName());
 	public static ArrayList<String> originRecord;
 	public static void main(String args[]) {
 // TODO	Bug: there are same named file in current-modules.txt for eg. TestMessage

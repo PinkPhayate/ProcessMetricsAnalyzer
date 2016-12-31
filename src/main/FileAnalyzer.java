@@ -52,13 +52,8 @@ public class FileAnalyzer {
 	}
 	public void extractClassModule (String filename) {
 		List<String> fileStrs = null;
+		fileStrs = FileReading.readFile(filename);
 
-		try {
-			fileStrs = FileReading.readFile(filename);
-		} catch (IOException e) {
-			DiffAnalyzerMain.logger.warning( filename + "IOException occured");
-			return ;
-		}
 		
 		// count line of code
 		int numberOfLine = 0;
@@ -81,7 +76,7 @@ public class FileAnalyzer {
 				// comment line
 			}else {
 				/** Class Module is beginning*/
-				if ( isStartOfClassLine ( line ) ) {
+				if ( isClassLine ( line ) ) {
 					// put beginning position
 					begenningPosition = numberOfLine;
 					// extract class name
@@ -131,21 +126,25 @@ public class FileAnalyzer {
 		String[] array = line.split(" ");
 		List<String> list = this.removeExtracts( Arrays.asList(array) );
 
-		if (!this.isClassLine( list ) ) {
-			return null;
-		}
 		int index = list.indexOf("class");
 		if ( index+1 < list.size() ) {
 			return list.get(index + 1);
 		}
 		return null;
 	}
+	private boolean isClassLine ( String line ) {
+		String[] array = line.split(" ");
+		List<String> list = this.removeExtracts( Arrays.asList(array) );
+		return this.isClassLine( list );
+	}
+
 	/** confirm that line if it is beginning of class */
 	private boolean isClassLine ( List<String> list ) {
 		// remove space and null
 
 		// there are 'class' in array
 		int CLASS = list.indexOf("class");        
+		int PUBLIC = list.indexOf("public");        
         if( CLASS == -1)	return false;
         
         // there are reserved word in array
@@ -153,18 +152,10 @@ public class FileAnalyzer {
         	int position = list.indexOf( rw );
         	if ( position != -1 ) return true;				
         }
-		return false;
-	}
-	private boolean isStartOfClassLine ( String line ) {
-		// there are 'class' in array
-		int CLASS = line.indexOf("class");        
-        if( CLASS == -1)	return false;
-        
-        // there are reserved word in array
-        for ( String rw : this.reservedWords ) {
-        	int position = line.indexOf( rw );
-        	if ( position != -1 ) return true;				
+        if( PUBLIC > -1) {
+        	return true;
         }
+
 		return false;
 	}
 	
