@@ -11,8 +11,13 @@ import lib.FileWriting;
 import test.FileAnalizerTest;
 
 public class FileAnalyzer {
-	//	private String MODULE_START = "public class";
-	private List<String> MODULE_START = Arrays.asList(
+	private final String[] reservedWords = {
+			"static",
+			"abstract",
+			"partial",
+			"sealed"
+	};
+	private final List<String> MODULE_START = Arrays.asList(
 			"public class",
 			"public static class",
 			"public abstract class",
@@ -64,128 +69,113 @@ public class FileAnalyzer {
 		int begenningPosition = -1;
 		int endingPosition = -1;
 		
-		// indicator to count '{'
+		// indicator to count '{ or }'
 		int numStart = 0;
 		int numEnd = 0;
 		
 		// create module instance
 		Module module = new Module( filename );
 		for(String line: fileStrs) {
-			
-			/** Class Module is beginning*/
-			if ( this.confirmBeginningClass(line) ) {
-				// put beginning position
-				begenningPosition = numberOfLine;
-				// extract class name
-				String className = this.extractClassName(line);
-				if(className == null
-						&& FileAnalizerTest.linesJudgedNotClassLogger != null) {
-					FileAnalizerTest.linesJudgedNotClassLogger.add( line );
-				}else if ( className == null ) {
-					DiffAnalyzerMain.logger.warning( filename +" has null classname" );
+			// when line means comment, getting out!
+			if ( line.indexOf( "//") != -1 ) {
+				// comment line
+			}else {
+				/** Class Module is beginning*/
+				if ( isStartOfClassLine ( line ) ) {
+					// put beginning position
+					begenningPosition = numberOfLine;
+					// extract class name
+					String classname = this.extractClassName(line);
+					if (classname == null ) {
+						String errorMsg = filename+" has null classname\n"+line;
+						DiffAnalyzerMain.logger.warning( errorMsg );
+						// when test
+						if ( FileAnalizerTest.linesJudgedNotClassLogger != null ) {
+							FileAnalizerTest.linesJudgedNotClassLogger.add( errorMsg );
+						}
+					}else {
+						module.putClassName(classname);
+					}
 				}
-				else {
-					module.putClassName(className);
+				if (line.indexOf("{") != -1) {
+					//count number of '{'
+					numStart += this.countChar(line, "{");
 				}
-				
-				// put class name
-//				Module module = new Module( filename, classname );
-			}
-			if (line.indexOf("{") != -1) {
-				//count number of '{'
-				numStart += this.countChar(line, "{");
-			}
-			if (line.indexOf("}") != -1) {
-				//count number of '}'
-				numEnd += this.countChar(line, "}");
-				// if number of '{' is same number of '}' -> class be over
-				if (numStart == numEnd) {
-					/** Class module was over */
-					// put end position
-					endingPosition = numberOfLine;
-					// initialize
-					numStart = 0;
-					numEnd = 0;
-					// if module has class name
-					if(module.getClassName() != "") {
-						module.putPositions(begenningPosition, endingPosition);
-						// put module to ArrayList
-						this.modules.add(module);
-						//initialize module
-						module = new Module( filename );
+				if (line.indexOf("}") != -1) {
+					//count number of '}'
+					numEnd += this.countChar(line, "}");
+					// if number of '{' is same number of '}' -> class be over
+					if (numStart == numEnd) {
+						/** Class module was over */
+						// put end position
+						endingPosition = numberOfLine;
+						// initialize
+						numStart = 0;
+						numEnd = 0;
+						// if module has class name
+						if(module.getClassName() != null ) {
+							module.putPositions(begenningPosition, endingPosition);
+							// put module to ArrayList
+							this.modules.add(module);
+							//initialize module
+							module = new Module( filename );
+						}
 					}
 				}
 			}
 			numberOfLine++;
 		}
 	}
-	private boolean confirmBeginningClass ( String line ) {
-		for ( String formal: this.MODULE_START) {
-			if ( line.indexOf( formal ) != -1) {
-				return true;
-			}
-		}
-
-		return false;
-	}
 
 	private String extractClassName(String line) {
-		// if line means comment, getting out!
-		if( line.indexOf( "//") != -1) {
-			return null;
-		}
 		String[] array = line.split(" ");
-		if (!this.isClassLine( array ) ) {
+		List<String> list = this.removeExtracts( Arrays.asList(array) );
+
+		if (!this.isClassLine( list ) ) {
 			return null;
 		}
-		for(int i=0; i<array.length-1; i++) {
-			if (array[i].equals("class")) {
-				return array[i+1];
-			}
+		int index = list.indexOf("class");
+		if ( index+1 < list.size() ) {
+			return list.get(index + 1);
 		}
 		return null;
 	}
 	/** confirm that line if it is beginning of class */
-	private boolean isClassLine (String[] array) {
-		List<String> list = Arrays.asList(array);
-		list = this.removeExtracts(list);
-		int PUBLIC = list.indexOf("public");
-		int CLASS = list.indexOf("class");
-        int STATIC = list.indexOf("static");
-        int ABSTRACT = list.indexOf("abstract");
-        int PARTIAL = list.indexOf("partial");
-        int SEALED = list.indexOf("sealed");
-        
-        
-		/** constrain to public class line*/
-		if( PUBLIC == -1)	return false;
-		if( CLASS == -1)	return false;
-		if( PUBLIC+1 == CLASS)	return true;
-		if( PUBLIC+2 == CLASS) {
-			if( PUBLIC+1 == STATIC )	return true;
-			if( PUBLIC+1 == ABSTRACT )	return true;
-			if( PUBLIC+1 == PARTIAL )	return true;
-			if( PUBLIC+1 == SEALED )	return true;			
-		}
+	private boolean isClassLine ( List<String> list ) {
+		// remove space and null
 
-		/** constrain to public static class line*/		
-		if( STATIC == -1 || ABSTRACT == -1 ||
-				PARTIAL == -1 || SEALED == -1 ) {
-			return false;
-		}
-		if( PUBLIC+2 == CLASS)	return true;
-
+		// there are 'class' in array
+		int CLASS = list.indexOf("class");        
+        if( CLASS == -1)	return false;
+        
+        // there are reserved word in array
+        for ( String rw : this.reservedWords ) {
+        	int position = list.indexOf( rw );
+        	if ( position != -1 ) return true;				
+        }
 		return false;
 	}
+	private boolean isStartOfClassLine ( String line ) {
+		// there are 'class' in array
+		int CLASS = line.indexOf("class");        
+        if( CLASS == -1)	return false;
+        
+        // there are reserved word in array
+        for ( String rw : this.reservedWords ) {
+        	int position = line.indexOf( rw );
+        	if ( position != -1 ) return true;				
+        }
+		return false;
+	}
+	
 	
 	private List<String> removeExtracts(List<String> list) {
 		List<String> modifiedList = new ArrayList<String>();
 		for ( String element: list) {
-			modifiedList.add( element.replaceAll("\t", ""));
-		}
-		for ( int i=0;i<modifiedList.size();i++) {
-			String element = modifiedList.get( i );
-			if ( element.length() == 0 )	modifiedList.remove( i );
+			element = element.replaceAll("\t", "");
+			if ( element.length() > 0) {
+				modifiedList.add(element);
+			}
 		}
 		return modifiedList;
 	}

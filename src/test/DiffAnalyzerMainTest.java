@@ -38,7 +38,7 @@ public class DiffAnalyzerMainTest {
 //			e.printStackTrace();
 //		}
 		int expected = currFileStrs.size();
-		System.out.println( "Actual: "+actual );	//745
+		System.out.println( "Actual: "+actual );	//908
 		System.out.println( "Expected: "+expected );	//1830
 		try {
 			FileWriting.writeFile(FileAnalizerTest.linesJudgedNotClassLogger, "linesJudgedNotClass.txt");

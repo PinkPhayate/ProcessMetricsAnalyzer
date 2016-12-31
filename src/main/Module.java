@@ -4,8 +4,8 @@ package main;
 import java.util.TreeMap;
 
 public class Module {
-	private String fileName;
-	private String className;
+	private String fileName = null;
+	private String className = null;
 	
 	protected int begenningPosition = -1;
 	protected int endingPosition = -1;

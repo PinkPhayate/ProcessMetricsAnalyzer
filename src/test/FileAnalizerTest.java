@@ -26,6 +26,7 @@ public class FileAnalizerTest {
 	public void test() {
 		fail("Not yet implemented");
 	}
+	/** unit test */
 	@Test
 	public void testÉxtractClassName() {
 
@@ -68,24 +69,43 @@ public class FileAnalizerTest {
 	}
 	public static ArrayList<String> linesJudgedNotClassLogger ;
 	@Test
-	public void extrsctClassName () {
+	public void testExtractClassModule2 () {
+		/**
+		 * This test make you confirm reject line or not about begin of class
+		 * */
 		linesJudgedNotClassLogger = new ArrayList<String>();
 		
-		// get file list in directory
-		String suffix = "cs";
-		String cvDirectory = "/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet";
-		ArrayList<String> currFileStrs = this.getFileList(suffix, cvDirectory);
+		ArrayList<String> currFileStrs = this.getFileListFromTestData ();
 
 		FileAnalyzer fileAnalyzer = new FileAnalyzer();
-		ArrayList<Module> currentModules = fileAnalyzer.getModules(currFileStrs);
+		fileAnalyzer.getModules(currFileStrs);
+		fileAnalyzer.saveModules( "current-modules.txt" );
+		// reject
 		try {
 			FileWriting.writeFile(linesJudgedNotClassLogger, "linesJudgedNotClass.txt");
+			
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 
 	}
+	@Test
+	public void examineClassLineNotExtracted () {
+		
+		FileAnalyzer fileAnalyzer  = new FileAnalyzer();
+		try {
+			ArrayList<String> lines = FileReading.readFile( "linesJudgedNotClass.txt");
+			for ( int index=1;index<lines.size();index+=2 ) {
+				Method method = FileAnalyzer.class.getDeclaredMethod(
+						"extractClassName", String.class );
+				method.setAccessible(true);
+				String actual = (String)method.invoke(fileAnalyzer, lines.get(index));
+			}
+		} catch ( Exception e) {
+			e.printStackTrace();
+		}
+	}
+
 	@Test
 	public void testConfirmBeginningClass () {
 		try {
@@ -105,26 +125,6 @@ public class FileAnalizerTest {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-	}
-	@Test
-	public void testClassLineNotExtracted () {
-		String str = "public  class  Hoge {";
-//		String [] array = str.split( " " );
-//		for (String s: array) {
-//			System.out.println( s.length() );
-//		}
-		try {
-			method = FileAnalyzer.class.getDeclaredMethod(
-					"extractClassName", String.class );
-			method.setAccessible(true);
-			String actual = (String)method.invoke(fileAnalyzer, str);
-			String expected = "Hoge";
-			assertEquals(expected, actual);
-		} catch ( Exception e) {
-			e.printStackTrace();
-		}
-
-		
 	}
 	@Test
 	public void testExtractClassNameNotExtracted () {
@@ -168,6 +168,13 @@ public class FileAnalizerTest {
 		
 	}
 	private ArrayList<String> getFileList (String suffix, String directory) {
+		FileListGetter search = new FileListGetter(suffix);
+		return search.getFileList( directory );
+
+	}
+	private ArrayList<String> getFileListFromTestData () {
+		String suffix = "cs";
+		String directory = "/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet";
 		FileListGetter search = new FileListGetter(suffix);
 		return search.getFileList( directory );
 
