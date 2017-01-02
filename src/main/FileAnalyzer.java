@@ -97,6 +97,7 @@ public class FileAnalyzer {
 		// indicator to count '{ or }'
 		int numStart = 0;
 		int numEnd = 0;
+		int blockIndicator = 9999;
 		
 		// create module instance
 		Module module = new Module( filename );
@@ -140,18 +141,22 @@ public class FileAnalyzer {
 							containment = new ArrayList<String>();
 							containment.add( line );
 							module.putClassName(classname);
+							blockIndicator = 0;
 						}
 					}
 				}
 				if (line.indexOf("{") != -1) {
 					//count number of '{'
 					numStart += this.countChar(line, "{");
+					blockIndicator ++;
 				}
 				if (line.indexOf("}") != -1) {
 					//count number of '}'
 					numEnd += this.countChar(line, "}");
+					blockIndicator --;
 					// if number of '{' is same number of '}' -> class be over
-					if (numStart == numEnd) {
+//					if (numStart == numEnd) {
+					if ( blockIndicator == 0) {
 						/** Class module was over */
 						// put end position
 						endingPosition = numberOfLine;
@@ -166,6 +171,7 @@ public class FileAnalyzer {
 							this.modules.add(module);
 							//initialize module
 							module = new Module( filename );
+							containment = new ArrayList<String>();
 						}
 					}
 				}
