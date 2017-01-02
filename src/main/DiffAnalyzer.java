@@ -82,19 +82,15 @@ public class DiffAnalyzer {
 					this.searchModuleByClassName( previousModules, currentModule.getClassName() );
 			DiffAnalyzerMain.logger.info( currentModule.getClassName()  );
 			if (previousModule != null) {
-				try {
-					//get ArrayList about current version by beginning, end line number
-					ArrayList<String> currentClass = this.putClassText( currentModule );
-					// get ArrayList about previous version by beginning, end line number
-					ArrayList<String> previousClass = this.putClassText( previousModule );
+				//get ArrayList about current version by beginning, end line number
+				ArrayList<String> currentClass = currentModule.getModuleContainment();
+				// get ArrayList about previous version by beginning, end line number
+				ArrayList<String> previousClass = previousModule.getModuleContainment();
 
-					// get differences
-					TreeMap<String,Integer> differences = this.getDifference(previousClass, currentClass);
-					// calculate process metrics
-					currentModule.calculateMetrics(differences);
-				} catch (IOException e) {
-					e.printStackTrace();
-				}				
+				// get differences
+				TreeMap<String,Integer> differences = this.getDifference(previousClass, currentClass);
+				// calculate process metrics
+				currentModule.calculateMetrics(differences);				
 			}else {
 				currentModule.isNew();				
 			}

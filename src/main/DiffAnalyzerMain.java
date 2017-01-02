@@ -57,7 +57,8 @@ public class DiffAnalyzerMain {
 
 		/** Step 3 */
 		DiffAnalyzer diffAnalyzer = new DiffAnalyzer();
-		ArrayList<String> record = diffAnalyzer.compareTwoVersion(currentModules, previousModules);
+		ArrayList<String> record =
+				diffAnalyzer.compareTwoVersion(currentModules, previousModules);
 		originRecord = record;
 		try {
 			FileWriting.writeFile(record, mainDirecotory + "processmetrics.csv");
