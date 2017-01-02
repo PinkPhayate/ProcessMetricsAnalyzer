@@ -50,14 +50,35 @@ public class FileAnalyzer {
 			}
 		}
 	}
+	private String join ( List<String> array ) {
+		String str = "";
+		for ( String element: array ) {
+			str = str.concat( element );
+		}
+		return str;
+	}
 	private String removeSpace ( String line ) {
-		
+		String[] array = line.split(" ");
+		List<String> list = this.removeTab( Arrays.asList(array) );
+		String str = this.join( list );
+		return str;
 	}
 	private int confirmComment ( String line ) {
-		//	when // in line, return 0
+		line = this.removeSpace( line );
+		//	when // in line, return 1
+		if ( line.indexOf("//") != -1 ) {
+			return 1;
+		}
 		//	when */ in line, return 1
+		if ( line.indexOf("*/") != -1 ) {
+			return 1;
+		}
 		//	when /* in line, return 2
+		if ( line.indexOf("/*") != -1 ) {
+			return 2;
+		}
 		//	else return 0
+		return 0;
 	}
 	public void extractClassModule (String filename) {
 		List<String> fileStrs = null;
@@ -79,12 +100,22 @@ public class FileAnalyzer {
 		
 		// create module instance
 		Module module = new Module( filename );
+		boolean isContinued = false;
 		for(String line: fileStrs) {
 			// when line means comment, getting out!
-			if ( line.indexOf( "//") != -1 ) {
-				// comment line
-			}else {
+//			if ( line.indexOf( "//") != -1 ) {
+//				// comment line
+			int statusCode = this.confirmComment( line );
+			if ( statusCode == 2 ) {
+				isContinued = true;
+			}
+			// status code==0 and is not continue -> script block  
+			if ( statusCode != 0 || isContinued ) {
+				// this is commet line
+			}
+			else {
 				/** Class Module is beginning*/
+				isContinued = false;
 				if ( isClassLine ( line ) ) {
 					// put beginning position
 					begenningPosition = numberOfLine;
