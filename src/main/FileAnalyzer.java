@@ -50,6 +50,15 @@ public class FileAnalyzer {
 			}
 		}
 	}
+	private String removeSpace ( String line ) {
+		
+	}
+	private int confirmComment ( String line ) {
+		//	when // in line, return 0
+		//	when */ in line, return 1
+		//	when /* in line, return 2
+		//	else return 0
+	}
 	public void extractClassModule (String filename) {
 		List<String> fileStrs = null;
 		fileStrs = FileReading.readFile(filename);
@@ -124,7 +133,7 @@ public class FileAnalyzer {
 
 	private String extractClassName(String line) {
 		String[] array = line.split(" ");
-		List<String> list = this.removeExtracts( Arrays.asList(array) );
+		List<String> list = this.removeTab( Arrays.asList(array) );
 
 		int index = list.indexOf("class");
 		if ( index+1 < list.size() ) {
@@ -134,7 +143,7 @@ public class FileAnalyzer {
 	}
 	private boolean isClassLine ( String line ) {
 		String[] array = line.split(" ");
-		List<String> list = this.removeExtracts( Arrays.asList(array) );
+		List<String> list = this.removeTab( Arrays.asList(array) );
 		return this.isClassLine( list );
 	}
 
@@ -160,10 +169,14 @@ public class FileAnalyzer {
 	}
 	
 	
-	private List<String> removeExtracts(List<String> list) {
+	private List<String> removeTab(List<String> list) {
 		List<String> modifiedList = new ArrayList<String>();
 		for ( String element: list) {
-			element = element.replaceAll("\t", "");
+			int num = element.indexOf("\t");
+			while ( num != -1 ) {
+				element = element.replaceAll("\t", "");
+				num = element.indexOf("\t");				
+			}
 			if ( element.length() > 0) {
 				modifiedList.add(element);
 			}
