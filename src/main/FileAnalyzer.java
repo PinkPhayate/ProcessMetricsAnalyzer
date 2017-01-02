@@ -100,6 +100,7 @@ public class FileAnalyzer {
 		
 		// create module instance
 		Module module = new Module( filename );
+		ArrayList<String> containment = null;
 		boolean isContinued = false;
 		for(String line: fileStrs) {
 			// when line means comment, getting out!
@@ -116,10 +117,14 @@ public class FileAnalyzer {
 				// this is commet line
 			}
 			else {
-				/** Class Module is beginning*/
+				/** not comment line*/
+				if (containment != null ) {
+					containment.add( line );
+				}
 				if ( isClassLine ( line ) ) {
 					// put beginning position
 					begenningPosition = numberOfLine;
+
 					// extract class name
 					String classname = this.extractClassName(line);
 					if (classname == null ) {
@@ -130,7 +135,12 @@ public class FileAnalyzer {
 							FileAnalizerTest.linesJudgedNotClassLogger.add( errorMsg );
 						}
 					}else {
-						module.putClassName(classname);
+						/** class script starts */
+						if ( containment == null) {
+							containment = new ArrayList<String>();
+							containment.add( line );
+							module.putClassName(classname);
+						}
 					}
 				}
 				if (line.indexOf("{") != -1) {
@@ -148,10 +158,11 @@ public class FileAnalyzer {
 						// initialize
 						numStart = 0;
 						numEnd = 0;
-						// if module has class name
+						// when module has class name
 						if(module.getClassName() != null ) {
 							module.putPositions(begenningPosition, endingPosition);
 							// put module to ArrayList
+							module.putModuleContainment(containment);
 							this.modules.add(module);
 							//initialize module
 							module = new Module( filename );

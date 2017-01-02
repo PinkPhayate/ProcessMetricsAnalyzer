@@ -1,6 +1,7 @@
 package main;
 
 
+import java.util.ArrayList;
 import java.util.TreeMap;
 
 public class Module {
@@ -10,6 +11,7 @@ public class Module {
 	protected int begenningPosition = -1;
 	protected int endingPosition = -1;
 	
+	private ArrayList<String> containment = null;
 	private double M1 = 0;
 	private double M2 = 0;
 	private double M3 = 0;
@@ -34,8 +36,14 @@ public class Module {
 		this.begenningPosition = begenningPosition;
 		this.endingPosition = endingPosition;
 	}
+	public void putModuleContainment ( ArrayList<String> containment) {
+		this.containment = containment;
+	}
 	public void putClassName (String className) {
 		this.className = className;
+	}
+	public ArrayList<String> getModuleContainment () {
+		return this.containment;
 	}
 	public String getClassName() {
 		return this.className;

@@ -1,148 +1,148 @@
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/Glimpse.Test.Ado/CommandSanitizerShould.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Ado/AlternateType/GlimpseDbCommand.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Ado/AlternateType/GlimpseDbConnection.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Ado/AlternateType/GlimpseDbDataAdapter.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Ado/AlternateType/GlimpseDbDataReader.cs: 
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/Glimpse.Test.Ado/CommandSanitizerShould.cs: CommandSanitizerShould
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Ado/AlternateType/GlimpseDbCommand.cs: GlimpseDbCommand
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Ado/AlternateType/GlimpseDbConnection.cs: GlimpseDbConnection
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Ado/AlternateType/GlimpseDbDataAdapter.cs: GlimpseDbDataAdapter
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Ado/AlternateType/GlimpseDbDataReader.cs: GlimpseDbDataReader
 /Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Ado/AlternateType/GlimpseDbProviderFactory.cs: GlimpseDbProviderFactory
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Ado/AlternateType/GlimpseDbTransaction.cs: 
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Ado/AlternateType/GlimpseDbTransaction.cs: GlimpseDbTransaction
 /Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Ado/AlternateType/Support.cs: Support
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Ado/Display/SqlDisplay.cs: 
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Ado/Display/SqlDisplay.cs: SqlDisplay
 /Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Ado/Extensibility/ICommandParameterParser.cs: 
 /Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Ado/Initialize.cs: Initialize
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Ado/Inspector/AdoInspector.cs: 
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Ado/Inspector/AdoInspector.cs: AdoInspector
 /Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Ado/Inspector/Core/AdoExecutionBlock.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Ado/Inspector/Core/DbProviderFactoriesExecutionTask.cs: 
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Ado/Inspector/Core/DbProviderFactoriesExecutionTask.cs: DbProviderFactoriesExecutionTask
 /Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Ado/Message/AdoCommandMessage.cs: AdoCommandMessage
 /Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Ado/Message/AdoMessage.cs: AdoMessage
 /Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Ado/Message/AdoTransactionMessage.cs: AdoTransactionMessage
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Ado/Message/CommandDurationAndRowCountMessage.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Ado/Message/CommandErrorMessage.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Ado/Message/CommandExecutedMessage.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Ado/Message/CommandExecutedParamater.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Ado/Message/CommandRowCountMessage.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Ado/Message/ConnectionClosedMessage.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Ado/Message/ConnectionStartedMessage.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Ado/Message/DtcTransactionCompletedMessage.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Ado/Message/DtcTransactionEnlistedMessage.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Ado/Message/MvcTimelineCategory.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Ado/Message/TransactionBeganMessage.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Ado/Message/TransactionCommitMessage.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Ado/Message/TransactionRollbackMessage.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Ado/Model/CommandMetadata.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Ado/Model/CommandParameterMetadata.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Ado/Model/ConnectionMetadata.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Ado/Model/MessageAggregator.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Ado/Model/QueryMetadata.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Ado/Model/TransactionMetadata.cs: 
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Ado/Message/CommandDurationAndRowCountMessage.cs: CommandDurationAndRowCountMessage
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Ado/Message/CommandErrorMessage.cs: CommandErrorMessage
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Ado/Message/CommandExecutedMessage.cs: CommandExecutedMessage
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Ado/Message/CommandExecutedParamater.cs: CommandExecutedParamater
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Ado/Message/CommandRowCountMessage.cs: CommandRowCountMessage
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Ado/Message/ConnectionClosedMessage.cs: ConnectionClosedMessage
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Ado/Message/ConnectionStartedMessage.cs: ConnectionStartedMessage
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Ado/Message/DtcTransactionCompletedMessage.cs: DtcTransactionCompletedMessage
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Ado/Message/DtcTransactionEnlistedMessage.cs: DtcTransactionEnlistedMessage
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Ado/Message/MvcTimelineCategory.cs: AdoTimelineCategory
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Ado/Message/TransactionBeganMessage.cs: TransactionBeganMessage
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Ado/Message/TransactionCommitMessage.cs: TransactionCommitMessage
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Ado/Message/TransactionRollbackMessage.cs: TransactionRollbackMessage
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Ado/Model/CommandMetadata.cs: CommandMetadata
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Ado/Model/CommandParameterMetadata.cs: CommandParameterMetadata
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Ado/Model/ConnectionMetadata.cs: ConnectionMetadata
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Ado/Model/MessageAggregator.cs: MessageAggregator
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Ado/Model/QueryMetadata.cs: QueryMetadata
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Ado/Model/TransactionMetadata.cs: TransactionMetadata
 /Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Ado/Resources.Designer.cs: 
 /Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Ado/SqlStatistics.cs: 
 /Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Ado/SqlStatisticsCalculator.cs: SqlStatisticsCalculator
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Ado/Tab/Sql.cs: 
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Ado/Tab/Sql.cs: SQL
 /Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Ado/Tab/Support/CommandParameterParser.cs: 
 /Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Ado/Tab/Support/CommandSanitizer.cs: 
 /Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.AspNet/AlternateType/IRouteNameMixin.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.AspNet/AlternateType/Route.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.AspNet/AlternateType/RouteBase.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.AspNet/AlternateType/RouteConstraint.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.AspNet/AlternateType/RouteConstraintRegex.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.AspNet/AlternateType/RouteNameMixin.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.AspNet/AspNetFrameworkProvider.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.AspNet/AspNetServiceLocator.cs: 
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.AspNet/AlternateType/Route.cs: Route
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.AspNet/AlternateType/RouteBase.cs: RouteBase
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.AspNet/AlternateType/RouteConstraint.cs: RouteConstraint
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.AspNet/AlternateType/RouteConstraintRegex.cs: RouteConstraintRegex
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.AspNet/AlternateType/RouteNameMixin.cs: RouteNameMixin
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.AspNet/AspNetFrameworkProvider.cs: AspNetFrameworkProvider
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.AspNet/AspNetServiceLocator.cs: AspNetServiceLocator
 /Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.AspNet/Constants.cs: Constants
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.AspNet/Controls/Client.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.AspNet/Display/EnvironmentDisplay.cs: 
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.AspNet/Controls/Client.cs: Client
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.AspNet/Display/EnvironmentDisplay.cs: EnvironmentDisplay
 /Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.AspNet/Extensibility/AspNetTab.cs: AspNetTab
 /Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.AspNet/Extensions/HttpContextExtensions.cs: HttpContextExtensions
 /Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.AspNet/Extensions/RuntimePolicyContextExtensions.cs: RuntimePolicyContextExtensions
 /Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.AspNet/Extensions/TabContextExtensions.cs: TabContextExtensions
 /Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.AspNet/HttpApplicationBase.cs: HttpApplicationBase
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.AspNet/HttpApplicationStateBaseDataStoreAdapter.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.AspNet/HttpApplicationWrapper.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.AspNet/HttpHandler.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.AspNet/HttpHandlerEndpointConfiguration.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.AspNet/HttpModule.cs: 
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.AspNet/HttpApplicationStateBaseDataStoreAdapter.cs: HttpApplicationStateBaseDataStoreAdapter
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.AspNet/HttpApplicationWrapper.cs: HttpApplicationWrapper
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.AspNet/HttpHandler.cs: HttpHandler
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.AspNet/HttpHandlerEndpointConfiguration.cs: HttpHandlerEndpointConfiguration
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.AspNet/HttpModule.cs: HttpModule
 /Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.AspNet/HttpRuntimeShutdownMessageResolver.cs: HttpRuntimeShutdownMessageResolver
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.AspNet/Inspector/RoutesInspector.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.AspNet/Message/ProcessConstraintMessage.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.AspNet/Message/RouteDataMessage.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.AspNet/Model/CacheConfigurationModel.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.AspNet/Model/CacheItemModel.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.AspNet/Model/CacheModel.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.AspNet/Model/ConfigurationAuthenticationFormsCredentialsModel.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.AspNet/Model/ConfigurationAuthenticationFormsModel.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.AspNet/Model/ConfigurationAuthenticationModel.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.AspNet/Model/ConfigurationConnectionStringModel.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.AspNet/Model/ConfigurationCustomErrorsErrorModel.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.AspNet/Model/ConfigurationCustomErrorsModel.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.AspNet/Model/ConfigurationHttpHandlersModel.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.AspNet/Model/ConfigurationHttpModulesModel.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.AspNet/Model/ConfigurationModel.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.AspNet/Model/ConfigurationRoleManagerModel.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.AspNet/Model/ConfigurationRoleManagerProviderSettingsModel.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.AspNet/Model/EnvironmentAssemblyModel.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.AspNet/Model/EnvironmentFrameworkModel.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.AspNet/Model/EnvironmentMachineModel.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.AspNet/Model/EnvironmentModel.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.AspNet/Model/EnvironmentProcessModel.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.AspNet/Model/EnvironmentTimeZoneModel.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.AspNet/Model/EnvironmentWebServerModel.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.AspNet/Model/RequestModel.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.AspNet/Model/RouteConstraintModel.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.AspNet/Model/RouteDataItemModel.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.AspNet/Model/RouteModel.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.AspNet/Model/ServerModel.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.AspNet/Model/SessionModel.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.AspNet/Model/UriTokenInstance.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.AspNet/Policy/LocalPolicy.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.AspNet/PreBodyTagFilter.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.AspNet/RequestMetadata.cs: 
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.AspNet/Inspector/RoutesInspector.cs: RoutesInspector
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.AspNet/Message/ProcessConstraintMessage.cs: ProcessConstraintMessage
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.AspNet/Message/RouteDataMessage.cs: RouteDataMessage
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.AspNet/Model/CacheConfigurationModel.cs: CacheConfigurationModel
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.AspNet/Model/CacheItemModel.cs: CacheItemModel
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.AspNet/Model/CacheModel.cs: CacheModel
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.AspNet/Model/ConfigurationAuthenticationFormsCredentialsModel.cs: ConfigurationAuthenticationFormsCredentialsModel
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.AspNet/Model/ConfigurationAuthenticationFormsModel.cs: ConfigurationAuthenticationFormsModel
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.AspNet/Model/ConfigurationAuthenticationModel.cs: ConfigurationAuthenticationModel
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.AspNet/Model/ConfigurationConnectionStringModel.cs: ConfigurationConnectionStringModel
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.AspNet/Model/ConfigurationCustomErrorsErrorModel.cs: ConfigurationCustomErrorsErrorModel
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.AspNet/Model/ConfigurationCustomErrorsModel.cs: ConfigurationCustomErrorsModel
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.AspNet/Model/ConfigurationHttpHandlersModel.cs: ConfigurationHttpHandlersModel
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.AspNet/Model/ConfigurationHttpModulesModel.cs: ConfigurationHttpModulesModel
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.AspNet/Model/ConfigurationModel.cs: ConfigurationModel
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.AspNet/Model/ConfigurationRoleManagerModel.cs: ConfigurationRoleManagerModel
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.AspNet/Model/ConfigurationRoleManagerProviderSettingsModel.cs: ConfigurationRoleManagerProviderSettingsModel
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.AspNet/Model/EnvironmentAssemblyModel.cs: EnvironmentAssemblyModel
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.AspNet/Model/EnvironmentFrameworkModel.cs: EnvironmentFrameworkModel
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.AspNet/Model/EnvironmentMachineModel.cs: EnvironmentMachineModel
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.AspNet/Model/EnvironmentModel.cs: EnvironmentModel
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.AspNet/Model/EnvironmentProcessModel.cs: EnvironmentProcessModel
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.AspNet/Model/EnvironmentTimeZoneModel.cs: EnvironmentTimeZoneModel
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.AspNet/Model/EnvironmentWebServerModel.cs: EnvironmentWebServerModel
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.AspNet/Model/RequestModel.cs: RequestModel
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.AspNet/Model/RouteConstraintModel.cs: RouteConstraintModel
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.AspNet/Model/RouteDataItemModel.cs: RouteDataItemModel
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.AspNet/Model/RouteModel.cs: RouteModel
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.AspNet/Model/ServerModel.cs: ServerModel
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.AspNet/Model/SessionModel.cs: SessionModel
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.AspNet/Model/UriTokenInstance.cs: UriTokenInstance
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.AspNet/Policy/LocalPolicy.cs: LocalPolicy
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.AspNet/PreBodyTagFilter.cs: PreBodyTagFilter
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.AspNet/RequestMetadata.cs: RequestMetadata
 /Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.AspNet/Resources.Designer.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.AspNet/SerializationConverter/ConfigurationModelConverter.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.AspNet/SerializationConverter/ConfigurationRoleManagerProviderSettingsModelConverter.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.AspNet/SerializationConverter/EnvironmentModelConverter.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.AspNet/SerializationConverter/ListOfRouteModelConverter.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.AspNet/SerializationConverter/RequestModelConverter.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.AspNet/SerializationConverter/SessionModelConverter.cs: 
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.AspNet/SerializationConverter/ConfigurationModelConverter.cs: ConfigurationModelConverter
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.AspNet/SerializationConverter/ConfigurationRoleManagerProviderSettingsModelConverter.cs: ConfigurationRoleManagerProviderSettingsModelConverter
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.AspNet/SerializationConverter/EnvironmentModelConverter.cs: EnvironmentModelConverter
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.AspNet/SerializationConverter/ListOfRouteModelConverter.cs: ListOfRouteModelConverter
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.AspNet/SerializationConverter/RequestModelConverter.cs: RequestModelConverter
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.AspNet/SerializationConverter/SessionModelConverter.cs: SessionModelConverter
 /Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.AspNet/Support/Serialization.cs: Serialization
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.AspNet/Tab/Cache.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.AspNet/Tab/Configuration.cs: 
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.AspNet/Tab/Cache.cs: Cache
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.AspNet/Tab/Configuration.cs: Configuration
 /Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.AspNet/Tab/ConfigurationConnectionStringModelFactory.cs: ConfigurationConnectionStringModelFactory
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.AspNet/Tab/Environment.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.AspNet/Tab/Request.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.AspNet/Tab/Routes.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.AspNet/Tab/Server.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.AspNet/Tab/Session.cs: 
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.AspNet/Tab/Environment.cs: Environment
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.AspNet/Tab/Request.cs: Request
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.AspNet/Tab/Routes.cs: Routes
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.AspNet/Tab/Server.cs: Server
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.AspNet/Tab/Session.cs: Session
 /Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core.Net35/Backport/Net35Backport.cs: Net35Backport
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core.Net35/Backport/Tuple.cs: 
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core.Net35/Backport/Tuple.cs: Tuple<T1,
 /Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/ClientScript/Client.cs: Client
 /Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/ClientScript/Data.cs: Data
 /Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/ClientScript/Metadata.cs: Metadata
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Configuration/ContentTypeElement.cs: 
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Configuration/ContentTypeElement.cs: ContentTypeElement
 /Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Configuration/ContentTypeElementCollection.cs: ContentTypeElementCollection
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Configuration/DiscoverableCollectionElement.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Configuration/LoggingElement.cs: 
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Configuration/DiscoverableCollectionElement.cs: DiscoverableCollectionElement
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Configuration/LoggingElement.cs: LoggingElement
 /Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Configuration/LoggingLevel.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Configuration/PolicyDiscoverableCollectionElement.cs: 
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Configuration/PolicyDiscoverableCollectionElement.cs: PolicyDiscoverableCollectionElement
 /Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Configuration/RegexConverter.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Configuration/RegexElement.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Configuration/RegexElementCollection.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Configuration/Section.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Configuration/StatusCodeElement.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Configuration/StatusCodeElementCollection.cs: 
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Configuration/RegexElement.cs: RegexElement
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Configuration/RegexElementCollection.cs: RegexElementCollection
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Configuration/Section.cs: Section
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Configuration/StatusCodeElement.cs: StatusCodeElement
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Configuration/StatusCodeElementCollection.cs: StatusCodeElementCollection
 /Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Configuration/TypeConverter.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Configuration/TypeElement.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Configuration/TypeElementCollection.cs: 
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Configuration/TypeElement.cs: TypeElement
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Configuration/TypeElementCollection.cs: TypeElementCollection
 /Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Constants.cs: Constants
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Display/TimingsDisplay.cs: 
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Display/TimingsDisplay.cs: TimingsDisplay
 /Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Extensibility/AlternateMethod.cs: AlternateMethod
 /Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Extensibility/AlternateType.cs: AlternateType<T>
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Extensibility/AlternateTypeGenerationHook.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Extensibility/AlternateTypeSelector.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Extensibility/AlternateTypeToCastleInterceptorAdapter.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Extensibility/AntiXssEncoder.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Extensibility/CastleInvocationToAlternateMethodContextAdapter.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Extensibility/DictionaryDataStoreAdapter.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Extensibility/ExecutionTimer.cs: 
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Extensibility/AlternateTypeGenerationHook.cs: AlternateTypeGenerationHook<T>
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Extensibility/AlternateTypeSelector.cs: AlternateTypeSelector
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Extensibility/AlternateTypeToCastleInterceptorAdapter.cs: AlternateTypeToCastleInterceptorAdapter
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Extensibility/AntiXssEncoder.cs: AntiXssEncoder
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Extensibility/CastleInvocationToAlternateMethodContextAdapter.cs: CastleInvocationToAlternateMethodContextAdapter
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Extensibility/DictionaryDataStoreAdapter.cs: DictionaryDataStoreAdapter
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Extensibility/ExecutionTimer.cs: ExecutionTimer
 /Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Extensibility/IAlternateMethod.cs: 
 /Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Extensibility/IAlternateMethodContext.cs: 
 /Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Extensibility/IAlternateType.cs: 
@@ -180,33 +180,33 @@
 /Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Extensibility/ITabSetup.cs: 
 /Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Extensibility/ITabSetupContext.cs: 
 /Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Extensibility/IWrapper.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Extensibility/InspectorContext.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Extensibility/JsonNetConverterDictionaryKeysAreNotPropertyNames.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Extensibility/JsonNetSerializationConverterAdapter.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Extensibility/JsonNetSerializer.cs: 
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Extensibility/InspectorContext.cs: InspectorContext
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Extensibility/JsonNetConverterDictionaryKeysAreNotPropertyNames.cs: JsonNetConverterDictionaryKeysAreNotPropertyNames
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Extensibility/JsonNetSerializationConverterAdapter.cs: JsonNetSerializationConverterAdapter
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Extensibility/JsonNetSerializer.cs: JsonNetSerializer
 /Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Extensibility/LoggerBase.cs: LoggerBase
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Extensibility/MessageBroker.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Extensibility/NLogLogger.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Extensibility/NuGetPackageAttribute.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Extensibility/NullLogger.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Extensibility/ResourceContext.cs: 
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Extensibility/MessageBroker.cs: MessageBroker
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Extensibility/NLogLogger.cs: NLogLogger
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Extensibility/NuGetPackageAttribute.cs: NuGetPackageAttribute
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Extensibility/NullLogger.cs: NullLogger
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Extensibility/ResourceContext.cs: ResourceContext
 /Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Extensibility/ResourceParameter.cs: ResourceParameter
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Extensibility/ResourceParameterMetadata.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Extensibility/ResourceResultContext.cs: 
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Extensibility/ResourceParameterMetadata.cs: ResourceParameterMetadata
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Extensibility/ResourceResultContext.cs: ResourceResultContext
 /Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Extensibility/ResourceResultDecorator.cs: ResourceResultDecorator
 /Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Extensibility/RuntimeEvent.cs: 
 /Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Extensibility/RuntimePolicy.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Extensibility/RuntimePolicyContext.cs: 
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Extensibility/RuntimePolicyContext.cs: RuntimePolicyContext
 /Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Extensibility/ScriptOrder.cs: 
 /Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Extensibility/SerializationConverter.cs: SerializationConverter<T>
 /Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Extensibility/Subscriber.cs: Subscriber
 /Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Extensibility/SubscriberOfT.cs: 
 /Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Extensibility/TabBase.cs: TabBase
 /Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Extensibility/TabBaseOfT.cs: TabBase<T>
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Extensibility/TabContext.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Extensibility/TabSetupContext.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Extensibility/TimerResult.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Extensibility/TimerResultOfT.cs: 
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Extensibility/TabContext.cs: TabContext
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Extensibility/TabSetupContext.cs: TabSetupContext
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Extensibility/TimerResult.cs: TimerResult
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Extensibility/TimerResultOfT.cs: TimerResult<T>
 /Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Extensions/AlternateMethodContextExtensions.cs: AlternateMethodContextExtensions
 /Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Extensions/DataStoreExtensions.cs: DataStoreExtensions
 /Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Extensions/DictionaryExtensions.cs: DictionaryExtensions
@@ -214,19 +214,19 @@
 /Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Extensions/NameValueCollectionExtension.cs: NameValueCollectionExtension
 /Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Extensions/ObjectExtensions.cs: ObjectExtensions
 /Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Extensions/TabContextExtensions.cs: TabContextExtensions
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Framework/ApplicationPersistenceStore.cs: 
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Framework/ApplicationPersistenceStore.cs: ApplicationPersistenceStore
 /Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Framework/AssemblyTypesResolver.cs: AssemblyTypesResolver
 /Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Framework/CacheSetting.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Framework/CastleDynamicProxyFactory.cs: 
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Framework/CastleDynamicProxyFactory.cs: CastleDynamicProxyFactory
 /Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Framework/CastleDynamicProxyWrapper.cs: 
 /Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Framework/Crc32.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Framework/Factory.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Framework/GlimpseConfiguration.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Framework/GlimpseException.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Framework/GlimpseMetadata.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Framework/GlimpseRequest.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Framework/GlimpseRequestHeaders.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Framework/GlimpseRuntime.cs: 
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Framework/Factory.cs: Factory
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Framework/GlimpseConfiguration.cs: GlimpseConfiguration
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Framework/GlimpseException.cs: GlimpseException
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Framework/GlimpseMetadata.cs: GlimpseMetadata
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Framework/GlimpseRequest.cs: GlimpseRequest
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Framework/GlimpseRequestHeaders.cs: GlimpseRequestHeaders
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Framework/GlimpseRuntime.cs: GlimpseRuntime
 /Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Framework/IDiscoverableCollection.cs: 
 /Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Framework/IFrameworkProvider.cs: 
 /Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Framework/IGlimpseConfiguration.cs: 
@@ -236,71 +236,71 @@
 /Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Framework/IRequestMetadata.cs: 
 /Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Framework/IServiceLocator.cs: 
 /Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Framework/ReflectionBlackList.cs: ReflectionBlackList
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Framework/ReflectionDiscoverableCollection.cs: 
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Framework/ReflectionDiscoverableCollection.cs: ReflectionDiscoverableCollection<T>
 /Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Framework/ResourceEndpointConfiguration.cs: ResourceEndpointConfiguration
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Framework/ResourceParameters.cs: 
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Framework/ResourceParameters.cs: ResourceParameters
 /Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Framework/Support/ExecutionBlockBase.cs: ExecutionBlockBase
 /Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Framework/Support/IExecutionTask.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Framework/TabMetadata.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Framework/TabResult.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Inspector/TraceInspector.cs: 
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Framework/TabMetadata.cs: TabMetadata
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Framework/TabResult.cs: TabResult
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Inspector/TraceInspector.cs: TraceInspector
 /Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Message/IMessage.cs: 
 /Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Message/ISourceMessage.cs: SourceMessageExtension
 /Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Message/ITimedMessage.cs: TimedMessageExtension
 /Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Message/ITimelineMessage.cs: TimelineMessageExtension
 /Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Message/ITraceMessage.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Message/MessageBase.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Message/TimelineCategory.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Message/TimelineCategoryItem.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Message/TraceMessage.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Model/TimelineCategoryModel.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Model/TimelineEventModel.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Model/TimelineModel.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Policy/AjaxPolicy.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Policy/ContentTypePolicy.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Policy/ControlCookiePolicy.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Policy/GlimpseResourcePolicy.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Policy/StatusCodePolicy.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Policy/UriPolicy.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Resource/AjaxResource.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Resource/ClientResource.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Resource/ConfigurationResource.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Resource/ConfigurationScriptResource.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Resource/ConfigurationStyleResource.cs: 
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Message/MessageBase.cs: MessageBase
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Message/TimelineCategory.cs: TimelineCategory
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Message/TimelineCategoryItem.cs: TimelineCategoryItem
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Message/TraceMessage.cs: TraceMessage
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Model/TimelineCategoryModel.cs: TimelineCategoryModel
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Model/TimelineEventModel.cs: TimelineEventModel
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Model/TimelineModel.cs: TimelineModel
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Policy/AjaxPolicy.cs: AjaxPolicy
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Policy/ContentTypePolicy.cs: ContentTypePolicy
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Policy/ControlCookiePolicy.cs: ControlCookiePolicy
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Policy/GlimpseResourcePolicy.cs: GlimpseResourcePolicy
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Policy/StatusCodePolicy.cs: StatusCodePolicy
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Policy/UriPolicy.cs: UriPolicy
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Resource/AjaxResource.cs: AjaxResource
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Resource/ClientResource.cs: ClientResource
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Resource/ConfigurationResource.cs: ConfigurationResource
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Resource/ConfigurationScriptResource.cs: ConfigurationScriptResource
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Resource/ConfigurationStyleResource.cs: ConfigurationStyleResource
 /Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Resource/FileResource.cs: FileResource
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Resource/HistoryResource.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Resource/LogoResource.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Resource/LogosResource.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Resource/MetadataResource.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Resource/PopupRedirectResource.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Resource/PopupResource.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Resource/RequestResource.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Resource/SpriteResource.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Resource/VersionCheckResource.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/ResourceResult/CacheControlDecorator.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/ResourceResult/ExceptionResourceResult.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/ResourceResult/FileResourceResult.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/ResourceResult/HtmlResourceResult.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/ResourceResult/JsonResourceResult.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/ResourceResult/RedirectResourceResult.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/ResourceResult/StatusCodeResourceResult.cs: 
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Resource/HistoryResource.cs: HistoryResource
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Resource/LogoResource.cs: LogoResource
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Resource/LogosResource.cs: LogosResource
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Resource/MetadataResource.cs: MetadataResource
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Resource/PopupRedirectResource.cs: PopupRedirectResource
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Resource/PopupResource.cs: PopupResource
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Resource/RequestResource.cs: RequestResource
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Resource/SpriteResource.cs: SpriteResource
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Resource/VersionCheckResource.cs: VersionCheckResource
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/ResourceResult/CacheControlDecorator.cs: CacheControlDecorator
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/ResourceResult/ExceptionResourceResult.cs: ExceptionResourceResult
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/ResourceResult/FileResourceResult.cs: FileResourceResult
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/ResourceResult/HtmlResourceResult.cs: HtmlResourceResult
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/ResourceResult/JsonResourceResult.cs: JsonResourceResult
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/ResourceResult/RedirectResourceResult.cs: RedirectResourceResult
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/ResourceResult/StatusCodeResourceResult.cs: StatusCodeResourceResult
 /Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Resources.Designer.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/SerializationConverter/CSharpTypeConverter.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/SerializationConverter/DateTimeConverter.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/SerializationConverter/EnumerableOfITimelineMessageConverter.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/SerializationConverter/GlimpseMetadataConverter.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/SerializationConverter/GlimpseRequestConverter.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/SerializationConverter/GlimpseRequestHeadersConverter.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/SerializationConverter/ListOfTraceMessageConverter.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/SerializationConverter/MethodInfoConverter.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/SerializationConverter/TabMetadataConverter.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/SerializationConverter/TabResultConverter.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/SerializationConverter/TimeSpanConverter.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/SerializationConverter/TimelineEventModelConverter.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Setting/Initializer.cs: 
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/SerializationConverter/CSharpTypeConverter.cs: CSharpTypeConverter
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/SerializationConverter/DateTimeConverter.cs: DateTimeConverter
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/SerializationConverter/EnumerableOfITimelineMessageConverter.cs: EnumerableOfITimelineMessageConverter
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/SerializationConverter/GlimpseMetadataConverter.cs: GlimpseMetadataConverter
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/SerializationConverter/GlimpseRequestConverter.cs: GlimpseRequestConverter
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/SerializationConverter/GlimpseRequestHeadersConverter.cs: GlimpseRequestHeadersConverter
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/SerializationConverter/ListOfTraceMessageConverter.cs: ListOfTraceMessageConverter
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/SerializationConverter/MethodInfoConverter.cs: MethodInfoConverter
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/SerializationConverter/TabMetadataConverter.cs: TabMetadataConverter
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/SerializationConverter/TabResultConverter.cs: TabResultConverter
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/SerializationConverter/TimeSpanConverter.cs: TimeSpanConverter
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/SerializationConverter/TimelineEventModelConverter.cs: TimelineEventModelConverter
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Setting/Initializer.cs: Initializer
 /Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Support/NuGetPackage.cs: NuGetPackage
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Support/NuGetPackageDiscoverer.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Support/NuGetPackageDiscoveryResult.cs: 
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Support/NuGetPackageDiscoverer.cs: NuGetPackageDiscoverer
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Support/NuGetPackageDiscoveryResult.cs: NuGetPackageDiscoveryResult
 /Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/System.cs: Settings
 /Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Tab/Assist/CodeType.cs: 
 /Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Tab/Assist/CodeTypeConverter.cs: CodeTypeConverter
@@ -313,50 +313,50 @@
 /Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Tab/Assist/ITabStyleValueT.cs: 
 /Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Tab/Assist/Plugin.cs: Plugin
 /Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Tab/Assist/StringFormattingExtensions.cs: StringFormattingExtensions
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Tab/Assist/TabLayout.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Tab/Assist/TabLayoutCell.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Tab/Assist/TabLayoutRow.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Tab/Assist/TabObject.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Tab/Assist/TabObjectRow.cs: 
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Tab/Assist/TabLayout.cs: TabLayout
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Tab/Assist/TabLayoutCell.cs: TabLayoutCell
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Tab/Assist/TabLayoutRow.cs: TabLayoutRow
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Tab/Assist/TabObject.cs: TabObject
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Tab/Assist/TabObjectRow.cs: TabObjectRow
 /Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Tab/Assist/TabRowFormattingExtensions.cs: TabRowFormattingExtensions
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Tab/Assist/TabSection.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Tab/Assist/TabSectionColumn.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Tab/Assist/TabSectionRow.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Tab/Timeline.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Tab/Trace.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/TraceListener.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.EF/AlternateType/GlimpseDbCommandDefinition.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.EF/AlternateType/GlimpseDbConnectionFactory.cs: 
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Tab/Assist/TabSection.cs: TabSection
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Tab/Assist/TabSectionColumn.cs: TabSectionColumn
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Tab/Assist/TabSectionRow.cs: TabSectionRow
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Tab/Timeline.cs: Timeline
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/Tab/Trace.cs: Trace
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Core/TraceListener.cs: TraceListener
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.EF/AlternateType/GlimpseDbCommandDefinition.cs: GlimpseDbCommandDefinition
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.EF/AlternateType/GlimpseDbConnectionFactory.cs: GlimpseDbConnectionFactory
 /Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.EF/AlternateType/GlimpseDbProviderServices.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.EF/AlternateType/InvariantNameResolver.cs: 
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.EF/AlternateType/InvariantNameResolver.cs: InvariantNameResolver
 /Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.EF/Initialize.cs: Initialize
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.EF/Inspector/Core/DbConfigurationExecutionTask.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.EF/Inspector/Core/DbConnectionFactoriesExecutionTask.cs: 
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.EF/Inspector/Core/DbConfigurationExecutionTask.cs: DbConfigurationExecutionTask
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.EF/Inspector/Core/DbConnectionFactoriesExecutionTask.cs: DbConnectionFactoriesExecutionTask
 /Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.EF/Inspector/Core/EntityFrameworkExecutionBlock.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.EF/Inspector/EntityFrameworkInspector.cs: 
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.EF/Inspector/EntityFrameworkInspector.cs: EntityFrameworkInspector
 /Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.EF/Resources.Designer.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc/AlternateType/ActionFilter.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc/AlternateType/ActionInvoker.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc/AlternateType/ActionInvokerStateMixin.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc/AlternateType/AsyncActionInvoker.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc/AlternateType/AuthorizationFilter.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc/AlternateType/ControllerFactory.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc/AlternateType/DependencyResolver.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc/AlternateType/ExceptionFilter.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc/AlternateType/ModelBinder.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc/AlternateType/ModelBinderProvider.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc/AlternateType/ResultFilter.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc/AlternateType/ValueProvider.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc/AlternateType/ValueProviderFactory.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc/AlternateType/View.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc/AlternateType/ViewCorrelationMixin.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc/AlternateType/ViewEngine.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc/Display/MvcDisplay.cs: 
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc/AlternateType/ActionFilter.cs: ActionFilter
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc/AlternateType/ActionInvoker.cs: ActionInvoker
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc/AlternateType/ActionInvokerStateMixin.cs: ActionInvokerStateMixin
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc/AlternateType/AsyncActionInvoker.cs: AsyncActionInvoker
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc/AlternateType/AuthorizationFilter.cs: AuthorizationFilter
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc/AlternateType/ControllerFactory.cs: ControllerFactory
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc/AlternateType/DependencyResolver.cs: DependencyResolver
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc/AlternateType/ExceptionFilter.cs: ExceptionFilter
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc/AlternateType/ModelBinder.cs: ModelBinder
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc/AlternateType/ModelBinderProvider.cs: ModelBinderProvider
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc/AlternateType/ResultFilter.cs: ResultFilter
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc/AlternateType/ValueProvider.cs: ValueProvider<T>
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc/AlternateType/ValueProviderFactory.cs: ValueProviderFactory
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc/AlternateType/View.cs: View
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc/AlternateType/ViewCorrelationMixin.cs: ViewCorrelationMixin
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc/AlternateType/ViewEngine.cs: ViewEngine
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc/Display/MvcDisplay.cs: MvcDisplay
 /Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc/Html/HtmlHelperExtension.cs: HtmlHelperExtension
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc/Inspector/DependencyInjectionInspector.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc/Inspector/ExecutionInspector.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc/Inspector/ModelBinderInspector.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc/Inspector/ViewEngineInspector.cs: 
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc/Inspector/DependencyInjectionInspector.cs: DependencyInjectionInspector
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc/Inspector/ExecutionInspector.cs: ExecutionInspector
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc/Inspector/ModelBinderInspector.cs: ModelBinderInspector
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc/Inspector/ViewEngineInspector.cs: ViewEngineInspector
 /Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc/Message/FilterBounds.cs: 
 /Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc/Message/FilterCategory.cs: 
 /Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc/Message/IActionMessage.cs: ActionMessageExtension
@@ -367,58 +367,40 @@
 /Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc/Message/IExecutionMessage.cs: 
 /Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc/Message/IFilterMessage.cs: FilterMessageExtension
 /Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc/Message/IInvokeActionResultMessage.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc/Message/MvcTimelineCategory.cs: 
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc/Message/MvcTimelineCategory.cs: MvcTimelineCategory
 /Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc/Message/MvcTimelineExtension.cs: MvcTimelineExtension
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc/Model/DefaultValueModel.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc/Model/ExecutionModel.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc/Model/MetadataContentModel.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc/Model/MetadataItemModel.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc/Model/MetadataPropertyItemModel.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc/Model/ModelBindingModel.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc/Model/MvcDisplayModel.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc/Model/ViewModelSummary.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc/Model/ViewsModel.cs: 
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc/Model/DefaultValueModel.cs: DefaultValueModel<T>
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc/Model/ExecutionModel.cs: ExecutionModel
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc/Model/MetadataContentModel.cs: MetadataContentModel
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc/Model/MetadataItemModel.cs: MetadataItemModel
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc/Model/MetadataPropertyItemModel.cs: MetadataPropertyItemModel
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc/Model/ModelBindingModel.cs: ModelBindingModel
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc/Model/MvcDisplayModel.cs: MvcDisplayModel
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc/Model/ViewModelSummary.cs: ViewModelSummary
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc/Model/ViewsModel.cs: ViewsModel
 /Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc/Resources.Designer.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc/SerializationConverter/CultureConverter.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc/SerializationConverter/ListOfExecutionModelConverter.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc/SerializationConverter/ListOfMetadataItemModelConverter.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc/SerializationConverter/ListOfViewsModelConverter.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc/SerializationConverter/MvcDisplayModelConverter.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc/SerializationConverter/UrlParameterConverter.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc/Tab/Execution.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc/Tab/Metadata.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc/Tab/ModelBinding.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc/Tab/Views.cs: 
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc/SerializationConverter/CultureConverter.cs: CultureConverter
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc/SerializationConverter/ListOfExecutionModelConverter.cs: ListOfExecutionModelConverter
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc/SerializationConverter/ListOfMetadataItemModelConverter.cs: ListOfMetadataItemModelConverter
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc/SerializationConverter/ListOfViewsModelConverter.cs: ListOfViewsModelConverter
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc/SerializationConverter/MvcDisplayModelConverter.cs: MvcDisplayModelConverter
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc/SerializationConverter/UrlParameterConverter.cs: UrlParameterConverter
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc/Tab/Execution.cs: Execution
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc/Tab/Metadata.cs: Metadata
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc/Tab/ModelBinding.cs: ModelBinding
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc/Tab/Views.cs: Views
 /Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc2/Backport/IEnumerableValueProvider.cs: 
 /Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc2/Backport/IUnvalidatedValueProvider.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc3.MusicStore.Sample/Controllers/AccountController.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc3.MusicStore.Sample/Controllers/CheckoutController.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc3.MusicStore.Sample/Controllers/FileUploadController.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc3.MusicStore.Sample/Controllers/HomeController.cs: NoCacheAttribute
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc3.MusicStore.Sample/Controllers/ModelBindingTestsController.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc3.MusicStore.Sample/Controllers/ShoppingCartController.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc3.MusicStore.Sample/Controllers/StoreController.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc3.MusicStore.Sample/Controllers/StoreManagerController.cs: 
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc3.MusicStore.Sample/Controllers/AccountController.cs: AccountController
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc3.MusicStore.Sample/Controllers/CheckoutController.cs: CheckoutController
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc3.MusicStore.Sample/Controllers/FileUploadController.cs: FileUploadController
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc3.MusicStore.Sample/Controllers/HomeController.cs: HomeController
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc3.MusicStore.Sample/Controllers/ModelBindingTestsController.cs: ModelBindingTestsController
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc3.MusicStore.Sample/Controllers/ShoppingCartController.cs: ShoppingCartController
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc3.MusicStore.Sample/Controllers/StoreController.cs: StoreController
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc3.MusicStore.Sample/Controllers/StoreManagerController.cs: StoreManagerController
 /Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc3.MusicStore.Sample/Framework/Configuration.cs: Configuration
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc3.MusicStore.Sample/Framework/SqlMapper.cs: CacheInfo
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc3.MusicStore.Sample/Framework/SqlMapper.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc3.MusicStore.Sample/Framework/SqlMapper.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc3.MusicStore.Sample/Framework/SqlMapper.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc3.MusicStore.Sample/Framework/SqlMapper.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc3.MusicStore.Sample/Framework/SqlMapper.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc3.MusicStore.Sample/Framework/SqlMapper.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc3.MusicStore.Sample/Framework/SqlMapper.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc3.MusicStore.Sample/Framework/SqlMapper.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc3.MusicStore.Sample/Framework/SqlMapper.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc3.MusicStore.Sample/Framework/SqlMapper.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc3.MusicStore.Sample/Framework/SqlMapper.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc3.MusicStore.Sample/Framework/SqlMapper.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc3.MusicStore.Sample/Framework/SqlMapper.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc3.MusicStore.Sample/Framework/SqlMapper.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc3.MusicStore.Sample/Framework/SqlMapper.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc3.MusicStore.Sample/Framework/SqlMapper.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc3.MusicStore.Sample/Framework/SqlMapper.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc3.MusicStore.Sample/Framework/SqlMapper.cs: Identity
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc3.MusicStore.Sample/Framework/SqlMapper.cs: SqlMapper
 /Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc3.MusicStore.Sample/Framework/SqlMapper.cs: 
 /Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc3.MusicStore.Sample/Framework/SqlMapper.cs: 
 /Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc3.MusicStore.Sample/Framework/SqlMapper.cs: 
@@ -444,334 +426,351 @@
 /Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc3.MusicStore.Sample/Framework/SqlMapper.cs: 
 /Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc3.MusicStore.Sample/Framework/SqlMapper.cs: 
 /Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc3.MusicStore.Sample/Framework/SqlMapper.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc3.MusicStore.Sample/Framework/SqlMapper.cs: DontMap
 /Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc3.MusicStore.Sample/Framework/SqlMapper.cs: 
 /Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc3.MusicStore.Sample/Framework/SqlMapper.cs: 
 /Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc3.MusicStore.Sample/Framework/SqlMapper.cs: 
 /Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc3.MusicStore.Sample/Framework/SqlMapper.cs: 
 /Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc3.MusicStore.Sample/Framework/SqlMapper.cs: 
 /Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc3.MusicStore.Sample/Framework/SqlMapper.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc3.MusicStore.Sample/Framework/SqlMapper.cs: DapperTable
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc3.MusicStore.Sample/Framework/SqlMapper.cs: DapperRowMetaObject
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc3.MusicStore.Sample/Framework/SqlMapper.cs: DeadValue
 /Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc3.MusicStore.Sample/Framework/SqlMapper.cs: 
 /Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc3.MusicStore.Sample/Framework/SqlMapper.cs: 
 /Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc3.MusicStore.Sample/Framework/SqlMapper.cs: 
 /Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc3.MusicStore.Sample/Framework/SqlMapper.cs: 
 /Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc3.MusicStore.Sample/Framework/SqlMapper.cs: 
 /Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc3.MusicStore.Sample/Framework/SqlMapper.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc3.MusicStore.Sample/Global.asax.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc3.MusicStore.Sample/Models/AccountModels.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc3.MusicStore.Sample/Models/Album.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc3.MusicStore.Sample/Models/Artist.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc3.MusicStore.Sample/Models/Cart.cs: 
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc3.MusicStore.Sample/Framework/SqlMapper.cs: 
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc3.MusicStore.Sample/Framework/SqlMapper.cs: 
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc3.MusicStore.Sample/Framework/SqlMapper.cs: 
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc3.MusicStore.Sample/Framework/SqlMapper.cs: 
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc3.MusicStore.Sample/Framework/SqlMapper.cs: 
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc3.MusicStore.Sample/Framework/SqlMapper.cs: 
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc3.MusicStore.Sample/Framework/SqlMapper.cs: 
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc3.MusicStore.Sample/Framework/SqlMapper.cs: 
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc3.MusicStore.Sample/Framework/SqlMapper.cs: 
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc3.MusicStore.Sample/Framework/SqlMapper.cs: 
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc3.MusicStore.Sample/Framework/SqlMapper.cs: 
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc3.MusicStore.Sample/Framework/SqlMapper.cs: 
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc3.MusicStore.Sample/Framework/SqlMapper.cs: 
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc3.MusicStore.Sample/Framework/SqlMapper.cs: 
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc3.MusicStore.Sample/Framework/SqlMapper.cs: 
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc3.MusicStore.Sample/Framework/SqlMapper.cs: 
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc3.MusicStore.Sample/Framework/SqlMapper.cs: 
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc3.MusicStore.Sample/Framework/SqlMapper.cs: 
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc3.MusicStore.Sample/Framework/SqlMapper.cs: 
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc3.MusicStore.Sample/Framework/SqlMapper.cs: 
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc3.MusicStore.Sample/Framework/SqlMapper.cs: 
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc3.MusicStore.Sample/Framework/SqlMapper.cs: 
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc3.MusicStore.Sample/Global.asax.cs: MvcApplication
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc3.MusicStore.Sample/Models/AccountModels.cs: ChangePasswordModel
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc3.MusicStore.Sample/Models/Album.cs: Album
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc3.MusicStore.Sample/Models/Artist.cs: Artist
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc3.MusicStore.Sample/Models/Cart.cs: Cart
 /Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc3.MusicStore.Sample/Models/Genre.cs: Genre
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc3.MusicStore.Sample/Models/Inventory.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc3.MusicStore.Sample/Models/InventoryManager.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc3.MusicStore.Sample/Models/MusicStoreEntities.cs: 
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc3.MusicStore.Sample/Models/Inventory.cs: Inventory
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc3.MusicStore.Sample/Models/InventoryManager.cs: InventoryManager
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc3.MusicStore.Sample/Models/MusicStoreEntities.cs: MusicStoreEntities
 /Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc3.MusicStore.Sample/Models/Order.cs: Order
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc3.MusicStore.Sample/Models/OrderDetail.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc3.MusicStore.Sample/Models/SampleData.cs: 
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc3.MusicStore.Sample/Models/OrderDetail.cs: OrderDetail
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc3.MusicStore.Sample/Models/SampleData.cs: SampleData
 /Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc3.MusicStore.Sample/Models/ShoppingCart.cs: ShoppingCart
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc3.MusicStore.Sample/ViewModels/ShoppingCartRemoveViewModel.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc3.MusicStore.Sample/ViewModels/ShoppingCartViewModel.cs: 
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc3.MusicStore.Sample/ViewModels/ShoppingCartRemoveViewModel.cs: ShoppingCartRemoveViewModel
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc3.MusicStore.Sample/ViewModels/ShoppingCartViewModel.cs: ShoppingCartViewModel
 /Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc3/Backport/IEnumerableValueProvider.cs: 
 /Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc4.MusicStore.Sample/App_Start/AppConfig.cs: AppConfig
 /Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc4.MusicStore.Sample/App_Start/AuthConfig.cs: AuthConfig
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc4.MusicStore.Sample/App_Start/BundleConfig.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc4.MusicStore.Sample/App_Start/FilterConfig.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc4.MusicStore.Sample/App_Start/RouteConfig.cs: 
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc4.MusicStore.Sample/App_Start/BundleConfig.cs: BundleConfig
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc4.MusicStore.Sample/App_Start/FilterConfig.cs: FilterConfig
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc4.MusicStore.Sample/App_Start/RouteConfig.cs: RouteConfig
 /Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc4.MusicStore.Sample/App_Start/WebApiConfig.cs: WebApiConfig
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc4.MusicStore.Sample/Controllers/AccountController.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc4.MusicStore.Sample/Controllers/CheckoutController.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc4.MusicStore.Sample/Controllers/FileUploadController.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc4.MusicStore.Sample/Controllers/HomeController.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc4.MusicStore.Sample/Controllers/ModelBindingTestsController.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc4.MusicStore.Sample/Controllers/ShoppingCartController.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc4.MusicStore.Sample/Controllers/StoreController.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc4.MusicStore.Sample/Controllers/StoreManagerController.cs: 
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc4.MusicStore.Sample/Controllers/AccountController.cs: AccountController
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc4.MusicStore.Sample/Controllers/CheckoutController.cs: CheckoutController
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc4.MusicStore.Sample/Controllers/FileUploadController.cs: FileUploadController
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc4.MusicStore.Sample/Controllers/HomeController.cs: HomeController
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc4.MusicStore.Sample/Controllers/ModelBindingTestsController.cs: ModelBindingTestsController
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc4.MusicStore.Sample/Controllers/ShoppingCartController.cs: ShoppingCartController
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc4.MusicStore.Sample/Controllers/StoreController.cs: StoreController
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc4.MusicStore.Sample/Controllers/StoreManagerController.cs: StoreManagerController
 /Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc4.MusicStore.Sample/Filters/InitializeSimpleMembershipAttribute.cs: InitializeSimpleMembershipAttribute
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc4.MusicStore.Sample/Global.asax.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc4.MusicStore.Sample/Models/AccountModels.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc4.MusicStore.Sample/Models/Album.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc4.MusicStore.Sample/Models/Artist.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc4.MusicStore.Sample/Models/Cart.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc4.MusicStore.Sample/Models/Genre.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc4.MusicStore.Sample/Models/MusicStoreEntities.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc4.MusicStore.Sample/Models/Order.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc4.MusicStore.Sample/Models/OrderDetail.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc4.MusicStore.Sample/Models/SampleData.cs: 
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc4.MusicStore.Sample/Global.asax.cs: MvcApplication
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc4.MusicStore.Sample/Models/AccountModels.cs: UsersContext
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc4.MusicStore.Sample/Models/Album.cs: Album
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc4.MusicStore.Sample/Models/Artist.cs: Artist
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc4.MusicStore.Sample/Models/Cart.cs: Cart
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc4.MusicStore.Sample/Models/Genre.cs: Genre
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc4.MusicStore.Sample/Models/MusicStoreEntities.cs: MusicStoreEntities
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc4.MusicStore.Sample/Models/Order.cs: Order
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc4.MusicStore.Sample/Models/OrderDetail.cs: OrderDetail
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc4.MusicStore.Sample/Models/SampleData.cs: SampleData
 /Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc4.MusicStore.Sample/Models/ShoppingCart.cs: ShoppingCart
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc4.MusicStore.Sample/ViewModels/ShoppingCartRemoveViewModel.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc4.MusicStore.Sample/ViewModels/ShoppingCartViewModel.cs: 
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc4.MusicStore.Sample/ViewModels/ShoppingCartRemoveViewModel.cs: ShoppingCartRemoveViewModel
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc4.MusicStore.Sample/ViewModels/ShoppingCartViewModel.cs: ShoppingCartViewModel
 /Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc5.MusicStore.Sample/App_Start/AppConfig.cs: AppConfig
 /Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc5.MusicStore.Sample/App_Start/AuthConfig.cs: AuthConfig
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc5.MusicStore.Sample/App_Start/BundleConfig.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc5.MusicStore.Sample/App_Start/FilterConfig.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc5.MusicStore.Sample/App_Start/RouteConfig.cs: 
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc5.MusicStore.Sample/App_Start/BundleConfig.cs: BundleConfig
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc5.MusicStore.Sample/App_Start/FilterConfig.cs: FilterConfig
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc5.MusicStore.Sample/App_Start/RouteConfig.cs: RouteConfig
 /Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc5.MusicStore.Sample/App_Start/WebApiConfig.cs: WebApiConfig
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc5.MusicStore.Sample/Controllers/AccountController.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc5.MusicStore.Sample/Controllers/AttributeRoutingTestController.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc5.MusicStore.Sample/Controllers/CheckoutController.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc5.MusicStore.Sample/Controllers/FileUploadController.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc5.MusicStore.Sample/Controllers/HomeController.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc5.MusicStore.Sample/Controllers/ModelBindingTestsController.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc5.MusicStore.Sample/Controllers/ShoppingCartController.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc5.MusicStore.Sample/Controllers/StoreController.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc5.MusicStore.Sample/Controllers/StoreManagerController.cs: 
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc5.MusicStore.Sample/Controllers/AccountController.cs: AccountController
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc5.MusicStore.Sample/Controllers/AttributeRoutingTestController.cs: AttributeRoutingTestController
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc5.MusicStore.Sample/Controllers/CheckoutController.cs: CheckoutController
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc5.MusicStore.Sample/Controllers/FileUploadController.cs: FileUploadController
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc5.MusicStore.Sample/Controllers/HomeController.cs: HomeController
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc5.MusicStore.Sample/Controllers/ModelBindingTestsController.cs: ModelBindingTestsController
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc5.MusicStore.Sample/Controllers/ShoppingCartController.cs: ShoppingCartController
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc5.MusicStore.Sample/Controllers/StoreController.cs: StoreController
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc5.MusicStore.Sample/Controllers/StoreManagerController.cs: StoreManagerController
 /Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc5.MusicStore.Sample/Filters/InitializeSimpleMembershipAttribute.cs: InitializeSimpleMembershipAttribute
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc5.MusicStore.Sample/Global.asax.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc5.MusicStore.Sample/Models/AccountModels.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc5.MusicStore.Sample/Models/Album.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc5.MusicStore.Sample/Models/Artist.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc5.MusicStore.Sample/Models/Cart.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc5.MusicStore.Sample/Models/Genre.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc5.MusicStore.Sample/Models/MusicStoreEntities.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc5.MusicStore.Sample/Models/Order.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc5.MusicStore.Sample/Models/OrderDetail.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc5.MusicStore.Sample/Models/SampleData.cs: 
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc5.MusicStore.Sample/Global.asax.cs: MvcApplication
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc5.MusicStore.Sample/Models/AccountModels.cs: UsersContext
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc5.MusicStore.Sample/Models/Album.cs: Album
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc5.MusicStore.Sample/Models/Artist.cs: Artist
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc5.MusicStore.Sample/Models/Cart.cs: Cart
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc5.MusicStore.Sample/Models/Genre.cs: Genre
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc5.MusicStore.Sample/Models/MusicStoreEntities.cs: MusicStoreEntities
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc5.MusicStore.Sample/Models/Order.cs: Order
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc5.MusicStore.Sample/Models/OrderDetail.cs: OrderDetail
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc5.MusicStore.Sample/Models/SampleData.cs: SampleData
 /Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc5.MusicStore.Sample/Models/ShoppingCart.cs: ShoppingCart
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc5.MusicStore.Sample/ViewModels/ShoppingCartRemoveViewModel.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc5.MusicStore.Sample/ViewModels/ShoppingCartViewModel.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.AspNet/AlternateType/RouteBaseShould.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.AspNet/AlternateType/RouteConstraintMatchShould.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.AspNet/AlternateType/RouteConstraintRegexShould.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.AspNet/AlternateType/RouteConstraintShould.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.AspNet/AlternateType/RouteGetRouteDataShould.cs: GetRouteDataRouteShould<T>
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.AspNet/AlternateType/RouteProcessConstraintShould.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.AspNet/AlternateType/RouteShould .cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.AspNet/AspNetFrameworkProviderShould.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.AspNet/HttpApplicationStateBaseDataAdapterShould.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.AspNet/HttpHandlerShould.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.AspNet/HttpModuleShould.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.AspNet/Inspector/RoutesInspectorShould.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.AspNet/Model/RequestModelShould.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.AspNet/Model/RouteModelShould.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.AspNet/Policy/LocalPolicyShould.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.AspNet/PreBodyTagFilterShould.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.AspNet/SerializationConverter/ConfigurationModelConverterShould.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.AspNet/SerializationConverter/ConfigurationRoleManagerProviderSettingsModelConverterShould.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.AspNet/SerializationConverter/RequestModelConverterShould.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.AspNet/SerializationConverter/SessionModelConverterShould.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.AspNet/Tab/CacheShould.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.AspNet/Tab/ConfigurationConnectionStringModelFactoryShould.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.AspNet/Tab/ConfigurationShould.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.AspNet/Tab/EnvironmentShould.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.AspNet/Tab/RequestShould.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.AspNet/Tab/RoutesShould.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.AspNet/Tab/ServerShould.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.AspNet/Tab/SessionShould.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.AspNet/Tester/AspNetFrameworkProviderTester.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.AspNet/Tester/HttpHandlerTester.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.AspNet/Tester/HttpModuleTester.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Common/AutoFixtureCustomizations.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Common/AutoMockAttribute.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Common/GlimpseCustomizations.cs: 
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc5.MusicStore.Sample/ViewModels/ShoppingCartRemoveViewModel.cs: ShoppingCartRemoveViewModel
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Mvc5.MusicStore.Sample/ViewModels/ShoppingCartViewModel.cs: ShoppingCartViewModel
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.AspNet/AlternateType/RouteBaseShould.cs: RouteBaseShould
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.AspNet/AlternateType/RouteConstraintMatchShould.cs: RouteConstraintMatchShould
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.AspNet/AlternateType/RouteConstraintRegexShould.cs: RouteConstraintRegexShould
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.AspNet/AlternateType/RouteConstraintShould.cs: RouteConstraintShould
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.AspNet/AlternateType/RouteGetRouteDataShould.cs: below.")]
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.AspNet/AlternateType/RouteProcessConstraintShould.cs: RouteProcessConstraintShould
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.AspNet/AlternateType/RouteShould .cs: RouteShould
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.AspNet/AspNetFrameworkProviderShould.cs: AspNetFrameworkProviderShould
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.AspNet/HttpApplicationStateBaseDataAdapterShould.cs: HttpApplicationStateBaseDataAdapterShould
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.AspNet/HttpHandlerShould.cs: HttpHandlerShould:IDisposable
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.AspNet/HttpModuleShould.cs: HttpModuleShould:IDisposable
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.AspNet/Inspector/RoutesInspectorShould.cs: RoutesInspectorShould
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.AspNet/Model/RequestModelShould.cs: RequestModelShould
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.AspNet/Model/RouteModelShould.cs: RouteModelShould
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.AspNet/Policy/LocalPolicyShould.cs: LocalPolicyShould
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.AspNet/PreBodyTagFilterShould.cs: PreBodyTagFilterShould
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.AspNet/SerializationConverter/ConfigurationModelConverterShould.cs: ConfigurationModelConverterShould
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.AspNet/SerializationConverter/ConfigurationRoleManagerProviderSettingsModelConverterShould.cs: ConfigurationRoleManagerProviderSettingsModelConverterShould
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.AspNet/SerializationConverter/RequestModelConverterShould.cs: RequestModelConverterShould
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.AspNet/SerializationConverter/SessionModelConverterShould.cs: SessionModelConverterShould
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.AspNet/Tab/CacheShould.cs: CacheShould
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.AspNet/Tab/ConfigurationConnectionStringModelFactoryShould.cs: ConfigurationConnectionStringModelFactoryShould
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.AspNet/Tab/ConfigurationShould.cs: ConfigurationShould
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.AspNet/Tab/EnvironmentShould.cs: EnvironmentShould
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.AspNet/Tab/RequestShould.cs: RequestShould
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.AspNet/Tab/RoutesShould.cs: RoutesShould
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.AspNet/Tab/ServerShould.cs: ServerShould
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.AspNet/Tab/SessionShould.cs: SessionShould
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.AspNet/Tester/AspNetFrameworkProviderTester.cs: AspNetFrameworkProviderTester
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.AspNet/Tester/HttpHandlerTester.cs: HttpHandlerTester
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.AspNet/Tester/HttpModuleTester.cs: HttpModuleTester
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Common/AutoFixtureCustomizations.cs: AutoFixtureCustomizations
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Common/AutoMockAttribute.cs: AutoMockAttribute
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Common/GlimpseCustomizations.cs: GlimpseCustomizations
 /Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Common/MoqExtensions.cs: MoqExtensions
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Common/MvcCustomizations.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Common/SystemCustomizations.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core.Net35/Net35BackportShould.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/AntiXssEncoderShould.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/ApplicationPersistenceStoreShould.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/BadData/Blowup.cs: 
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Common/MvcCustomizations.cs: MvcCustomizations
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Common/SystemCustomizations.cs: SystemCustomizations
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core.Net35/Net35BackportShould.cs: Net35BackportShould
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/AntiXssEncoderShould.cs: AntiXssEncoderShould
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/ApplicationPersistenceStoreShould.cs: ApplicationPersistenceStoreShould:IDisposable
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/BadData/Blowup.cs: Blowup:IBlowup
 /Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/BadData/IBlowup.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/CastleShould.cs: SealedSpecialDisposable
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/ClientScript/ClientShould.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/ClientScript/DataShould.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/ClientScript/MetadataShould.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/Configuration/ContentTypeElementCollectionShould.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/Configuration/ContentTypeElementShould.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/Configuration/DiscoverableCollectionElementShould.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/Configuration/LoggingElementShould.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/Configuration/PolicyDiscoverableCollectionElementShould.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/Configuration/RegexConverterShould.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/Configuration/RegexElementShould.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/Configuration/SectionShould.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/Configuration/TypeConverterShould.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/Configuration/TypeElementShould.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/DictionaryDataStoreAdapterShould.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/Extensibility/AlternateTypeGenerationHookShould.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/Extensibility/AlternateTypeSelectorShould.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/Extensibility/AlternateTypeToCastleInterceptorAdapterShould.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/Extensibility/CastleInvocationToAlternateMethodContextAdapterShould.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/Extensibility/ExceptionResourceResultShould.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/Extensibility/FileResourceResultShould.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/Extensibility/JsonNetSerializationConverterShould.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/Extensibility/JsonResourceResultShould.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/Extensibility/LoggerBaseShould.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/Extensibility/ResourceEndpointConfigurationShould.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/Extensibility/RuntimePolicyContextShould.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/Extensibility/SerializationConverterShould.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/Extensibility/TabBaseShould.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/Extensibility/TabContextShould.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/Extensibility/TabSetupContextShould.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/Extensions/EnumExtensionsShould.cs: 
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/CastleShould.cs: SimpleSpecialDisposable
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/ClientScript/ClientShould.cs: ClientShould
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/ClientScript/DataShould.cs: DataShould
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/ClientScript/MetadataShould.cs: MetadataShould
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/Configuration/ContentTypeElementCollectionShould.cs: ContentTypeElementCollectionShould
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/Configuration/ContentTypeElementShould.cs: ContentTypeElementShould
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/Configuration/DiscoverableCollectionElementShould.cs: DiscoverableCollectionElementShould
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/Configuration/LoggingElementShould.cs: LoggingElementShould
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/Configuration/PolicyDiscoverableCollectionElementShould.cs: PolicyDiscoverableCollectionElementShould
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/Configuration/RegexConverterShould.cs: RegexConverterShould
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/Configuration/RegexElementShould.cs: RegexElementShould
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/Configuration/SectionShould.cs: SectionShould
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/Configuration/TypeConverterShould.cs: TypeConverterShould
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/Configuration/TypeElementShould.cs: TypeElementShould
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/DictionaryDataStoreAdapterShould.cs: DictionaryDataStoreAdapterShould
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/Extensibility/AlternateTypeGenerationHookShould.cs: AlternateTypeGenerationHookShould
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/Extensibility/AlternateTypeSelectorShould.cs: AlternateTypeSelectorShould
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/Extensibility/AlternateTypeToCastleInterceptorAdapterShould.cs: AlternateTypeToCastleInterceptorAdapterShould
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/Extensibility/CastleInvocationToAlternateMethodContextAdapterShould.cs: CastleInvocationToAlternateMethodContextAdapterShould
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/Extensibility/ExceptionResourceResultShould.cs: ExceptionResourceResultShould
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/Extensibility/FileResourceResultShould.cs: FileResourceResultShould
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/Extensibility/JsonNetSerializationConverterShould.cs: JsonNetSerializationConverterShould
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/Extensibility/JsonResourceResultShould.cs: JsonResourceResultShould
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/Extensibility/LoggerBaseShould.cs: LoggerBaseShould
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/Extensibility/ResourceEndpointConfigurationShould.cs: ResourceEndpointConfigurationShould
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/Extensibility/RuntimePolicyContextShould.cs: RuntimePolicyContextShould
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/Extensibility/SerializationConverterShould.cs: SerializationConverterShould
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/Extensibility/TabBaseShould.cs: TabBaseShould
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/Extensibility/TabContextShould.cs: TabContextShould:IDisposable
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/Extensibility/TabSetupContextShould.cs: TabSetupContextShould
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/Extensions/EnumExtensionsShould.cs: EnumExtensionsShould
 /Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/Extensions/TestingExtensions.cs: TestingExtensions
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/Framework/ApplicationPersistenceStoreShould.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/Framework/CastleDynamicProxyFactoryShould.cs: SealedTestProxy
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/Framework/FactoryShould.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/Framework/GlimpseConfigurationShould.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/Framework/GlimpseMetadataShould.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/Framework/GlimpseRuntimeShould.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/Framework/InspectorContextShould.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/Framework/MessageBrokerShould.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/Framework/ReflectionDiscoverableCollectionShould.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/Framework/ResourceParametersShould.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/Framework/TimerShould.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/GlimpseExceptionShould.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/JsonNetSerializerShould.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/Message/ExecutionMessageShould.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/Message/TimedMessageShould.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/Message/TimelineMessageShould.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/Plugin/Assist/PluginShould.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/Plugin/Assist/StringFormattingExtensionsShould.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/Plugin/Assist/TabLayoutCellShould.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/Plugin/Assist/TabLayoutRowShould.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/Plugin/Assist/TabLayoutShould.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/Plugin/Assist/TabRowFormattingExtensionsShould.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/Plugin/Assist/TabRowShould.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/Plugin/Assist/TabSectionColumnShould.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/Plugin/Assist/TabSectionShould.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/Policy/AjaxPolicyShould.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/Policy/ContentTypePolicyShould.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/Policy/ControlCookiePolicyShould.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/Policy/GlimpseResourcePolicyShould.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/Policy/StatusCodePolicyShould.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/Policy/UriPolicyShould.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/Resource/AjaxShould.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/Resource/ClientShould.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/Resource/ConfigurationShould.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/Resource/DataShould.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/Resource/FileResourceShould.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/Resource/HistoryResourceShould.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/Resource/MetadataShould.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/Resource/PopupResourceShould.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/Resource/VersionCheckResourceShould.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/ResourceResult/CacheControlDecoratorShould.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/ResourceResult/RedirectResourceResultShould.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/ResourcesShould.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/SerializationConverter/CSharpTypeConverterShould.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/SerializationConverter/DateTimeConverterShould.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/SerializationConverter/GlimpseMetadataConverterShould.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/SerializationConverter/GlimpseRequestConverterShould.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/SerializationConverter/ListOfTraceMessageConverterShould.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/SerializationConverter/PluginMetadataConverterShould.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/SerializationConverter/TabResultConverterShould.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/SerializationConverter/TimeStampConverterShould.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/SerializationConverter/TimelineEventModelConverterShould.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/StatusCodeResourceResultShould.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/Tab/TimelineShould.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/Tab/TraceShould.cs: 
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/Framework/ApplicationPersistenceStoreShould.cs: ApplicationPersistenceStoreShould
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/Framework/CastleDynamicProxyFactoryShould.cs: CastleDynamicProxyFactoryShould
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/Framework/FactoryShould.cs: FactoryShould
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/Framework/GlimpseConfigurationShould.cs: GlimpseConfigurationShould
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/Framework/GlimpseMetadataShould.cs: GlimpseMetadataShould
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/Framework/GlimpseRuntimeShould.cs: GlimpseRuntimeShould
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/Framework/InspectorContextShould.cs: InspectorContextShould
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/Framework/MessageBrokerShould.cs: MessageBrokerShould
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/Framework/ReflectionDiscoverableCollectionShould.cs: ReflectionDiscoverableCollectionTester<T>
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/Framework/ResourceParametersShould.cs: ResourceParametersShould:IDisposable
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/Framework/TimerShould.cs: TimerShould
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/GlimpseExceptionShould.cs: GlimpseExceptionShould
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/JsonNetSerializerShould.cs: JsonNetSerializerShould
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/Message/ExecutionMessageShould.cs: ExecutionMessageShould
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/Message/TimedMessageShould.cs: TimedMessageShould
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/Message/TimelineMessageShould.cs: TimelineMessageShould
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/Plugin/Assist/PluginShould.cs: PluginShould
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/Plugin/Assist/StringFormattingExtensionsShould.cs: StringFormattingExtensionsShould
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/Plugin/Assist/TabLayoutCellShould.cs: TabLayoutCellShould
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/Plugin/Assist/TabLayoutRowShould.cs: TabLayoutRowShould
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/Plugin/Assist/TabLayoutShould.cs: TabLayoutShould
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/Plugin/Assist/TabRowFormattingExtensionsShould.cs: TabRowFormattingExtensionsShould
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/Plugin/Assist/TabRowShould.cs: TabRowShould
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/Plugin/Assist/TabSectionColumnShould.cs: TabSectionColumnShould
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/Plugin/Assist/TabSectionShould.cs: TabSectionShould
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/Policy/AjaxPolicyShould.cs: AjaxPolicyShould:IDisposable
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/Policy/ContentTypePolicyShould.cs: ContentTypePolicyShould:IDisposable
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/Policy/ControlCookiePolicyShould.cs: ControlCookiePolicyShould:IDisposable
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/Policy/GlimpseResourcePolicyShould.cs: GlimpseResourcePolicyShould
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/Policy/StatusCodePolicyShould.cs: StatusCodePolicyShould:IDisposable
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/Policy/UriPolicyShould.cs: UriPolicyShould:IDisposable
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/Resource/AjaxShould.cs: AjaxShould
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/Resource/ClientShould.cs: ClientShould
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/Resource/ConfigurationShould.cs: ConfigurationShould
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/Resource/DataShould.cs: DataShould
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/Resource/FileResourceShould.cs: FileResourceShould
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/Resource/HistoryResourceShould.cs: HistoryResourceShould
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/Resource/MetadataShould.cs: MetadataShould
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/Resource/PopupResourceShould.cs: PopupResourceShould
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/Resource/VersionCheckResourceShould.cs: VersionCheckResourceShould
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/ResourceResult/CacheControlDecoratorShould.cs: CacheControlDecoratorShould
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/ResourceResult/RedirectResourceResultShould.cs: RedirectResourceResultShould
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/ResourcesShould.cs: ResourcesShould:IDisposable
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/SerializationConverter/CSharpTypeConverterShould.cs: CSharpTypeConverterShould
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/SerializationConverter/DateTimeConverterShould.cs: DateTimeConverterShould
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/SerializationConverter/GlimpseMetadataConverterShould.cs: GlimpseMetadataConverterShould
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/SerializationConverter/GlimpseRequestConverterShould.cs: GlimpseRequestConverterShould
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/SerializationConverter/ListOfTraceMessageConverterShould.cs: ListOfTraceMessageConverterShould
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/SerializationConverter/PluginMetadataConverterShould.cs: PluginMetadataConverterShould
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/SerializationConverter/TabResultConverterShould.cs: TabResultConverterShould
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/SerializationConverter/TimeStampConverterShould.cs: TimeSpanConverterShould
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/SerializationConverter/TimelineEventModelConverterShould.cs: TimelineEventModelConverterShould
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/StatusCodeResourceResultShould.cs: StatusCodeResourceResultShould
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/Tab/TimelineShould.cs: TimelineShould
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/Tab/TraceShould.cs: TraceShould
 /Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/TestDoubles/DummyEnum.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/TestDoubles/DummyException.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/TestDoubles/DummyInspector1.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/TestDoubles/DummyInspector2.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/TestDoubles/DummyMessage.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/TestDoubles/DummyObjectContext.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/TestDoubles/DummySerializationConverter.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/TestDoubles/DummySerializationConverterOfT.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/TestDoubles/DummyServiceLocator.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/TestDoubles/DummyTab.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/TestDoubles/DummyTabSetupTab.cs: 
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/TestDoubles/DummyException.cs: DummyException:Exception
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/TestDoubles/DummyInspector1.cs: DummyInspector1
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/TestDoubles/DummyInspector2.cs: DummyInspector2
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/TestDoubles/DummyMessage.cs: DummyMessage
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/TestDoubles/DummyObjectContext.cs: DummyObjectContext
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/TestDoubles/DummySerializationConverter.cs: DummySerializationConverter:ISerializationConverter
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/TestDoubles/DummySerializationConverterOfT.cs: DummySerializationConverterOfT:SerializationConverter<DummyObjectContext>
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/TestDoubles/DummyServiceLocator.cs: DummyServiceLocator:IServiceLocator
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/TestDoubles/DummyTab.cs: DummyTab:TabBase<DummyObjectContext>
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/TestDoubles/DummyTabSetupTab.cs: DummyTabSetupTab
 /Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/TestDoubles/IDummyInterface.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/TestDoubles/IDummyMixin.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/Tester/AjaxPolicyTester.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/Tester/ApplicationPersistenceStoreTester.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/Tester/ContentTypePolicyTester.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/Tester/ControlCookiePolicyTester.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/Tester/GlimpseConfigurationTester.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/Tester/GlimpseRuntimeTester.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/Tester/ResourceParametersTester.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/Tester/StatusCodePolicyTester.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/Tester/UriPolicyTester.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/TraceListenerShould.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Integration.Site/Areas/Area/AreaAreaRegistration.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Integration.Site/Areas/Area/Controllers/HomeAreaController.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Integration.Site/Code/CustomModelBinder.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Integration.Site/Code/CustomModelBinderProvider.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Integration.Site/Code/DomainData.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Integration.Site/Code/DomainRoute.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Integration.Site/Controllers/AsyncTestController.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Integration.Site/Controllers/BindingController.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Integration.Site/Controllers/HomeController.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Integration.Site/Controllers/RoutingController.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Integration.Site/Controllers/TraceController.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Integration.Site/GlimpseSecurityPolicy.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Integration.Site/Global.asax.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Integration.Site/IntegrationTestTab.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Integration.Site/Models/CustomModel.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Integration/BrowserFactory.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Integration/GlimpseShould.cs: 
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/TestDoubles/IDummyMixin.cs: DummyMixin
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/Tester/AjaxPolicyTester.cs: AjaxPolicyTester
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/Tester/ApplicationPersistenceStoreTester.cs: ApplicationPersistenceStoreTester
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/Tester/ContentTypePolicyTester.cs: ContentTypePolicyTester:ContentTypePolicy
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/Tester/ControlCookiePolicyTester.cs: ControlCookiePolicyTester:ControlCookiePolicy
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/Tester/GlimpseConfigurationTester.cs: GlimpseConfigurationTester
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/Tester/GlimpseRuntimeTester.cs: GlimpseRuntimeTester
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/Tester/ResourceParametersTester.cs: ResourceParametersTester
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/Tester/StatusCodePolicyTester.cs: StatusCodePolicyTester
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/Tester/UriPolicyTester.cs: UriPolicyTester
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Core/TraceListenerShould.cs: TraceListenerShould
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Integration.Site/Areas/Area/AreaAreaRegistration.cs: AreaAreaRegistration
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Integration.Site/Areas/Area/Controllers/HomeAreaController.cs: HomeAreaController
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Integration.Site/Code/CustomModelBinder.cs: CustomModelBinder
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Integration.Site/Code/CustomModelBinderProvider.cs: CustomModelBinderProvider
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Integration.Site/Code/DomainData.cs: DomainData
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Integration.Site/Code/DomainRoute.cs: DomainRoute
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Integration.Site/Controllers/AsyncTestController.cs: AsyncTestController
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Integration.Site/Controllers/BindingController.cs: BindingController
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Integration.Site/Controllers/HomeController.cs: HomeController
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Integration.Site/Controllers/RoutingController.cs: RoutingController
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Integration.Site/Controllers/TraceController.cs: TraceController
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Integration.Site/Global.asax.cs: MvcApplication
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Integration.Site/IntegrationTestTab.cs: IntegrationTestTab
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Integration.Site/Models/CustomModel.cs: CustomModel
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Integration/BrowserFactory.cs: BrowserFactory
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Integration/GlimpseShould.cs: GlimpseShould
 /Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Integration/WebDriverExtensions.cs: WebDriverExtensions
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Mvc/AlternateType/ActionFilterOnActionExecutedShould.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Mvc/AlternateType/ActionFilterOnActionExecutingShould.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Mvc/AlternateType/ActionFilterShould.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Mvc/AlternateType/ActionInvokerGetFiltersShould.cs: ActionInvokerGetFiltersShould<T>
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Mvc/AlternateType/ActionInvokerInvokeActionMethodArgumentsShould.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Mvc/AlternateType/ActionInvokerInvokeActionMethodShould.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Mvc/AlternateType/ActionInvokerInvokeActionResultShould.cs: ActionInvokerInvokeActionResultShould<T>
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Mvc/AlternateType/AsyncActionInvokerBeginInvokerActionMethodShould.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Mvc/AlternateType/AsyncActionInvokerEndInvokeActionMethodShould.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Mvc/AlternateType/AsyncActionInvokerShould.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Mvc/AlternateType/AuthorizationFilterOnAuthorizationShould.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Mvc/AlternateType/AuthorizationFilterShould.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Mvc/AlternateType/ControllerFactoryCreateControllerArgumentsShould.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Mvc/AlternateType/ControllerFactoryCreateControllerShould.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Mvc/AlternateType/ControllerFactoryShould.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Mvc/AlternateType/DependencyResolverGetServiceShould.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Mvc/AlternateType/DependencyResolverGetServicesShould.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Mvc/AlternateType/DependencyResolverShould.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Mvc/AlternateType/ExceptionFilterOnExceptionShould.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Mvc/AlternateType/ExceptionFilterShould.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Mvc/AlternateType/ModelBinderBindModelArgumentsShould.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Mvc/AlternateType/ModelBinderBindModelShould.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Mvc/AlternateType/ModelBinderBindPropertyArgumentsShould.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Mvc/AlternateType/ModelBinderBindPropertyShould.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Mvc/AlternateType/ModelBinderProviderGetBinderShould.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Mvc/AlternateType/ModelBinderProviderShould.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Mvc/AlternateType/ModelBinderShould.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Mvc/AlternateType/ResultFilterOnResultExecutedShould.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Mvc/AlternateType/ResultFilterOnResultExecutingShould.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Mvc/AlternateType/ResultFilterShould.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Mvc/AlternateType/ValueProviderContainsPrefixShould.cs: ValueProviderContainsPrefixShould<T>
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Mvc/AlternateType/ValueProviderFactoryGetValueProviderShould.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Mvc/AlternateType/ValueProviderFactoryShould.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Mvc/AlternateType/ValueProviderGetValueArgumentShould.cs: ValueProviderGetValueArgumentShould<T>
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Mvc/AlternateType/ValueProviderGetValueShould.cs: ValueProviderGetValueShould<T>
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Mvc/AlternateType/ValueProviderShould.cs: ValueProviderShould<T>
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Mvc/AlternateType/ViewEngineFindViewsArgumentsShould.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Mvc/AlternateType/ViewEngineFindViewsShould.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Mvc/AlternateType/ViewRenderArgumentsShould.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Mvc/AlternateType/ViewRenderMixinShould.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Mvc/AlternateType/ViewRenderShould.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Mvc/AlternateType/ViewShould.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Mvc/Inspector/DependencyInjectionShould.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Mvc/Inspector/ExecutionShould.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Mvc/Inspector/ModelBinderInspectorShould.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Mvc/Inspector/ViewEngineShould.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Mvc/Message/ActionMessageShould.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Mvc/Message/BoundedFilterMessageShould.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Mvc/Message/ChildActionMessageShould.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Mvc/Message/FilterMessageShould.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Mvc/Message/_ActionFilterMessageShould.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Mvc/Message/_ActionMessageShould.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Mvc/Message/_BoundedFilterMessageShould.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Mvc/Message/_ExecutionMessageShould.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Mvc/Message/_FilterMessageShould.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Mvc/Model/ViewModelSummaryShould.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Mvc/Model/ViewsModelShould.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Mvc/ResourcesShould.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Mvc/SerializationConverter/ListOfMetadataItemModelConverterShould.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Mvc/SerializationConverter/ListOfViewsModelConverterShould.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Mvc/Tab/MetadataShould.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Mvc/Tab/ModelBindingShould.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Mvc/Tab/ViewsShould.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Mvc/TestDoubles/DummyAsyncController.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Mvc/TestDoubles/DummyController.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Mvc/TestDoubles/DummyDefaultModelBinder.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Mvc/TestDoubles/DummyModelBinderProvider.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Mvc/TestDoubles/DummyValueProviderFactory.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Mvc/TestDoubles/DummyView.cs: 
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Mvc/AlternateType/ActionFilterOnActionExecutedShould.cs: ActionFilterOnActionExecutedShould
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Mvc/AlternateType/ActionFilterOnActionExecutingShould.cs: ActionFilterOnActionExecutingShould
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Mvc/AlternateType/ActionFilterShould.cs: ActionFilterShould
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Mvc/AlternateType/ActionInvokerGetFiltersShould.cs: below.")]
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Mvc/AlternateType/ActionInvokerInvokeActionMethodArgumentsShould.cs: ActionInvokerInvokeActionMethodArgumentsShould
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Mvc/AlternateType/ActionInvokerInvokeActionMethodShould.cs: ActionInvokerInvokeActionMethodShould
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Mvc/AlternateType/ActionInvokerInvokeActionResultShould.cs: below.")]
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Mvc/AlternateType/AsyncActionInvokerBeginInvokerActionMethodShould.cs: AsyncActionInvokerBeginInvokerActionMethodShould
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Mvc/AlternateType/AsyncActionInvokerEndInvokeActionMethodShould.cs: AsyncActionInvokerEndInvokeActionMethodShould
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Mvc/AlternateType/AsyncActionInvokerShould.cs: AsyncActionInvokerShould
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Mvc/AlternateType/AuthorizationFilterOnAuthorizationShould.cs: AuthorizationFilterOnAuthorizationShould
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Mvc/AlternateType/AuthorizationFilterShould.cs: AuthorizationFilterShould
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Mvc/AlternateType/ControllerFactoryCreateControllerArgumentsShould.cs: ControllerFactoryCreateControllerArgumentsShould
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Mvc/AlternateType/ControllerFactoryCreateControllerShould.cs: ControllerFactoryCreateControllerShould
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Mvc/AlternateType/ControllerFactoryShould.cs: ControllerFactoryShould
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Mvc/AlternateType/DependencyResolverGetServiceShould.cs: DependencyResolverGetServiceShould
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Mvc/AlternateType/DependencyResolverGetServicesShould.cs: DependencyResolverGetServicesShould
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Mvc/AlternateType/DependencyResolverShould.cs: DependencyResolverShould
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Mvc/AlternateType/ExceptionFilterOnExceptionShould.cs: ExceptionFilterOnExceptionShould
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Mvc/AlternateType/ExceptionFilterShould.cs: ExceptionFilterShould
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Mvc/AlternateType/ModelBinderBindModelArgumentsShould.cs: ModelBinderBindModelArgumentsShould
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Mvc/AlternateType/ModelBinderBindModelShould.cs: ModelBinderBindModelShould
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Mvc/AlternateType/ModelBinderBindPropertyArgumentsShould.cs: ModelBinderBindPropertyArgumentsShould
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Mvc/AlternateType/ModelBinderBindPropertyShould.cs: ModelBinderBindPropertyShould
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Mvc/AlternateType/ModelBinderProviderGetBinderShould.cs: ModelBinderProviderGetBinderShould
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Mvc/AlternateType/ModelBinderProviderShould.cs: ModelBinderProviderShould
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Mvc/AlternateType/ModelBinderShould.cs: ModelBinderShould
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Mvc/AlternateType/ResultFilterOnResultExecutedShould.cs: ResultFilterOnResultExecutedShould
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Mvc/AlternateType/ResultFilterOnResultExecutingShould.cs: ResultFilterOnResultExecutingShould
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Mvc/AlternateType/ResultFilterShould.cs: ResultFilterShould
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Mvc/AlternateType/ValueProviderContainsPrefixShould.cs: below.")]
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Mvc/AlternateType/ValueProviderFactoryGetValueProviderShould.cs: ValueProviderFactoryGetValueProviderShould
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Mvc/AlternateType/ValueProviderFactoryShould.cs: ValueProviderFactoryShould
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Mvc/AlternateType/ValueProviderGetValueArgumentShould.cs: below.")]
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Mvc/AlternateType/ValueProviderGetValueShould.cs: below.")]
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Mvc/AlternateType/ValueProviderShould.cs: below.")]
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Mvc/AlternateType/ViewEngineFindViewsArgumentsShould.cs: ViewEngineFindViewsArgumentsShould
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Mvc/AlternateType/ViewEngineFindViewsShould.cs: ViewEngineFindViewsShould
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Mvc/AlternateType/ViewRenderArgumentsShould.cs: ViewRenderArgumentsShould
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Mvc/AlternateType/ViewRenderMixinShould.cs: ViewRenderMixinShould
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Mvc/AlternateType/ViewRenderShould.cs: ViewRenderShould
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Mvc/AlternateType/ViewShould.cs: ViewShould
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Mvc/Inspector/DependencyInjectionShould.cs: DependencyInjectionShould
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Mvc/Inspector/ExecutionShould.cs: ExecutionShould
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Mvc/Inspector/ModelBinderInspectorShould.cs: ModelBinderInspectorShould
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Mvc/Inspector/ViewEngineShould.cs: ViewEngineShould
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Mvc/Message/ActionMessageShould.cs: ActionMessageShould
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Mvc/Message/BoundedFilterMessageShould.cs: BoundedFilterMessageShould
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Mvc/Message/ChildActionMessageShould.cs: ChildActionMessageShould
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Mvc/Message/FilterMessageShould.cs: FilterMessageShould
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Mvc/Message/_ActionFilterMessageShould.cs: ActionFilterMessageShould
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Mvc/Message/_ActionMessageShould.cs: ActionMessageShould
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Mvc/Message/_BoundedFilterMessageShould.cs: BoundedFilterMessageShould
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Mvc/Message/_ExecutionMessageShould.cs: ExecutionMessageShould
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Mvc/Message/_FilterMessageShould.cs: FilterMessageShould
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Mvc/Model/ViewModelSummaryShould.cs: ViewModelSummaryShould
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Mvc/Model/ViewsModelShould.cs: ViewsModelShould
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Mvc/ResourcesShould.cs: ResourcesShould
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Mvc/SerializationConverter/ListOfMetadataItemModelConverterShould.cs: ListOfMetadataItemModelConverterShould
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Mvc/SerializationConverter/ListOfViewsModelConverterShould.cs: ListOfViewsModelConverterShould
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Mvc/Tab/MetadataShould.cs: MetadataShould
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Mvc/Tab/ModelBindingShould.cs: ModelBindingShould
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Mvc/Tab/ViewsShould.cs: ViewsShould
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Mvc/TestDoubles/DummyAsyncController.cs: DummyAsyncController
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Mvc/TestDoubles/DummyController.cs: DummyController
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Mvc/TestDoubles/DummyDefaultModelBinder.cs: DummyDefaultModelBinder
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Mvc/TestDoubles/DummyModelBinderProvider.cs: DummyModelBinderProvider
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Mvc/TestDoubles/DummyValueProviderFactory.cs: DummyValueProviderFactory
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Test.Mvc/TestDoubles/DummyView.cs: DummyView
 /Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.WebForms.WingTip.Sample/About.aspx.cs: About
 /Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.WebForms.WingTip.Sample/About.aspx.designer.cs: About
 /Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.WebForms.WingTip.Sample/Account/Login.aspx.cs: Login
@@ -789,7 +788,7 @@
 /Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.WebForms.WingTip.Sample/Admin/AdminPage.aspx.cs: AdminPage
 /Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.WebForms.WingTip.Sample/Admin/AdminPage.aspx.designer.cs: AdminPage
 /Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.WebForms.WingTip.Sample/App_Start/AuthConfig.cs: AuthConfig
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.WebForms.WingTip.Sample/App_Start/BundleConfig.cs: 
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.WebForms.WingTip.Sample/App_Start/BundleConfig.cs: BundleConfig
 /Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.WebForms.WingTip.Sample/Checkout/CheckoutCancel.aspx.cs: CheckoutCancel
 /Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.WebForms.WingTip.Sample/Checkout/CheckoutCancel.aspx.designer.cs: CheckoutCancel
 /Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.WebForms.WingTip.Sample/Checkout/CheckoutComplete.aspx.cs: CheckoutComplete
@@ -802,31 +801,31 @@
 /Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.WebForms.WingTip.Sample/Checkout/CheckoutStart.aspx.designer.cs: CheckoutStart
 /Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.WebForms.WingTip.Sample/Contact.aspx.cs: Contact
 /Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.WebForms.WingTip.Sample/Contact.aspx.designer.cs: Contact
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.WebForms.WingTip.Sample/DataBindingTests/CustomAttribute.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.WebForms.WingTip.Sample/DataBindingTests/CustomParameter.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.WebForms.WingTip.Sample/DataBindingTests/CustomValueProvider.cs: 
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.WebForms.WingTip.Sample/DataBindingTests/CustomAttribute.cs: CustomAttribute
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.WebForms.WingTip.Sample/DataBindingTests/CustomParameter.cs: CustomParameter
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.WebForms.WingTip.Sample/DataBindingTests/CustomValueProvider.cs: CustomValueProvider
 /Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.WebForms.WingTip.Sample/DataBindingTests/ListView.aspx.cs: ListView
 /Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.WebForms.WingTip.Sample/DataBindingTests/ListView.aspx.designer.cs: ListView
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.WebForms.WingTip.Sample/DataBindingTests/ListViewAdapter.cs: 
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.WebForms.WingTip.Sample/DataBindingTests/ListViewAdapter.cs: ListViewAdapter
 /Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.WebForms.WingTip.Sample/Default.aspx.cs: _Default
 /Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.WebForms.WingTip.Sample/Default.aspx.designer.cs: _Default
 /Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.WebForms.WingTip.Sample/ErrorPage.aspx.cs: ErrorPage
 /Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.WebForms.WingTip.Sample/ErrorPage.aspx.designer.cs: ErrorPage
 /Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.WebForms.WingTip.Sample/FileUpload/FileUpload.aspx.cs: FileUpload
 /Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.WebForms.WingTip.Sample/FileUpload/FileUpload.aspx.designer.cs: FileUpload
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.WebForms.WingTip.Sample/Global.asax.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.WebForms.WingTip.Sample/Logic/AddProducts.cs: 
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.WebForms.WingTip.Sample/Global.asax.cs: Global
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.WebForms.WingTip.Sample/Logic/AddProducts.cs: AddProducts
 /Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.WebForms.WingTip.Sample/Logic/ExceptionUtility.cs: ExceptionUtility
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.WebForms.WingTip.Sample/Logic/PayPalFunctions.cs: NVPAPICaller
 /Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.WebForms.WingTip.Sample/Logic/PayPalFunctions.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.WebForms.WingTip.Sample/Logic/PayPalFunctions.cs: NVPCodec
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.WebForms.WingTip.Sample/Logic/ShoppingCartActions.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.WebForms.WingTip.Sample/Models/CartItem.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.WebForms.WingTip.Sample/Models/Category.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.WebForms.WingTip.Sample/Models/Order.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.WebForms.WingTip.Sample/Models/OrderDetail.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.WebForms.WingTip.Sample/Models/Product.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.WebForms.WingTip.Sample/Models/ProductContext.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.WebForms.WingTip.Sample/Models/ProductDatabaseInitializer.cs: 
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.WebForms.WingTip.Sample/Logic/ShoppingCartActions.cs: ShoppingCartActions
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.WebForms.WingTip.Sample/Models/CartItem.cs: CartItem
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.WebForms.WingTip.Sample/Models/Category.cs: Category
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.WebForms.WingTip.Sample/Models/Order.cs: Order
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.WebForms.WingTip.Sample/Models/OrderDetail.cs: OrderDetail
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.WebForms.WingTip.Sample/Models/Product.cs: Product
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.WebForms.WingTip.Sample/Models/ProductContext.cs: ProductContext
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.WebForms.WingTip.Sample/Models/ProductDatabaseInitializer.cs: ProductDatabaseInitializer
 /Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.WebForms.WingTip.Sample/ProductDetails.aspx.cs: ProductDetails
 /Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.WebForms.WingTip.Sample/ProductDetails.aspx.designer.cs: ProductDetails
 /Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.WebForms.WingTip.Sample/ProductList.aspx.cs: ProductList
@@ -841,68 +840,68 @@
 /Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.WebForms.WingTip.Sample/ViewstateTests/PopulatedControls.aspx.designer.cs: PopulatedControls
 /Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.WebForms.WingTip.Sample/Viewstateless.aspx.cs: Viewstateless
 /Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.WebForms.WingTip.Sample/Viewstateless.aspx.designer.cs: Viewstateless
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.WebForms/AlternateType/ModelBinder.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.WebForms/Display/WebForms.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.WebForms/Inspector/DataBoundControlAdapter.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.WebForms/Inspector/ModelBinderInspector.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.WebForms/Inspector/PageLifeCycleInspector.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.WebForms/Inspector/ViewStatePageAdapter.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.WebForms/Inspector/ViewStatePageStatePersister.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.WebForms/Message/PageLifeCycleMessage.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.WebForms/Message/WebFormsTimelineCategory.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.WebForms/Model/ControlTreeItemModel.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.WebForms/Model/ControlTreeItemTrackModel.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.WebForms/Model/DataBindModel.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.WebForms/Model/DataBindParameter.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.WebForms/Model/DataBindParameterModel.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.WebForms/Model/EventParameterModel.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.WebForms/Model/ExecutionItemModel.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.WebForms/Model/ModelBindParameter.cs: 
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.WebForms/AlternateType/ModelBinder.cs: ModelBinder
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.WebForms/Display/WebForms.cs: WebForms
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.WebForms/Inspector/DataBoundControlAdapter.cs: DataBoundControlAdapter
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.WebForms/Inspector/ModelBinderInspector.cs: ModelBinderInspector
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.WebForms/Inspector/PageLifeCycleInspector.cs: PageLifeCycleInspector
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.WebForms/Inspector/ViewStatePageAdapter.cs: ViewStatePageAdapter
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.WebForms/Inspector/ViewStatePageStatePersister.cs: ViewStatePageStatePersister
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.WebForms/Message/PageLifeCycleMessage.cs: PageLifeCycleMessage
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.WebForms/Message/WebFormsTimelineCategory.cs: WebFormsTimelineCategory
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.WebForms/Model/ControlTreeItemModel.cs: ControlTreeItemModel
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.WebForms/Model/ControlTreeItemTrackModel.cs: ControlTreeItemTrackModel
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.WebForms/Model/DataBindModel.cs: DataBindModel
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.WebForms/Model/DataBindParameter.cs: DataBindParameter
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.WebForms/Model/DataBindParameterModel.cs: DataBindParameterModel
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.WebForms/Model/EventParameterModel.cs: EventParameterModel
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.WebForms/Model/ExecutionItemModel.cs: ExecutionItemModel
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.WebForms/Model/ModelBindParameter.cs: ModelBindParameter
 /Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.WebForms/Resources.Designer.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.WebForms/SerializationConverter/DataBindParameterConverter.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.WebForms/SerializationConverter/IndexedStringListConverter.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.WebForms/SerializationConverter/IndexedStringListConverterTarget.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.WebForms/Support/DataBindFormatter.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.WebForms/Support/ViewStateFormatter.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.WebForms/Tab/ControlTree.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.WebForms/Tab/PageLifeCycle.cs: 
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.WebForms/SerializationConverter/DataBindParameterConverter.cs: DataBindParameterConverter
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.WebForms/SerializationConverter/IndexedStringListConverter.cs: IndexedStringListConverter
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.WebForms/SerializationConverter/IndexedStringListConverterTarget.cs: IndexedStringListConverterTarget
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.WebForms/Support/DataBindFormatter.cs: DataBindFormatter
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.WebForms/Support/ViewStateFormatter.cs: ViewStateFormatter
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.WebForms/Tab/ControlTree.cs: ControlTree
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.WebForms/Tab/PageLifeCycle.cs: PageLifeCycle
 /Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.WindowsAzure.Caching/Infrastructure/DataCacheEventSubscriberFactory.cs: DataCacheEventSubscriberFactory
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.WindowsAzure.Caching/Infrastructure/DataCacheEventSubscriberFactoryInitializer.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.WindowsAzure.Caching/Infrastructure/DefaultCacheEventSubscriber.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.WindowsAzure.Caching/Infrastructure/GlimpseDataCacheEventSubscriber.cs: 
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.WindowsAzure.Caching/Infrastructure/DataCacheEventSubscriberFactoryInitializer.cs: DataCacheEventSubscriberFactoryInitializer
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.WindowsAzure.Caching/Infrastructure/DefaultCacheEventSubscriber.cs: DefaultCacheEventSubscriber
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.WindowsAzure.Caching/Infrastructure/GlimpseDataCacheEventSubscriber.cs: GlimpseDataCacheEventSubscriber
 /Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.WindowsAzure.Caching/Infrastructure/IDataCacheEventSubscriber.cs: 
 /Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.WindowsAzure.Caching/Infrastructure/LongExtensions.cs: LongExtensions
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.WindowsAzure.Caching/Infrastructure/TraceModel.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.WindowsAzure.Caching/Models/CachingModel.cs: 
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.WindowsAzure.Caching/Infrastructure/TraceModel.cs: TraceModel
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.WindowsAzure.Caching/Models/CachingModel.cs: CachingModel
 /Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.WindowsAzure.Caching/Resources.Designer.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.WindowsAzure.Caching/Tab/Caching.cs: 
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.WindowsAzure.Caching/Tab/Caching.cs: Caching
 /Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.WindowsAzure.ServiceBus/Resources.Designer.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.WindowsAzure.Storage/Infrastructure/DefaultOperationContextFactory.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.WindowsAzure.Storage/Infrastructure/GlimpseOperationContextFactory.cs: 
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.WindowsAzure.Storage/Infrastructure/DefaultOperationContextFactory.cs: DefaultOperationContextFactory
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.WindowsAzure.Storage/Infrastructure/GlimpseOperationContextFactory.cs: GlimpseOperationContextFactory
 /Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.WindowsAzure.Storage/Infrastructure/IOperationContextFactory.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.WindowsAzure.Storage/Infrastructure/Inspections/GeneralBestPracticesInspector.cs: 
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.WindowsAzure.Storage/Infrastructure/Inspections/GeneralBestPracticesInspector.cs: GeneralBestPracticesInspector
 /Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.WindowsAzure.Storage/Infrastructure/Inspections/IWindowsAzureStorageInspector.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.WindowsAzure.Storage/Infrastructure/Inspections/TableStorageEchoContentInspector.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.WindowsAzure.Storage/Infrastructure/Inspections/TableStorageQueryIndexInspector.cs: 
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.WindowsAzure.Storage/Infrastructure/Inspections/TableStorageEchoContentInspector.cs: TableStorageEchoContentInspector
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.WindowsAzure.Storage/Infrastructure/Inspections/TableStorageQueryIndexInspector.cs: TableStorageQueryIndexInspector
 /Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.WindowsAzure.Storage/Infrastructure/Inspections/WindowsAzureStorageInspectorBase.cs: WindowsAzureStorageInspectorBase
 /Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.WindowsAzure.Storage/Infrastructure/Json/IPAddressConverter.cs: 
 /Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.WindowsAzure.Storage/Infrastructure/Json/IPEndPointConverter.cs: 
 /Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.WindowsAzure.Storage/Infrastructure/LongExtensions.cs: LongExtensions
 /Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.WindowsAzure.Storage/Infrastructure/OperationContextFactory.cs: OperationContextFactory
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.WindowsAzure.Storage/Infrastructure/OperationContextFactoryInitializer.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.WindowsAzure.Storage/Infrastructure/TraceModel.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.WindowsAzure.Storage/Infrastructure/WindowsAzureStorageTimelineMessage.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.WindowsAzure.Storage/Models/StorageModel.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.WindowsAzure.Storage/Models/StorageRequestModel.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.WindowsAzure.Storage/Models/StorageStatisticsModel.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.WindowsAzure.Storage/Models/StorageWarningModel.cs: 
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.WindowsAzure.Storage/Infrastructure/OperationContextFactoryInitializer.cs: OperationContextFactoryInitializer
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.WindowsAzure.Storage/Infrastructure/TraceModel.cs: TraceModel
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.WindowsAzure.Storage/Infrastructure/WindowsAzureStorageTimelineMessage.cs: WindowsAzureStorageTimelineMessage
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.WindowsAzure.Storage/Models/StorageModel.cs: StorageModel
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.WindowsAzure.Storage/Models/StorageRequestModel.cs: StorageRequestModel
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.WindowsAzure.Storage/Models/StorageStatisticsModel.cs: StorageStatisticsModel
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.WindowsAzure.Storage/Models/StorageWarningModel.cs: StorageWarningModel
 /Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.WindowsAzure.Storage/Resources.Designer.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.WindowsAzure.Storage/Tab/Storage.cs: 
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.WindowsAzure.Storage/Tab/Storage.cs: Storage
 /Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.WindowsAzure.WebRole.Sample/Default.aspx.cs: Default
 /Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.WindowsAzure.WebRole.Sample/Default.aspx.designer.cs: Default
 /Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.WindowsAzure/Infrastructure/IWindowsAzureEnvironment.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.WindowsAzure/Infrastructure/WindowsAzureCloudServicesEnvironment.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.WindowsAzure/Infrastructure/WindowsAzureWebsitesEnvironment.cs: 
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.WindowsAzure/Infrastructure/WindowsAzureCloudServicesEnvironment.cs: WindowsAzureCloudServicesEnvironment
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.WindowsAzure/Infrastructure/WindowsAzureWebsitesEnvironment.cs: WindowsAzureWebsitesEnvironment
 /Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.WindowsAzure/Resources.Designer.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.WindowsAzure/Tab/WindowsAzure.cs: 
-/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/tools/ManualBuild/ManualBuild/Program.cs: 
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.WindowsAzure/Tab/WindowsAzure.cs: WindowsAzure
+/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/tools/ManualBuild/ManualBuild/Program.cs: Assets
