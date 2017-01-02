@@ -203,5 +203,27 @@ public class FileAnalizerTest {
 		return search.getFileList( directory );
 
 	}
+	@Test
+	public void testIntegratedExtractClassModule() {
+		try {
+			FileAnalyzer fileAnalyzer  = new FileAnalyzer();
+			String filename = "/Users/phayate/src/Eclipse-Java/ProcessMetricsAnalyzer/test-data/Client.cs";
+			Method method = FileAnalyzer.class.getDeclaredMethod(
+					"extractClassModule", String.class );
+			method.setAccessible(true);
+			method.invoke(fileAnalyzer, filename);
+			// get file containment
+			ArrayList<Module> modules = fileAnalyzer.getTestModules();
+			Module module = modules.get(0);
+			ArrayList<String> arrayList = FileReading.readFile( filename,  module.getBegenningPostion(),  module.getEndingPosition() );
+			for (String line: arrayList) {
+				System.out.println( line );
+			}
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+	}
 
 }

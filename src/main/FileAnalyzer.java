@@ -64,14 +64,14 @@ public class FileAnalyzer {
 		return str;
 	}
 	private int confirmComment ( String line ) {
-		line = this.removeSpace( line );
+//		line = this.removeSpace( line );
 		//	when // in line, return 1
 		if ( line.indexOf("//") != -1 ) {
 			return 1;
 		}
-		//	when */ in line, return 1
+		//	when */ in line, return 3
 		if ( line.indexOf("*/") != -1 ) {
-			return 1;
+			return 3;
 		}
 		//	when /* in line, return 2
 		if ( line.indexOf("/*") != -1 ) {
@@ -108,14 +108,15 @@ public class FileAnalyzer {
 			int statusCode = this.confirmComment( line );
 			if ( statusCode == 2 ) {
 				isContinued = true;
+			}else if( statusCode == 3 ) {
+				isContinued = false;				
 			}
 			// status code==0 and is not continue -> script block  
-			if ( statusCode != 0 || isContinued ) {
+			if ( statusCode == 1 || isContinued ) {
 				// this is commet line
 			}
 			else {
 				/** Class Module is beginning*/
-				isContinued = false;
 				if ( isClassLine ( line ) ) {
 					// put beginning position
 					begenningPosition = numberOfLine;
