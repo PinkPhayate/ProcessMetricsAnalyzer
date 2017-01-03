@@ -75,11 +75,11 @@ public class Module {
 		
 		this.M1 = newLine + changedLine;
 		if (totalLine!= 0) {
-			this.M2 = deletedLine / totalLine;
+			this.M2 = deletedLine / (double)totalLine;
 		}
 		this.M6 = (newLine + changedLine + deletedLine);
 		if (deletedLine != 0) {
-			this.M7 = (newLine + changedLine) / deletedLine;			
+			this.M7 = (newLine + changedLine) / (double)deletedLine;			
 		}
 		
 	}
