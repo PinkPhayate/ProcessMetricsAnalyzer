@@ -47,12 +47,6 @@ public class DiffAnalyzerMain {
 		String pvDirectory = args[0] + args[2];
 		String suffix = args[3];
 
-		// String mainDirecotory = "/Users/phayate/src/TestDate/";
-		// String cvDirectory=
-		// "/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet";
-		// String pvDirectory= "/Users/phayate/src/TestDate/Glimpse-1.7.3-ado";
-		// String suffix = "cs";
-
 		/** Step 1 get class module in current version */
 		FileListGetter search = new FileListGetter(suffix);
 
