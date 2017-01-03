@@ -109,8 +109,6 @@ public class FileAnalyzer {
 		boolean isContinued = false;
 		for(String line: fileStrs) {
 			// when line means comment, getting out!
-//			if ( line.indexOf( "//") != -1 ) {
-//				// comment line
 			int statusCode = this.confirmComment( line );
 			if ( statusCode == 2 ) {
 				isContinued = true;
@@ -141,12 +139,12 @@ public class FileAnalyzer {
 						}
 					}else {
 						/** class script starts */
-						if ( containment == null) {
+//						if ( containment == null) {
 							containment = new ArrayList<String>();
 							containment.add( line );
 							module.putClassName(classname);
 							blockIndicator = 0;
-						}
+//						}
 					}
 				}
 				if (line.indexOf("{") != -1) {

@@ -11,6 +11,7 @@ import difflib.Patch;
 import difflib.Delta.TYPE;
 import lib.FileReading;
 
+
 public class DiffAnalyzer {
 	//	private ArrayList<String> prevFileStrs = null;
 	//	private ArrayList<String> currentFileStrs = null;
