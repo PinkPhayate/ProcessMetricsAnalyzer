@@ -17,13 +17,20 @@ When this program is executed, put 3 files in the same directory.
 ## Requirement
 java(1.8.0_73)
 
++ On Mac -> DIMA.jar
++ On Windows -> DIMA-win.jar
 
 ## Usage
 This repository has jar file and you can use by operating below command in your terminal.
-```terminal
-java -jar PRMA.jar  target_software_repository later_version_directory_name older_version_directory_name suffix
-```
 
++ Mac
+```terminal
+java -jar DIMA.jar  target_software_repository later_version_directory_name older_version_directory_name suffix
+```
++ Windows
+```terminal
+java -jar DIMA-win.jar  target_software_repository later_version_directory_name older_version_directory_name suffix
+```
 - target_software_repository  ->  that repository must have more two versionds per one software.
 - later_version_directory_name
 - older_version_directory_name
@@ -33,8 +40,13 @@ I have not tested excepting for java and c sharp.
 ## Sample
 
 ### Command
++ Mac
 ```terrminal
 java -jar DIMA.jar ./sample/ curr prev cs
+```
++ Windows
+```terrminal
+java -jar DIMA-win.jar ./sample/ curr prev cs
 ```
 
 

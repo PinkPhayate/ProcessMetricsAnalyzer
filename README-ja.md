@@ -23,8 +23,14 @@ java(1.8.0_73)
 ## 使い方
 ターミナル（またはコマンドプロンプト）で以下のコマンドを実行してください。
 
++ Mac
 ```terminal
-java -jar PRMA.jar  target_software_repository later_version_directory_name older_version_directory_name suffix
+java -jar DIMA.jar  target_software_repository later_version_directory_name older_version_directory_name suffix
+```
+
++ Windows
+```terminal
+java -jar DIMA-win.jar  target_software_repository later_version_directory_name older_version_directory_name suffix
 ```
 
 - target_software_repository  ->  ターゲットとなるソフトウェアが置かれているディレクトリ。そのディレクトリに、比較するバージョンどちらもなければいけません。
@@ -44,8 +50,14 @@ eg.) java, cs	など
 望ましいディレクトリ構造を、このレポジトリのsampleディレクトリに示します。その時の実行コマンドは以下になります。
 
 ### コマンド
++ mac
 ```terrminal
 java -jar DIMA.jar ./sample/ curr prev cs
+```
+
++ windows
+```terrminal
+java -jar DIMA-win.jar ./sample/ curr prev cs
 ```
 
 
