@@ -266,13 +266,8 @@ public class FileAnalyzer {
 		for ( Module module : this.modules) {
 			classNameList.add( module.getFileName() +": "+module.getClassName() );
 		}
-		try {
-			FileWriting.writeFile(classNameList, saveFileName);
-			DiffAnalyzerMain.logger.info("to record" + saveFileName + " has finished");
-		} catch (IOException e) {
-			DiffAnalyzerMain.logger.warning("IOException occured");
-			e.printStackTrace();
-		}
+		FileWriting.writeFile(classNameList, saveFileName);
+		DiffAnalyzerMain.logger.info("to record" + saveFileName + " has finished");
 		return classNameList;
 	}
 	

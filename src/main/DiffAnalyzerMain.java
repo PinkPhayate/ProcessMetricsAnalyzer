@@ -22,7 +22,12 @@ public class DiffAnalyzerMain {
 	 * 
 	 */
 	public static final Logger logger = Logger.getLogger(DiffAnalyzerMain.class.getName());
-	
+	/**
+	 * indicator for report
+	 */
+	public static int numOfExistFile = 0;
+	public static int numOfNewModule = 0;
+
 	public static ArrayList<String> originRecord;
 	public static void main(String args[]) {
 		// save log to file
@@ -69,13 +74,18 @@ public class DiffAnalyzerMain {
 		ArrayList<String> record =
 				diffAnalyzer.compareTwoVersion(currentModules, previousModules);
 		originRecord = record;
-		try {
-			FileWriting.writeFile(record, mainDirecotory + "processmetrics.csv");
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
+		FileWriting.writeFile(record, mainDirecotory + "processmetrics.csv");
 
 		DiffAnalyzerMain.logger.info("Step 3 has finished");
+		
+		ArrayList<String> report = new ArrayList<String>();
+		report.add("Number of files in Directory\t: "+currFileStrs.size());
+		report.add("Number of current class\t: "+currentModules.size());
+		report.add("Number of previous class\t: "+previousModules.size());
+		report.add("Number of exist module\t: "+numOfExistFile);
+		report.add("Number of new module\t: "+numOfNewModule);
+		FileWriting.writeFile(report,  "report.txt" );
+
 		return;
 
 	}

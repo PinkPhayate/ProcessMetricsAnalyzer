@@ -74,10 +74,13 @@ public class DiffAnalyzer {
 	private Module searchModuleByFilePath( ArrayList<Module> targetArrayList, Module key ) {
 		for(Module module: targetArrayList) {
 			if( key.getFileName().indexOf( module.getExtractedFileName() ) != -1 ){
-				if( module.getClassName() .equals(key.getClassName()) )
-				return module;
+				if( module.getClassName() .equals(key.getClassName()) ) {
+					DiffAnalyzerMain.numOfExistFile += 1;
+					return module;					
+				}
 			}
 		}
+		DiffAnalyzerMain.numOfNewModule += 1;
 		DiffAnalyzerMain.logger.warning( "There are no module named: " + key.getFileName() );
 		return null;
 	}

@@ -62,7 +62,7 @@ public class FileAnalizerTest {
 		String filename = "/Users/phayate/src/Eclipse-Java/ProcessMetricsAnalyzer/test-data/curr/net/ClientJDBCObjectFactoryImpl.java";
 		this.fileAnalyzer.extractClassModule(filename);
 		ArrayList<Module> modules = this.fileAnalyzer.getTestModules();
-		
+
 		Module module = modules.get(0);
 		assertEquals(64, module.getBegenningPosition());
 		assertEquals(465, module.getEndingPosition());
@@ -74,24 +74,20 @@ public class FileAnalizerTest {
 		 * This test make you confirm reject line or not about begin of class
 		 * */
 		linesJudgedNotClassLogger = new ArrayList<String>();
-		
+
 		ArrayList<String> currFileStrs = this.getFileListFromTestData ();
 
 		FileAnalyzer fileAnalyzer = new FileAnalyzer();
 		fileAnalyzer.getModules(currFileStrs);
 		fileAnalyzer.saveModules( "current-modules.txt" );
 		// reject
-		try {
-			FileWriting.writeFile(linesJudgedNotClassLogger, "linesJudgedNotClass.txt");
-			
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
+		FileWriting.writeFile(linesJudgedNotClassLogger, "linesJudgedNotClass.txt");
+
 
 	}
 	@Test
 	public void examineClassLineNotExtracted () {
-		
+
 		FileAnalyzer fileAnalyzer  = new FileAnalyzer();
 		try {
 			ArrayList<String> lines = FileReading.readFile( "linesJudgedNotClass.txt");
@@ -110,10 +106,10 @@ public class FileAnalizerTest {
 		/**
 		 * Number of files  vs  number of files having module
 		 * */
-		
+
 		ArrayList<String> numberOfFiles = this.getFileListFromTestData();
 		ArrayList<String> nonFileList = new ArrayList<String> ();
-		
+
 		FileAnalyzer fileAnalyzer = new FileAnalyzer();
 		fileAnalyzer.getModules(numberOfFiles);
 		ArrayList<String> numberOfFilesHavingModule  = fileAnalyzer.getFilenameList();
@@ -123,11 +119,7 @@ public class FileAnalizerTest {
 				nonFileList.add(filename);
 			}
 		}
-		try {
-			FileWriting.writeFile(nonFileList, "nonFileList.log");
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
+		FileWriting.writeFile(nonFileList, "nonFileList.log");
 	}
 
 	@Test
@@ -160,11 +152,11 @@ public class FileAnalizerTest {
 			FileAnalyzer fileAnalyzer  = new FileAnalyzer();
 			ArrayList<String> lines = FileReading.readFile( "classLineNotExtracted.txt" );
 			for ( String line : lines) {
-					method = FileAnalyzer.class.getDeclaredMethod(
-							"extractClassName", String.class );
-					method.setAccessible(true);
-					String actual = (String)method.invoke(fileAnalyzer, line);
-//					System.out.println( actual);
+				method = FileAnalyzer.class.getDeclaredMethod(
+						"extractClassName", String.class );
+				method.setAccessible(true);
+				String actual = (String)method.invoke(fileAnalyzer, line);
+				//					System.out.println( actual);
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -174,7 +166,7 @@ public class FileAnalizerTest {
 	@Test
 	public void testClassName() {
 		moduleListLogger = new ArrayList<String> ();
-		
+
 		// get file list in directory
 		String suffix = "cs";
 		String cvDirectory = "/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet";
@@ -183,13 +175,9 @@ public class FileAnalizerTest {
 		FileAnalyzer fileAnalyzer = new FileAnalyzer();
 		fileAnalyzer.getModules(currFileStrs);
 		fileAnalyzer.saveModules( "current-modules.txt" );
-		try {
-			FileWriting.writeFile(moduleListLogger, "moduleListLogger.txt");
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
+		FileWriting.writeFile(moduleListLogger, "moduleListLogger.txt");
 
-		
+
 	}
 	private ArrayList<String> getFileList (String suffix, String directory) {
 		FileListGetter search = new FileListGetter(suffix);
@@ -223,7 +211,7 @@ public class FileAnalizerTest {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		
+
 	}
 	@Test
 	public void testExtractContainment() {
@@ -244,7 +232,7 @@ public class FileAnalizerTest {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		
+
 	}
 
 }
