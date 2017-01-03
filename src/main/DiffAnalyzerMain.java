@@ -62,12 +62,14 @@ public class DiffAnalyzerMain {
 		ArrayList<Module> currentModules = fileAnalyzer.getModules(currFileStrs);
 		fileAnalyzer.saveModules( mainDirecotory + "current-modules.txt" );
 		DiffAnalyzerMain.logger.info("Step 1 has finished");
+		search.clear();
 
 		/** Step 2 get class module in previous version */
 		ArrayList<String> prevFileStrs = search.getFileList(pvDirectory);
 		fileAnalyzer = new FileAnalyzer();
 		ArrayList<Module> previousModules = fileAnalyzer.getModules(prevFileStrs);
-//		fileAnalyzer.saveModules( mainDirecotory + "previous-modules.txt" );		DiffAnalyzerMain.logger.info("Step 2 has finished");
+		fileAnalyzer.saveModules( mainDirecotory + "previous-modules.txt" );
+		DiffAnalyzerMain.logger.info("Step 2 has finished");
 
 		/** Step 3 */
 		DiffAnalyzer diffAnalyzer = new DiffAnalyzer();
@@ -78,13 +80,19 @@ public class DiffAnalyzerMain {
 
 		DiffAnalyzerMain.logger.info("Step 3 has finished");
 		
+		/** report */
+		
 		ArrayList<String> report = new ArrayList<String>();
 		report.add("Number of files in Directory\t: "+currFileStrs.size());
-		report.add("Number of current class\t: "+currentModules.size());
-		report.add("Number of previous class\t: "+previousModules.size());
-		report.add("Number of exist module\t: "+numOfExistFile);
-		report.add("Number of new module\t: "+numOfNewModule);
+		report.add("Number of current class\t\t\t: "+currentModules.size());
+		report.add("Number of previous class\t\t\t: "+previousModules.size());
+		report.add("Number of exist module\t\t\t: "+numOfExistFile);
+		report.add("Number of new module\t\t\t: "+numOfNewModule);
 		FileWriting.writeFile(report,  "report.txt" );
+		
+		for (String line: report) {
+			System.out.println( line );
+		}
 
 		return;
 
