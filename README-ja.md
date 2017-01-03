@@ -60,5 +60,7 @@ Number of new module			: 2
 
 ## 参考文献
 1.Nagappan N, Ball T. Use of Relative Code Churn Measures to Predict. Proc. 27th Int. Conf. on Softw. Eng., ICSE’5, 2005, pp284-282.
+
 2.http://www.ne.jp/asahi/hishidama/home/tech/java/google/java-diff-utils.html
+
 3.http://chat-messenger.net/blog-entry-55.html#1
