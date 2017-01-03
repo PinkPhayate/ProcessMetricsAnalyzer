@@ -6,21 +6,29 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 
+import main.DiffAnalyzerMain;
+
 public class FileReading {
-	public static ArrayList<String> readFile(String fileName) throws IOException {
+	public static ArrayList<String> readFile(String fileName) {
 		ArrayList<String> fileContainment = new ArrayList<String>();
 		File file = new File(fileName);
-		FileReader fr = new FileReader(file);
-		BufferedReader br = new BufferedReader(fr);
+		try {
+			FileReader fr = new FileReader(file);
+			BufferedReader br = new BufferedReader(fr);
+			
+			String line = br.readLine();
+			while(line!=null) {
+				fileContainment.add(line);
+				line = br.readLine();
+			}
+			br.close();
+			
+			return fileContainment;			
+		}catch(Exception e) {
+			DiffAnalyzerMain.logger.warning( "IOException occured" );
 
-		String line = br.readLine();
-		while(line!=null) {
-			fileContainment.add(line);
-			line = br.readLine();
 		}
-		br.close();
-
-		return fileContainment;
+		return null;
 	}
 	public static ArrayList<String> readFile(String fileName, int begenningPosition, int endingPosition ) throws IOException {
 		ArrayList<String> fileContainment = readFile(fileName);

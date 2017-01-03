@@ -5,17 +5,31 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-
+import difflib.StringUtills;
 import lib.FileReading;
 import lib.FileWriting;
+import test.FileAnalizerTest;
 
 public class FileAnalyzer {
-//	private String MODULE_START = "public class";
-	private List<String> MODULE_START = Arrays.asList(
+	private final String[] reservedWords = {
+			"static",
+			"abstract",
+			"partial",
+			"sealed"
+	};
+	private final List<String> MODULE_START = Arrays.asList(
 			"public class",
-			"public static class"
+			"public static class",
+			"public abstract class",
+			"public partial class",
+			"public sealed class"
+//			"internal class",
+//			"internal static class",
+//			"private class",
+//			"partial class",
+//			"sealed partial class"
 			); 
-
+	
 	private ArrayList<Module> modules = new ArrayList<Module>();
     public FileAnalyzer() {
     	//for unit test
@@ -24,19 +38,56 @@ public class FileAnalyzer {
 		for(String filename: module) {
 			this.extractClassModule(filename);
 		}
-		
+		this.removeNullClass();
 		return this.modules;
 	}
-	
-	public void extractClassModule (String filename) {
-		List<String> FileStrs = null;
-
-		try {
-			FileStrs = FileReading.readFile(filename);
-		} catch (IOException e) {
-			DiffAnalyzerMain.logger.warning("IOException occured");
-			return ;
+	/**if using iteration, error occurs named "ConcurrentModificationException"*/
+	private void removeNullClass() {
+		for ( int i=0; i<this.modules.size(); i++) {
+			Module module = modules.get( i );
+			if ( module.getClassName() == null ) {
+				this.modules.remove( i );
+			}
 		}
+	}
+	
+	/*
+	 * convert array to string
+	 * */
+	private String join ( List<String> array ) {
+		String str = "";
+		for ( String element: array ) {
+			str = str.concat( element );
+		}
+		return str;
+	}
+	private String removeSpace ( String line ) {
+		String[] array = line.split(" ");
+		List<String> list = this.removeTab( Arrays.asList(array) );
+		String str = this.join( list );
+		return str;
+	}
+	private int confirmComment ( String line ) {
+//		line = this.removeSpace( line );
+		//	when // in line, return 1
+		if ( line.indexOf("//") != -1 ) {
+			return 1;
+		}
+		//	when */ in line, return 3
+		if ( line.indexOf("*/") != -1 ) {
+			return 3;
+		}
+		//	when /* in line, return 2
+		if ( line.indexOf("/*") != -1 ) {
+			return 2;
+		}
+		//	else return 0
+		return 0;
+	}
+	public void extractClassModule (String filename) {
+		List<String> fileStrs = null;
+		fileStrs = FileReading.readFile(filename);
+
 		
 		// count line of code
 		int numberOfLine = 0;
@@ -47,64 +98,143 @@ public class FileAnalyzer {
 		int begenningPosition = -1;
 		int endingPosition = -1;
 		
-		// indicator to count '{'
+		// indicator to count '{ or }'
 		int numStart = 0;
 		int numEnd = 0;
+		int blockIndicator = 9999;
 		
 		// create module instance
 		Module module = new Module( filename );
-		for(String line: FileStrs) {
-			
-			/** Class Module is beginning*/
-			if ( this.confirmBeginningClass(line) ) {
-				// put beginning position
-				begenningPosition = numberOfLine;
-				// extract class name
-				String className = this.extractClassName(line);
-				if(className == null) {
-//					DiffAnalyzerMain.logger.warning(filename + ": class module name was not found");	
-				}else {
-					module.putClassName(className);
+		ArrayList<String> containment = null;
+		boolean isContinued = false;
+		for(String line: fileStrs) {
+			// when line means comment, getting out!
+//			if ( line.indexOf( "//") != -1 ) {
+//				// comment line
+			int statusCode = this.confirmComment( line );
+			if ( statusCode == 2 ) {
+				isContinued = true;
+			}else if( statusCode == 3 ) {
+				isContinued = false;				
+			}
+			// status code==0 and is not continue -> script block  
+			if ( statusCode == 1 || isContinued ) {
+				// this is commet line
+			}
+			else {
+				/** not comment line*/
+				if (containment != null ) {
+					containment.add( line );
 				}
-				
-				// put class name
-//				Module module = new Module( filename, classname );
-			}
-			if (line.indexOf("{") != -1) {
-				//count number of '{'
-				numStart += this.countChar(line, "{");
-			}
-			if (line.indexOf("}") != -1) {
-				//count number of '}'
-				numEnd += this.countChar(line, "}");
-				// if number of '{' is same number of '}' -> class be over
-				if (numStart == numEnd) {
-					/** Class module was over */
-					// put end position
-					endingPosition = numberOfLine;
-					// initialize
-					numStart = 0;
-					numEnd = 0;
-					// if module has class name
-					if(module.getClassName() != "") {
-						module.putPositions(begenningPosition, endingPosition);
-						// put module to ArrayList
-						this.modules.add(module);
-						//initialize module
-						module = new Module( filename );
+				if ( isClassLine ( line ) ) {
+					// put beginning position
+					begenningPosition = numberOfLine;
+
+					// extract class name
+					String classname = this.extractClassName(line);
+					if (classname == null ) {
+						String errorMsg = filename+" has null classname\n"+line;
+						DiffAnalyzerMain.logger.warning( errorMsg );
+						// when test
+						if ( FileAnalizerTest.linesJudgedNotClassLogger != null ) {
+							FileAnalizerTest.linesJudgedNotClassLogger.add( errorMsg );
+						}
+					}else {
+						/** class script starts */
+						if ( containment == null) {
+							containment = new ArrayList<String>();
+							containment.add( line );
+							module.putClassName(classname);
+							blockIndicator = 0;
+						}
+					}
+				}
+				if (line.indexOf("{") != -1) {
+					//count number of '{'
+					numStart += this.countChar(line, "{");
+					blockIndicator ++;
+				}
+				if (line.indexOf("}") != -1) {
+					//count number of '}'
+					numEnd += this.countChar(line, "}");
+					blockIndicator --;
+					// if number of '{' is same number of '}' -> class be over
+//					if (numStart == numEnd) {
+					if ( blockIndicator == 0) {
+						/** Class module was over */
+						// put end position
+						endingPosition = numberOfLine;
+						// initialize
+						numStart = 0;
+						numEnd = 0;
+						// when module has class name
+						if(module.getClassName() != null ) {
+							module.putPositions(begenningPosition, endingPosition);
+							// put module to ArrayList
+							module.putModuleContainment(containment);
+							this.modules.add(module);
+							//initialize module
+							module = new Module( filename );
+							containment = new ArrayList<String>();
+						}
 					}
 				}
 			}
 			numberOfLine++;
 		}
 	}
-	private boolean confirmBeginningClass ( String line ) {
-		for ( String formal: this.MODULE_START) {
-			if ( line.indexOf( formal ) != -1) {
-				return true;
+
+	private String extractClassName(String line) {
+		String[] array = line.split(" ");
+		List<String> list = this.removeTab( Arrays.asList(array) );
+
+		int index = list.indexOf("class");
+		if ( index+1 < list.size() ) {
+			return list.get(index + 1);
+		}
+		return null;
+	}
+	private boolean isClassLine ( String line ) {
+		String[] array = line.split(" ");
+		List<String> list = this.removeTab( Arrays.asList(array) );
+		return this.isClassLine( list );
+	}
+
+	/** confirm that line if it is beginning of class */
+	private boolean isClassLine ( List<String> list ) {
+		// remove space and null
+
+		// there are 'class' in array
+		int CLASS = list.indexOf("class");        
+		int PUBLIC = list.indexOf("public");        
+        if( CLASS == -1)	return false;
+        
+        // there are reserved word in array
+        for ( String rw : this.reservedWords ) {
+        	int position = list.indexOf( rw );
+        	if ( position != -1 ) return true;				
+        }
+        if( PUBLIC > -1) {
+        	return true;
+        }
+
+		return false;
+	}
+	
+	
+	private List<String> removeTab(List<String> list) {
+		List<String> modifiedList = new ArrayList<String>();
+		for ( String element: list) {
+			int num = element.indexOf("\t");
+			while ( num != -1 ) {
+				element = element.replaceAll("\t", "");
+				num = element.indexOf("\t");				
+			}
+			if ( element.length() > 0) {
+				modifiedList.add(element);
 			}
 		}
-		return false;
+		return modifiedList;
 	}
 	/**
 	 * @param line: line
@@ -120,57 +250,24 @@ public class FileAnalyzer {
 		}
 		return count;
 	}
-	private String extractClassName(String line) {
-		if( line.indexOf( "//") != -1) {
-			return null;
-		}
-		String[] array = line.split(" ");
-		if (!this.isClassLine( array ) ) {
-			return null;
-		}
-		for(int i=0; i<array.length-1; i++) {
-			if (array[i].equals("class")) {
-				return array[i+1];
-			}
-		}
-		return null;
-	}
-	/** confirm that line if it is beginning of class */
-	private boolean isClassLine (String[] array) {
-		List<String> list = Arrays.asList(array);
-		int PUBLIC = list.indexOf("public");
-		int CLASS = list.indexOf("class");
-		int STATIC = list.indexOf("static");
-		
-		/** constrain to public class line*/
-		if( PUBLIC == -1)	return false;
-		if( CLASS == -1)	return false;
-		if( PUBLIC+1 == CLASS)	return true;
 
-		/** constrain to public static class line*/		
-		if( STATIC == -1)	return false;
-		if( PUBLIC+2 == CLASS)	return true;
-
-		return false;
-	}
-	private String extractFileName(String filename) {
-		String[] array = filename.split("/");
-		return array[array.length - 1];
+	public ArrayList<String> getFilenameList () {
+		ArrayList<String> filenameList = new ArrayList<String> ();
+		// save class name only
+		for ( Module module : this.modules) {
+			filenameList.add( module.getFileName() );
+		}
+		return filenameList;
 	}
 	
 	public ArrayList<String> saveModules(String saveFileName) {
 		ArrayList<String> classNameList = new ArrayList<String> ();
 		// save class name only
-		for(Module module: this.modules) {
-			classNameList.add( module.getClassName() );
+		for ( Module module : this.modules) {
+			classNameList.add( module.getFileName() +": "+module.getClassName() );
 		}
-		try {
-			FileWriting.writeFile(classNameList, saveFileName);
-			DiffAnalyzerMain.logger.info("to record" + saveFileName + " has finished");
-		} catch (IOException e) {
-			DiffAnalyzerMain.logger.warning("IOException occured");
-			e.printStackTrace();
-		}
+		FileWriting.writeFile(classNameList, saveFileName);
+		DiffAnalyzerMain.logger.info("to record" + saveFileName + " has finished");
 		return classNameList;
 	}
 	

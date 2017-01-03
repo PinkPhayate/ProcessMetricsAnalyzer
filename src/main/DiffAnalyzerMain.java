@@ -1,9 +1,9 @@
 package main;
 
-import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.TreeMap;
+import java.util.logging.FileHandler;
 import java.util.logging.Logger;
 
 import lib.FileListGetter;
@@ -21,10 +21,23 @@ public class DiffAnalyzerMain {
 	 * 
 	 * 
 	 */
-	static final Logger logger = Logger.getLogger(DiffAnalyzerMain.class.getName());
+	public static final Logger logger = Logger.getLogger(DiffAnalyzerMain.class.getName());
+	/**
+	 * indicator for report
+	 */
+	public static int numOfExistFile = 0;
+	public static int numOfNewModule = 0;
 
+	public static ArrayList<String> originRecord;
 	public static void main(String args[]) {
-
+		// save log to file
+		try {
+		    FileHandler fh = new FileHandler("DiffAnalyzerLog.log");
+		    fh.setFormatter(new java.util.logging.SimpleFormatter());
+		    logger.addHandler(fh);
+		} catch (IOException e) {
+		    e.printStackTrace();
+		}
 		if (args.length != 4) {
 			return;
 		}
@@ -49,25 +62,42 @@ public class DiffAnalyzerMain {
 		ArrayList<Module> currentModules = fileAnalyzer.getModules(currFileStrs);
 		fileAnalyzer.saveModules( mainDirecotory + "current-modules.txt" );
 		DiffAnalyzerMain.logger.info("Step 1 has finished");
+		search.clear();
 
 		/** Step 2 get class module in previous version */
 		ArrayList<String> prevFileStrs = search.getFileList(pvDirectory);
 		fileAnalyzer = new FileAnalyzer();
 		ArrayList<Module> previousModules = fileAnalyzer.getModules(prevFileStrs);
+		fileAnalyzer.saveModules( mainDirecotory + "previous-modules.txt" );
 		DiffAnalyzerMain.logger.info("Step 2 has finished");
 
 		/** Step 3 */
 		DiffAnalyzer diffAnalyzer = new DiffAnalyzer();
-		ArrayList<String> record = diffAnalyzer.compareTwoVersion(currentModules, previousModules);
-		try {
-			FileWriting.writeFile(record, mainDirecotory + "processmetrics.csv");
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
+		ArrayList<String> record =
+				diffAnalyzer.compareTwoVersion(currentModules, previousModules);
+		originRecord = record;
+		FileWriting.writeFile(record, mainDirecotory + "processmetrics.csv");
 
 		DiffAnalyzerMain.logger.info("Step 3 has finished");
+		
+		/** report */
+		
+		ArrayList<String> report = new ArrayList<String>();
+		report.add("Number of files in Directory\t: "+currFileStrs.size());
+		report.add("Number of current class\t\t\t: "+currentModules.size());
+		report.add("Number of previous class\t\t\t: "+previousModules.size());
+		report.add("Number of exist module\t\t\t: "+numOfExistFile);
+		report.add("Number of new module\t\t\t: "+numOfNewModule);
+		FileWriting.writeFile(report,  "report.txt" );
+		
+		for (String line: report) {
+			System.out.println( line );
+		}
+
 		return;
 
 	}
+
+	
 
 }

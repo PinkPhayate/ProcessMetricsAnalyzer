@@ -1,15 +1,17 @@
 package main;
 
 
+import java.util.ArrayList;
 import java.util.TreeMap;
 
 public class Module {
-	private String fileName;
-	private String className;
+	private String fileName = null;
+	private String className = null;
 	
 	protected int begenningPosition = -1;
 	protected int endingPosition = -1;
 	
+	private ArrayList<String> containment = null;
 	private double M1 = 0;
 	private double M2 = 0;
 	private double M3 = 0;
@@ -34,8 +36,14 @@ public class Module {
 		this.begenningPosition = begenningPosition;
 		this.endingPosition = endingPosition;
 	}
+	public void putModuleContainment ( ArrayList<String> containment) {
+		this.containment = containment;
+	}
 	public void putClassName (String className) {
 		this.className = className;
+	}
+	public ArrayList<String> getModuleContainment () {
+		return this.containment;
 	}
 	public String getClassName() {
 		return this.className;
@@ -43,6 +51,11 @@ public class Module {
 	public String getFileName() {
 		return this.fileName;
 	}
+	public String getExtractedFileName() {
+		String[] array = this.fileName.split("/");
+		return array[array.length - 1];
+	}
+
 	public int getBegenningPostion() {
 		return this.begenningPosition;
 	}
