@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.TreeMap;
+import java.util.logging.Logger;
 
 import difflib.Delta;
 import difflib.DiffUtils;
@@ -46,7 +47,7 @@ public class DiffAnalyzer {
 				cntDelete++;
 			}
 		}
-		System.out.println(cntNew+", "+cntChange+", "+cntDelete);
+//		System.out.println(cntNew+", "+cntChange+", "+cntDelete);
 
 		/**translate <key,value>*/
 		TreeMap<String,Integer> differences = new TreeMap<String,Integer>();
@@ -61,13 +62,23 @@ public class DiffAnalyzer {
 	private Module searchModuleByClassName( ArrayList<Module> targetArrayList, String key ) {
 		for(Module module: targetArrayList) {
 			if( module.getClassName() == null) {
-				System.out.println( module.getClassName());
+				DiffAnalyzerMain.logger.warning( module.getClassName() );
 			}
 			if( module.getClassName() .equals(key)) {
 				return module;
 			}
 		}
-		DiffAnalyzerMain.logger.warning( "There are no module named: " + key );
+		DiffAnalyzerMain.logger.warning( "There are no module named in: " + key );
+		return null;
+	}
+	private Module searchModuleByFilePath( ArrayList<Module> targetArrayList, Module key ) {
+		for(Module module: targetArrayList) {
+			if( key.getFileName().indexOf( module.getExtractedFileName() ) != -1 ){
+				if( module.getClassName() .equals(key.getClassName()) )
+				return module;
+			}
+		}
+		DiffAnalyzerMain.logger.warning( "There are no module named: " + key.getFileName() );
 		return null;
 	}
 	public ArrayList<String> compareTwoVersion (ArrayList<Module> currentModules, ArrayList<Module> previousModules) {
@@ -79,12 +90,10 @@ public class DiffAnalyzer {
 		for (Module currentModule: currentModules) {
 			// get module with same class name as same as current version
 			Module previousModule =
-					this.searchModuleByClassName( previousModules, currentModule.getClassName() );
-			DiffAnalyzerMain.logger.info( currentModule.getClassName()  );
+					this.searchModuleByFilePath( previousModules, currentModule );
+//			DiffAnalyzerMain.logger.info( currentModule.getClassName()  );
 			if (previousModule != null) {
-				//get ArrayList about current version by beginning, end line number
 				ArrayList<String> currentClass = currentModule.getModuleContainment();
-				// get ArrayList about previous version by beginning, end line number
 				ArrayList<String> previousClass = previousModule.getModuleContainment();
 
 				// get differences
@@ -92,10 +101,12 @@ public class DiffAnalyzer {
 				// calculate process metrics
 				currentModule.calculateMetrics(differences);				
 			}else {
-				currentModule.isNew();				
+				currentModule.isNew();
+				DiffAnalyzerMain.logger.info( currentModule.getClassName()+" in "+currentModule.getFileName()+" has new class"  );
+
 			}
 			record.add(currentModule.getMetricsList() );
-			DiffAnalyzerMain.logger.info( currentModule.getMetricsList()  );
+//			DiffAnalyzerMain.logger.info( currentModule.getMetricsList()  );
 		}
 		return record;
 	}

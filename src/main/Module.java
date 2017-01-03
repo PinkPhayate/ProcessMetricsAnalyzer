@@ -51,6 +51,11 @@ public class Module {
 	public String getFileName() {
 		return this.fileName;
 	}
+	public String getExtractedFileName() {
+		String[] array = this.fileName.split("/");
+		return array[array.length - 1];
+	}
+
 	public int getBegenningPostion() {
 		return this.begenningPosition;
 	}

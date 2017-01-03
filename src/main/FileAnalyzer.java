@@ -50,6 +50,10 @@ public class FileAnalyzer {
 			}
 		}
 	}
+	
+	/*
+	 * convert array to string
+	 * */
 	private String join ( List<String> array ) {
 		String str = "";
 		for ( String element: array ) {
@@ -247,10 +251,6 @@ public class FileAnalyzer {
 		return count;
 	}
 
-	private String extractFileName(String filename) {
-		String[] array = filename.split("/");
-		return array[array.length - 1];
-	}
 	public ArrayList<String> getFilenameList () {
 		ArrayList<String> filenameList = new ArrayList<String> ();
 		// save class name only

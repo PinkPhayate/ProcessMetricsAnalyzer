@@ -3,6 +3,7 @@ package main;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.TreeMap;
+import java.util.logging.FileHandler;
 import java.util.logging.Logger;
 
 import lib.FileListGetter;
@@ -21,9 +22,17 @@ public class DiffAnalyzerMain {
 	 * 
 	 */
 	public static final Logger logger = Logger.getLogger(DiffAnalyzerMain.class.getName());
+	
 	public static ArrayList<String> originRecord;
 	public static void main(String args[]) {
-// TODO	Bug: there are same named file in current-modules.txt for eg. TestMessage
+		// save log to file
+		try {
+		    FileHandler fh = new FileHandler("DiffAnalyzerLog.log");
+		    fh.setFormatter(new java.util.logging.SimpleFormatter());
+		    logger.addHandler(fh);
+		} catch (IOException e) {
+		    e.printStackTrace();
+		}
 		if (args.length != 4) {
 			return;
 		}
@@ -53,7 +62,7 @@ public class DiffAnalyzerMain {
 		ArrayList<String> prevFileStrs = search.getFileList(pvDirectory);
 		fileAnalyzer = new FileAnalyzer();
 		ArrayList<Module> previousModules = fileAnalyzer.getModules(prevFileStrs);
-		fileAnalyzer.saveModules( mainDirecotory + "previous-modules.txt" );		DiffAnalyzerMain.logger.info("Step 2 has finished");
+//		fileAnalyzer.saveModules( mainDirecotory + "previous-modules.txt" );		DiffAnalyzerMain.logger.info("Step 2 has finished");
 
 		/** Step 3 */
 		DiffAnalyzer diffAnalyzer = new DiffAnalyzer();
@@ -70,6 +79,7 @@ public class DiffAnalyzerMain {
 		return;
 
 	}
+
 	
 
 }
