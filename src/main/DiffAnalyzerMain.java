@@ -76,16 +76,16 @@ public class DiffAnalyzerMain {
 		ArrayList<String> record =
 				diffAnalyzer.compareTwoVersion(currentModules, previousModules);
 		originRecord = record;
-		FileWriting.writeFile(record, mainDirecotory + "processmetrics.csv");
+		FileWriting.writeFile(record, "processmetrics.csv");
 
 		DiffAnalyzerMain.logger.info("Step 3 has finished");
 		
 		/** report */
 		
 		ArrayList<String> report = new ArrayList<String>();
-		report.add("Number of files in Directory\t: "+currFileStrs.size());
+		report.add("Number of files in Directory\t\t: "+currFileStrs.size());
 		report.add("Number of current class\t\t\t: "+currentModules.size());
-		report.add("Number of previous class\t\t\t: "+previousModules.size());
+		report.add("Number of previous class\t\t: "+previousModules.size());
 		report.add("Number of exist module\t\t\t: "+numOfExistFile);
 		report.add("Number of new module\t\t\t: "+numOfNewModule);
 		FileWriting.writeFile(report,  "report.txt" );

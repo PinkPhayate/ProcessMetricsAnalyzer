@@ -4,14 +4,12 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.TreeMap;
-import java.util.logging.Logger;
 
 import difflib.Delta;
 import difflib.DiffUtils;
 import difflib.Patch;
 import difflib.Delta.TYPE;
 import lib.FileReading;
-import lib.FileWriting;
 
 public class DiffAnalyzer {
 	//	private ArrayList<String> prevFileStrs = null;
@@ -68,7 +66,7 @@ public class DiffAnalyzer {
 				return module;
 			}
 		}
-		DiffAnalyzerMain.logger.warning( "There are no module named in: " + key );
+		DiffAnalyzerMain.logger.info( "There are no module named in: " + key );
 		return null;
 	}
 	private Module searchModuleByFilePath( ArrayList<Module> targetArrayList, Module key ) {
@@ -81,7 +79,7 @@ public class DiffAnalyzer {
 			}
 		}
 		DiffAnalyzerMain.numOfNewModule += 1;
-		DiffAnalyzerMain.logger.warning( "There are no module named: " + key.getFileName() );
+//		DiffAnalyzerMain.logger.warning( "There are no module named: " + key.getFileName() );
 		return null;
 	}
 	public ArrayList<String> compareTwoVersion (ArrayList<Module> currentModules, ArrayList<Module> previousModules) {
