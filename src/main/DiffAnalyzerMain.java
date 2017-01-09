@@ -3,7 +3,9 @@ package main;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.TreeMap;
+import java.util.logging.ConsoleHandler;
 import java.util.logging.FileHandler;
+import java.util.logging.Handler;
 import java.util.logging.Logger;
 
 import lib.FileListGetter;
@@ -35,10 +37,11 @@ public class DiffAnalyzerMain {
 		    FileHandler fh = new FileHandler("DiffAnalyzerLog.log");
 		    fh.setFormatter(new java.util.logging.SimpleFormatter());
 		    logger.addHandler(fh);
+		    removeConsoleHandler( logger );
 		} catch (IOException e) {
 		    e.printStackTrace();
 		}
-		if (args.length != 4) {
+		if (args.length != 5) {
 			return;
 		}
 
@@ -46,6 +49,7 @@ public class DiffAnalyzerMain {
 		String cvDirectory = args[0] + args[1];
 		String pvDirectory = args[0] + args[2];
 		String suffix = args[3];
+		String saveFile = args[4];
 
 		/** Step 1 get class module in current version */
 		FileListGetter search = new FileListGetter(suffix);
@@ -55,7 +59,7 @@ public class DiffAnalyzerMain {
 		FileAnalyzer fileAnalyzer = new FileAnalyzer();
 		ArrayList<Module> currentModules = fileAnalyzer.getModules(currFileStrs);
 		fileAnalyzer.saveModules( mainDirecotory + "current-modules.txt" );
-		DiffAnalyzerMain.logger.info("Step 1 has finished");
+		System.out.println("Step 1 has finished");
 		search.clear();
 
 		/** Step 2 get class module in previous version */
@@ -63,19 +67,18 @@ public class DiffAnalyzerMain {
 		fileAnalyzer = new FileAnalyzer();
 		ArrayList<Module> previousModules = fileAnalyzer.getModules(prevFileStrs);
 		fileAnalyzer.saveModules( mainDirecotory + "previous-modules.txt" );
-		DiffAnalyzerMain.logger.info("Step 2 has finished");
+		System.out.println("Step 2 has finished");
 
 		/** Step 3 */
 		DiffAnalyzer diffAnalyzer = new DiffAnalyzer();
 		ArrayList<String> record =
 				diffAnalyzer.compareTwoVersion(currentModules, previousModules);
 		originRecord = record;
-		FileWriting.writeFile(record, "processmetrics.csv");
+		FileWriting.writeFile(record, saveFile);
 
 		DiffAnalyzerMain.logger.info("Step 3 has finished");
 		
 		/** report */
-		
 		ArrayList<String> report = new ArrayList<String>();
 		report.add("Number of files in Directory\t\t: "+currFileStrs.size());
 		report.add("Number of current class\t\t\t: "+currentModules.size());
@@ -84,6 +87,8 @@ public class DiffAnalyzerMain {
 		report.add("Number of new module\t\t\t: "+numOfNewModule);
 		FileWriting.writeFile(report,  "report.txt" );
 		
+		System.out.println("Result");
+		System.out.println("===================================");
 		for (String line: report) {
 			System.out.println( line );
 		}
@@ -91,7 +96,18 @@ public class DiffAnalyzerMain {
 		return;
 
 	}
-
+	private static void removeConsoleHandler(Logger logger) {
+		Handler[] handlerArr = logger.getHandlers();
+		for (Handler handler : handlerArr) {
+			if (handler instanceof ConsoleHandler) {
+				logger.removeHandler(handler);
+			}
+		}
+		Logger parentLogger = logger.getParent();
+		if (parentLogger != null) {
+			removeConsoleHandler(parentLogger);
+		}
+	}
 	
 
 }

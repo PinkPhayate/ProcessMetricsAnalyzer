@@ -15,6 +15,7 @@ import lib.FileReading;
 public class DiffAnalyzer {
 	//	private ArrayList<String> prevFileStrs = null;
 	//	private ArrayList<String> currentFileStrs = null;
+	private int numTotalFile = 1;
 
 	public TreeMap<String,Integer> getDifference (String prev_file, String crnt_file) {
 
@@ -87,7 +88,8 @@ public class DiffAnalyzer {
 		ArrayList<String> record = new ArrayList<String> ();
 		// add header to record file
 		record.add( this.getHeader() );
-		
+		int numOfFinishedFile = 0;
+		numTotalFile = currentModules.size();
 		/** iterate module in current version */
 		for (Module currentModule: currentModules) {
 			// get module with same class name as same as current version
@@ -108,6 +110,8 @@ public class DiffAnalyzer {
 
 			}
 			record.add(currentModule.getMetricsList() );
+			numOfFinishedFile ++;
+			this.informProgress( numOfFinishedFile );
 //			DiffAnalyzerMain.logger.info( currentModule.getMetricsList()  );
 		}
 		return record;
@@ -120,5 +124,9 @@ public class DiffAnalyzer {
 		return FileReading.readFile( module.getFileName(),
 				module.getBegenningPostion(),
 				module.getEndingPostion() );
+	}
+	private void informProgress( int numOfFinishedFile) {
+		System.out.print("\r");
+		System.out.print("Progress: " +  numOfFinishedFile + " / " + numTotalFile );		
 	}
 }
