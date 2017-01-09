@@ -87,7 +87,7 @@ public class DiffAnalyzerMain {
 		report.add("Number of new module\t\t\t: "+numOfNewModule);
 		FileWriting.writeFile(report,  "report.txt" );
 		
-		System.out.println("Result");
+		System.out.println("\nResult");
 		System.out.println("===================================");
 		for (String line: report) {
 			System.out.println( line );
