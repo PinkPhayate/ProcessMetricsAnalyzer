@@ -79,10 +79,10 @@ public class JFileChooserTest5 extends JFrame implements ActionListener{
 		if (selected == JFileChooser.APPROVE_OPTION){
 			File file = filechooser.getSelectedFile();
 			if(e.getSource() == this.buttonUpper){
-				upperText.setText(file.getName());
+				upperText.setText(file.getPath());
 			}
 			if(e.getSource() == this.buttonLower){
-				lowerText.setText(file.getName());
+				lowerText.setText(file.getPath());
 			}
 		}
 
