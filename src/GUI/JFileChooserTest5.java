@@ -36,7 +36,7 @@ public class JFileChooserTest5 extends JFrame implements ActionListener{
 		JPanel buttonPanel = new JPanel();
 		buttonPanel.setLayout(null);
 		this.buttonUpper = new JButton("Browse");
-		this.buttonUpper.setBounds(200,10,80,20);
+		this.buttonUpper.setBounds(210,10,80,20);
 		this.buttonUpper.addActionListener(this);
 		buttonPanel.add(this.buttonUpper);
 		getContentPane().add(buttonPanel, BorderLayout.CENTER);
@@ -44,7 +44,7 @@ public class JFileChooserTest5 extends JFrame implements ActionListener{
 		JPanel p = new JPanel();
 
 		this.upperText = new JTextField(null);
-		this.upperText.setBounds(0, 10, 200, 20);
+		this.upperText.setBounds(10, 10, 200, 20);
 		buttonPanel.add(this.upperText);    
 		this.upperText.setLayout(null);
 
@@ -52,16 +52,16 @@ public class JFileChooserTest5 extends JFrame implements ActionListener{
 		buttonPanelLower = new JPanel();
 		buttonPanelLower.setLayout(null);
 		buttonLower = new JButton("Browse");
-		buttonLower.setBounds(200,50,80,20);
+		buttonLower.setBounds(210,50,80,20);
 		buttonLower.addActionListener(this);
 		buttonPanel.add(buttonLower);
 		
 		this.lowerText = new JTextField(null);
-		this.lowerText.setBounds(0, 50, 200, 20);
+		this.lowerText.setBounds(10, 50, 200, 20);
 		buttonPanel.add(this.lowerText);    
 		this.lowerText.setLayout(null);
 
-		this.commenceButton = new JButton("Start");
+		this.commenceButton = new JButton("Analize");
 		this.commenceButton.setBounds(110,90,80,20);
 		this.commenceButton.addActionListener(this);
 		buttonPanel.add(this.commenceButton);
@@ -72,6 +72,7 @@ public class JFileChooserTest5 extends JFrame implements ActionListener{
 	public void actionPerformed(ActionEvent e){
 		if(e.getSource() == this.commenceButton){
 			this.commenceAnalyze();
+			return;
 		}
 		JFileChooser filechooser = new JFileChooser();
 		filechooser.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
