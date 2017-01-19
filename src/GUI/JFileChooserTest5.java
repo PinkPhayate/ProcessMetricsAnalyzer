@@ -5,6 +5,7 @@ import java.io.File;
 import java.awt.BorderLayout;
 import java.awt.event.*;
 import main.DiffAnalyzerMain;
+import main.DiffAnalyzerMainThread;
 public class JFileChooserTest5 extends JFrame implements ActionListener{
 
 	JLabel label;
@@ -14,6 +15,7 @@ public class JFileChooserTest5 extends JFrame implements ActionListener{
 	JTextField upperText  = null;
 	JTextField lowerText  = null;
 	JButton commenceButton = null;
+	JProgressBar bar = null;
 	
 	String softwareType = "cs";
 
@@ -66,6 +68,12 @@ public class JFileChooserTest5 extends JFrame implements ActionListener{
 		this.commenceButton.addActionListener(this);
 		buttonPanel.add(this.commenceButton);
 		getContentPane().add(buttonPanel, BorderLayout.CENTER);
+		
+		this.bar = new JProgressBar();
+		this.bar.setLayout(null);
+		this.bar.setValue(0);
+		this.bar.setBounds(10, 180, 280, 20);
+		buttonPanel.add(this.bar);
 
 	}
 
@@ -99,12 +107,18 @@ public class JFileChooserTest5 extends JFrame implements ActionListener{
 			
 		}
 		else {
+		    bar = new JProgressBar();
+		    bar.setValue(0);
+		    bar.setMaximum(200);
+
 			String[] args = { 
 					upperText.getText(),
 					lowerText.getText(),
 					softwareType
 			};
-			DiffAnalyzerMain.main(args);
+			DiffAnalyzerMainThread diffAnalyzerMainThread
+				= new DiffAnalyzerMainThread (args);
+			diffAnalyzerMainThread.start();
 		}
 	}
 
