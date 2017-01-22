@@ -195,7 +195,7 @@ public class FileAnalizerTest {
 	public void testIntegratedExtractClassModule() {
 		try {
 			FileAnalyzer fileAnalyzer  = new FileAnalyzer();
-			String filename = "/Users/phayate/src/TestDate/Glimpse-1.9.2-aspnet/source/Glimpse.Ado/AlternateType/GlimpseDbProviderFactory.cs";
+			String filename = "/Users/kishi-lab/Phayate/ApacheDerby/10.12/java/build/org/apache/derbyBuild/MessageBuilder.java";
 			Method method = FileAnalyzer.class.getDeclaredMethod(
 					"extractClassModule", String.class );
 			method.setAccessible(true);

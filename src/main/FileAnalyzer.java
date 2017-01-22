@@ -11,6 +11,7 @@ import lib.FileWriting;
 import test.FileAnalizerTest;
 
 public class FileAnalyzer {
+	int numberOfLine = 0;
 	private final String[] reservedWords = {
 			"static",
 			"abstract",
@@ -36,6 +37,8 @@ public class FileAnalyzer {
     }
 	public ArrayList<Module> getModules(ArrayList<String> module) {
 		for(String filename: module) {
+			// reset number of line certainly
+			this.numberOfLine = 0;
 			this.extractClassModule(filename);
 		}
 		this.removeNullClass();
@@ -90,7 +93,7 @@ public class FileAnalyzer {
 
 		
 		// count line of code
-		int numberOfLine = 0;
+//		int numberOfLine 
 		//extract filename
 //		filename = this.extractFileName(filename);
 		
@@ -178,8 +181,57 @@ public class FileAnalyzer {
 					}
 				}
 			}
-			numberOfLine++;
+			this.numberOfLine++;
 		}
+	}
+	private ArrayList<Module> extractModuleRecursively( List<String> fileStrs, String filename ) {
+		ArrayList<Module> modules = new ArrayList<Module>();
+		ArrayList<String>containment = new ArrayList<String>();
+		Module module = new Module( filename );
+		int blockIndicator = 0;
+		int begenningPosition = 0;
+		int endingPosition = 0;
+		// fileStrs = goStartLine(fileStrs)
+		for(String line : fileStrs) {
+			
+			// when looking out new class, call this method recursively
+			if ( isClassLine ( line ) ) {
+				// put beginning position
+				begenningPosition = this.numberOfLine;
+
+				// extract class name
+				String classname = this.extractClassName(line);
+				if (classname != null ) {
+					/** class script starts */
+					module.putClassName(classname);
+					containment.add( line );
+					blockIndicator = 0;
+//					}
+				}
+			}
+			if ( blockIndicator == 0) {
+				/** Class module was over */
+				// put end position
+				endingPosition = this.numberOfLine;
+				// initialize
+				// when module has class name
+				if(module.getClassName() != null ) {
+					module.putPositions(begenningPosition, endingPosition);
+					// put module to ArrayList
+					module.putModuleContainment(containment);
+					modules.add( module);
+				}
+			}
+
+			
+			this.numberOfLine++;
+		}
+
+		// tmpModules = this.extractModuleRecursively();
+		//modules.addAll( tmpModules );
+		
+		// when looking out end of class, return
+		return modules;
 	}
 
 	private String extractClassName(String line) {
