@@ -1,18 +1,18 @@
 package main;
-
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.TreeMap;
 import java.util.logging.ConsoleHandler;
 import java.util.logging.FileHandler;
 import java.util.logging.Handler;
 import java.util.logging.Logger;
 
 import lib.FileListGetter;
-import lib.FileReading;
 import lib.FileWriting;
 
-public class DiffAnalyzerMain extends Thread{
+public class DiffAnalyzerMainThread extends Thread{
+
+
+
 	/**
 	 * mainDirecotory :比較するバージョンが双方置いてあるフォルダ cvDirectory ：最新バージョンが置かれているディレクトリ名
 	 * pvDirectory ：過去のバージョンが置かれているディレクトリ名 suffix ：プログラミング言語。ソースコードの語尾を書く。
@@ -30,29 +30,31 @@ public class DiffAnalyzerMain extends Thread{
 	public static int numOfExistFile = 0;
 	public static int numOfNewModule = 0;
 
+	private String cvDirectory = null;
+	private String pvDirectory = null;
+	private String suffix = null;
+	private String saveFile = "ProcessMetrics.csv";
+
 	public static ArrayList<String> originRecord;
-	public void run (String args[]) {
-		
-	}
-	public static void main(String args[]) {
-		// save log to file
-		try {
-		    FileHandler fh = new FileHandler("DiffAnalyzerLog.log");
-		    fh.setFormatter(new java.util.logging.SimpleFormatter());
-		    logger.addHandler(fh);
-		    removeConsoleHandler( logger );
-		} catch (IOException e) {
-		    e.printStackTrace();
-		}
+	public DiffAnalyzerMainThread(String[] args) {
 		if (args.length != 3) {
 			return;
 		}
+		this.cvDirectory = args[0]+"/";
+		this.pvDirectory = args[1]+"/";
+		this.suffix = args[2];		
+	}
+	public void run () {
 
-//		String mainDirecotory = args[0];
-		String cvDirectory = args[0];
-		String pvDirectory = args[1];
-		String suffix = args[2];
-		String saveFile = "ProcessMetrics.csv";
+		// save log to file
+		try {
+			FileHandler fh = new FileHandler("DiffAnalyzerLog.log");
+			fh.setFormatter(new java.util.logging.SimpleFormatter());
+			logger.addHandler(fh);
+			removeConsoleHandler( logger );
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 
 		/** Step 1 get class module in current version */
 		FileListGetter search = new FileListGetter(suffix);
@@ -80,7 +82,7 @@ public class DiffAnalyzerMain extends Thread{
 		FileWriting.writeFile(record, saveFile);
 
 		DiffAnalyzerMain.logger.info("Step 3 has finished");
-		
+
 		/** report */
 		ArrayList<String> report = new ArrayList<String>();
 		report.add("Number of files in Directory\t\t: "+currFileStrs.size());
@@ -89,14 +91,14 @@ public class DiffAnalyzerMain extends Thread{
 		report.add("Number of exist module\t\t\t: "+numOfExistFile);
 		report.add("Number of new module\t\t\t: "+numOfNewModule);
 		FileWriting.writeFile(report,  "report.txt" );
-		
+
 		System.out.println("\nResult");
 		System.out.println("===================================");
 		for (String line: report) {
 			System.out.println( line );
 		}
 
-		return;
+//		return;
 
 	}
 	private static void removeConsoleHandler(Logger logger) {
@@ -111,6 +113,7 @@ public class DiffAnalyzerMain extends Thread{
 			removeConsoleHandler(parentLogger);
 		}
 	}
-	
+
+
 
 }
