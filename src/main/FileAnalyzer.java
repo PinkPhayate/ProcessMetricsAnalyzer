@@ -197,58 +197,62 @@ public class FileAnalyzer {
 		for(int idx=this.numberOfLine;idx<fileStrs.size();idx++) {
 			String line = fileStrs.get(idx);
 			// when line means comment, getting out!
-
-			if ( isClassLine ( line ) ) {
-				// put beginning position
-				begenningPosition = this.numberOfLine;
-				if( containment.size() > 0) {
-					ArrayList<Module> tmpModules = this.extractClassModuleRecursively(filename);
-					modules.addAll( tmpModules );
-					idx = this.numberOfLine;
-					if (line.indexOf("{") != -1) {
-						//count number of '{'
-						blockIndicator -= this.countChar(line, "{");
-					}
-					if (line.indexOf("}") != -1) {
-						blockIndicator += this.countChar(line, "}");
-					}
-
-				}
-				else {
-					// extract class name
-					String classname = this.extractClassName(line);
-					if (classname != null ) {
-						/** class script starts */
-						module.putClassName(classname);
-						containment.add( line );
-						blockIndicator = 0;
-					}
-				}
+			int statusCode = this.confirmComment( line );
+			if ( statusCode == 2 ) {
+				isContinued = true;
+			}else if( statusCode == 3 ) {
+				isContinued = false;				
 			}
-			if (line.indexOf("{") != -1) {
-				//count number of '{'
-				blockIndicator += this.countChar(line, "{");
+			// status code==0 and is not continue -> script block  
+			if ( statusCode == 1 || isContinued ) {
+				// this is comment line
 			}
-			if (line.indexOf("}") != -1) {
-				blockIndicator -= this.countChar(line, "}");
-				if ( blockIndicator == 0) {
-					/** Class module was over */
-					// put end position
-					endingPosition = this.numberOfLine;
-					// initialize
-					// when module has class name
-					if(module.getClassName() != null ) {
-						module.putPositions(begenningPosition, endingPosition);
-						// put module to ArrayList
-						module.putModuleContainment(containment);
-						modules.add( module);
+			else {
+				if ( isClassLine ( line ) ) {
+					// put beginning position
+					begenningPosition = this.numberOfLine;
+					if( containment.size() > 0) {
+						ArrayList<Module> tmpModules = this.extractClassModuleRecursively(filename);
+						modules.addAll( tmpModules );
+						idx = this.numberOfLine;
+						if (line.indexOf("{") != -1) blockIndicator -= this.countChar(line, "{");
+						if (line.indexOf("}") != -1) blockIndicator += this.countChar(line, "}");
 					}
-					break;
+					else {
+						// extract class name
+						String classname = this.extractClassName(line);
+						if (classname != null ) {
+							/** class script starts */
+							module.putClassName(classname);
+							containment.add( line );
+							blockIndicator = 0;
+						}
+					}
 				}
+				if (line.indexOf("{") != -1){
+					if(line.indexOf("'{'") == -1 ){
+						blockIndicator += this.countChar(line, "{");
+					}
+				}
+				if (line.indexOf("}") != -1) {
+					blockIndicator -= this.countChar(line, "}");
+					if ( blockIndicator == 0) {
+						/** Class module was over */
+						// put end position
+						endingPosition = this.numberOfLine;
+						// initialize
+						// when module has class name
+						if(module.getClassName() != null ) {
+							module.putPositions(begenningPosition, endingPosition);
+							// put module to ArrayList
+							module.putModuleContainment(containment);
+							modules.add( module);
+						}
+						break;
+					}
+				}
+				
 			}
-
-
-
 			this.numberOfLine++;
 		}
 
