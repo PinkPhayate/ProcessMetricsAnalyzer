@@ -24,17 +24,17 @@ public class FileAnalyzer {
 			"public abstract class",
 			"public partial class",
 			"public sealed class"
-//			"internal class",
-//			"internal static class",
-//			"private class",
-//			"partial class",
-//			"sealed partial class"
+			//			"internal class",
+			//			"internal static class",
+			//			"private class",
+			//			"partial class",
+			//			"sealed partial class"
 			); 
-	
+
 	private ArrayList<Module> modules = new ArrayList<Module>();
-    public FileAnalyzer() {
-    	//for unit test
-    }
+	public FileAnalyzer() {
+		//for unit test
+	}
 	public ArrayList<Module> getModules(ArrayList<String> module) {
 		for(String filename: module) {
 			// reset number of line certainly
@@ -53,7 +53,7 @@ public class FileAnalyzer {
 			}
 		}
 	}
-	
+
 	/*
 	 * convert array to string
 	 * */
@@ -71,7 +71,7 @@ public class FileAnalyzer {
 		return str;
 	}
 	private int confirmComment ( String line ) {
-//		line = this.removeSpace( line );
+		//		line = this.removeSpace( line );
 		//	when // in line, return 1
 		if ( line.indexOf("//") != -1 ) {
 			return 1;
@@ -91,21 +91,21 @@ public class FileAnalyzer {
 		List<String> fileStrs = null;
 		fileStrs = FileReading.readFile(filename);
 
-		
+
 		// count line of code
-//		int numberOfLine 
+		//		int numberOfLine 
 		//extract filename
-//		filename = this.extractFileName(filename);
-		
+		//		filename = this.extractFileName(filename);
+
 		// indicator to position
 		int begenningPosition = -1;
 		int endingPosition = -1;
-		
+
 		// indicator to count '{ or }'
 		int numStart = 0;
 		int numEnd = 0;
 		int blockIndicator = 9999;
-		
+
 		// create module instance
 		Module module = new Module( filename );
 		ArrayList<String> containment = null;
@@ -142,12 +142,12 @@ public class FileAnalyzer {
 						}
 					}else {
 						/** class script starts */
-//						if ( containment == null) {
-							containment = new ArrayList<String>();
-							containment.add( line );
-							module.putClassName(classname);
-							blockIndicator = 0;
-//						}
+						//						if ( containment == null) {
+						containment = new ArrayList<String>();
+						containment.add( line );
+						module.putClassName(classname);
+						blockIndicator = 0;
+						//						}
 					}
 				}
 				if (line.indexOf("{") != -1) {
@@ -160,7 +160,7 @@ public class FileAnalyzer {
 					numEnd += this.countChar(line, "}");
 					blockIndicator --;
 					// if number of '{' is same number of '}' -> class be over
-//					if (numStart == numEnd) {
+					//					if (numStart == numEnd) {
 					if ( blockIndicator == 0) {
 						/** Class module was over */
 						// put end position
@@ -193,27 +193,36 @@ public class FileAnalyzer {
 		int blockIndicator = 0;
 		int begenningPosition = 0;
 		int endingPosition = 0;
-		 fileStrs = goStartLine(fileStrs);
-		for(String line : fileStrs) {
-			
-			// when looking out new class, call this method recursively
+		boolean isContinued = false;
+		for(int idx=this.numberOfLine;idx<fileStrs.size();idx++) {
+			String line = fileStrs.get(idx);
+			// when line means comment, getting out!
+
 			if ( isClassLine ( line ) ) {
 				// put beginning position
 				begenningPosition = this.numberOfLine;
 				if( containment.size() > 0) {
 					ArrayList<Module> tmpModules = this.extractClassModuleRecursively(filename);
 					modules.addAll( tmpModules );
+					idx = this.numberOfLine;
+					if (line.indexOf("{") != -1) {
+						//count number of '{'
+						blockIndicator -= this.countChar(line, "{");
+					}
+					if (line.indexOf("}") != -1) {
+						blockIndicator += this.countChar(line, "}");
+					}
+
 				}
-
-
-				// extract class name
-				String classname = this.extractClassName(line);
-				if (classname != null ) {
-					/** class script starts */
-					module.putClassName(classname);
-					containment.add( line );
-					blockIndicator = 0;
-					//					}
+				else {
+					// extract class name
+					String classname = this.extractClassName(line);
+					if (classname != null ) {
+						/** class script starts */
+						module.putClassName(classname);
+						containment.add( line );
+						blockIndicator = 0;
+					}
 				}
 			}
 			if (line.indexOf("{") != -1) {
@@ -239,11 +248,11 @@ public class FileAnalyzer {
 			}
 
 
-			
+
 			this.numberOfLine++;
 		}
 
-		
+
 		// when looking out end of class, return
 		return modules;
 	}
@@ -278,21 +287,21 @@ public class FileAnalyzer {
 		// there are 'class' in array
 		int CLASS = list.indexOf("class");        
 		int PUBLIC = list.indexOf("public");        
-        if( CLASS == -1)	return false;
-        
-        // there are reserved word in array
-        for ( String rw : this.reservedWords ) {
-        	int position = list.indexOf( rw );
-        	if ( position != -1 ) return true;				
-        }
-        if( PUBLIC > -1) {
-        	return true;
-        }
+		if( CLASS == -1)	return false;
+
+		// there are reserved word in array
+		for ( String rw : this.reservedWords ) {
+			int position = list.indexOf( rw );
+			if ( position != -1 ) return true;				
+		}
+		if( PUBLIC > -1) {
+			return true;
+		}
 
 		return false;
 	}
-	
-	
+
+
 	private List<String> removeTab(List<String> list) {
 		List<String> modifiedList = new ArrayList<String>();
 		for ( String element: list) {
@@ -330,7 +339,7 @@ public class FileAnalyzer {
 		}
 		return filenameList;
 	}
-	
+
 	public ArrayList<String> saveModules(String saveFileName) {
 		ArrayList<String> classNameList = new ArrayList<String> ();
 		// save class name only
@@ -341,7 +350,7 @@ public class FileAnalyzer {
 		DiffAnalyzerMain.logger.info("to record" + saveFileName + " has finished");
 		return classNameList;
 	}
-	
+
 	/** Method for test*/
 	public ArrayList<Module> getTestModules () {
 		return this.modules;
