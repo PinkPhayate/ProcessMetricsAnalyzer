@@ -39,7 +39,7 @@ public class FileAnalyzer {
 		for(String filename: module) {
 			// reset number of line certainly
 			this.numberOfLine = 0;
-			this.extractClassModule(filename);
+			this.extractClassModuleRecursively(filename);
 		}
 		this.removeNullClass();
 		return this.modules;
@@ -120,7 +120,7 @@ public class FileAnalyzer {
 			}
 			// status code==0 and is not continue -> script block  
 			if ( statusCode == 1 || isContinued ) {
-				// this is commet line
+				// this is comment line
 			}
 			else {
 				/** not comment line*/
@@ -184,20 +184,27 @@ public class FileAnalyzer {
 			this.numberOfLine++;
 		}
 	}
-	private ArrayList<Module> extractModuleRecursively( List<String> fileStrs, String filename ) {
+	private ArrayList<Module> extractClassModuleRecursively( String filename ) {
+		List<String> fileStrs = FileReading.readFile(filename);
+
 		ArrayList<Module> modules = new ArrayList<Module>();
 		ArrayList<String>containment = new ArrayList<String>();
 		Module module = new Module( filename );
 		int blockIndicator = 0;
 		int begenningPosition = 0;
 		int endingPosition = 0;
-		// fileStrs = goStartLine(fileStrs)
+		 fileStrs = goStartLine(fileStrs);
 		for(String line : fileStrs) {
 			
 			// when looking out new class, call this method recursively
 			if ( isClassLine ( line ) ) {
 				// put beginning position
 				begenningPosition = this.numberOfLine;
+				if( containment.size() > 0) {
+					ArrayList<Module> tmpModules = this.extractClassModuleRecursively(filename);
+					modules.addAll( tmpModules );
+				}
+
 
 				// extract class name
 				String classname = this.extractClassName(line);
@@ -206,34 +213,48 @@ public class FileAnalyzer {
 					module.putClassName(classname);
 					containment.add( line );
 					blockIndicator = 0;
-//					}
+					//					}
 				}
 			}
-			if ( blockIndicator == 0) {
-				/** Class module was over */
-				// put end position
-				endingPosition = this.numberOfLine;
-				// initialize
-				// when module has class name
-				if(module.getClassName() != null ) {
-					module.putPositions(begenningPosition, endingPosition);
-					// put module to ArrayList
-					module.putModuleContainment(containment);
-					modules.add( module);
+			if (line.indexOf("{") != -1) {
+				//count number of '{'
+				blockIndicator += this.countChar(line, "{");
+			}
+			if (line.indexOf("}") != -1) {
+				blockIndicator -= this.countChar(line, "}");
+				if ( blockIndicator == 0) {
+					/** Class module was over */
+					// put end position
+					endingPosition = this.numberOfLine;
+					// initialize
+					// when module has class name
+					if(module.getClassName() != null ) {
+						module.putPositions(begenningPosition, endingPosition);
+						// put module to ArrayList
+						module.putModuleContainment(containment);
+						modules.add( module);
+					}
+					break;
 				}
 			}
+
 
 			
 			this.numberOfLine++;
 		}
 
-		// tmpModules = this.extractModuleRecursively();
-		//modules.addAll( tmpModules );
 		
 		// when looking out end of class, return
 		return modules;
 	}
 
+	private List<String> goStartLine(List<String> fileStrs) {
+		List<String> skippedFileStrs = new ArrayList<String>();
+		for(int i=this.numberOfLine; i< fileStrs.size(); i++) {
+			skippedFileStrs.add( fileStrs.get(i) );
+		}
+		return skippedFileStrs;
+	}
 	private String extractClassName(String line) {
 		String[] array = line.split(" ");
 		List<String> list = this.removeTab( Arrays.asList(array) );

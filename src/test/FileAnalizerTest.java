@@ -195,19 +195,16 @@ public class FileAnalizerTest {
 	public void testIntegratedExtractClassModule() {
 		try {
 			FileAnalyzer fileAnalyzer  = new FileAnalyzer();
-			String filename = "/Users/kishi-lab/Phayate/ApacheDerby/10.12/java/build/org/apache/derbyBuild/MessageBuilder.java";
+			String filename = "/Users/Phayate/src/ApacheDerby/10.12/java/build/org/apache/derbyBuild/MessageBuilder.java";
 			Method method = FileAnalyzer.class.getDeclaredMethod(
-					"extractClassModule", String.class );
+					"extractClassModuleRecursively", String.class );
 			method.setAccessible(true);
-			method.invoke(fileAnalyzer, filename);
-			// get file containment
-			ArrayList<Module> modules = fileAnalyzer.getTestModules();
-			Module module = modules.get(0);
-			ArrayList<String> arrayList = FileReading.readFile( filename,  module.getBegenningPostion(),  module.getEndingPosition() );
-			for (String line: arrayList) {
-				System.out.println( line );
-			}
+			ArrayList<Module> modules = 
+					(ArrayList<Module>) method.invoke(fileAnalyzer, filename);
 
+			for(Module module : modules) {
+				System.out.println( module.getClassName());
+			}
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
