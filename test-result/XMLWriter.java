@@ -6,13 +6,11 @@
         private         PrintWriter _pw;
         private         ArrayList<String>    _tagStack;
 
-         */
         public  XMLWriter()
         {
             _vacuous = true;
          }
 
-         */
         public  XMLWriter( File file )
             throws IOException
         {
@@ -38,7 +36,6 @@
             _fw.close();
         }
 
-         */
         public void    writeEmptyTag( String tag )
             throws IOException
         {
@@ -47,7 +44,6 @@
             writeEmptyTag( tag, "" );
         }
 
-         */
         public void    writeEmptyTag( String tag, String attributes )
             throws IOException
         {
@@ -60,7 +56,6 @@
                 _pw.println( "<" + tag + "/>");
         }
 
-         */
         public void    beginTag( String tag )
             throws IOException
         {
@@ -69,7 +64,6 @@
             beginTag( tag, "" );
         }
 
-         */
         public void    beginTag( String tag, String attributes )
             throws IOException
         {
@@ -84,7 +78,6 @@
             _tagStack.add( tag );
         }
 
-         */
         public void    endTag()
             throws IOException
         {
@@ -97,7 +90,6 @@
             _pw.println( "</" + tag + ">");
         }
 
-         */
         public void    writeTextElement( String tag, String text )
             throws IOException
         {
@@ -106,7 +98,6 @@
             writeTextElement( tag, "", text );
         }
 
-         */
         public void    writeTextElement( String tag, String attributes, String text )
             throws IOException
         {
@@ -121,7 +112,6 @@
             _pw.println( "</" + tag + ">");
         }
 
-         */
         public void    indent()
             throws IOException
         {
@@ -132,7 +122,6 @@
             for ( int i = 0; i < tabCount; i++ ) { _pw.write( TAB_STOP ); }
         }
 
-         */
         public void    println( String text )
             throws IOException
         {

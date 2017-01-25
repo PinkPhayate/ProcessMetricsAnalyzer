@@ -204,7 +204,7 @@ public class FileAnalyzer {
 				isContinued = false;				
 			}
 			// status code==0 and is not continue -> script block  
-			if ( statusCode == 1 || isContinued ) {
+			if ( statusCode > 0 || isContinued ) {
 				// this is comment line
 			}
 			else {

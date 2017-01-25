@@ -64,26 +64,20 @@ public class MessageBuilder extends Task
     private String  _ditaTargetFile;
 
 
-     */
     public  static  final   class   XMLWriter
     
 
-     */
     public MessageBuilder()
     {}
     
 
         
-    /** <p>Let Ant set the input file name.</p>*/
     public void setXmlSourceFile( String fileName ) { _xmlSourceFile = fileName;}
 
-    /** <p>Let Ant set the file name for the message property file we will write.</p>*/
     public void setPropertiesTargetFile( String fileName ) { _propertiesTargetFile = fileName;}
 
-    /** <p>Let Ant set the file name for the SQLState dita file we will write.</p>*/
     public void setDitaTargetFile( String fileName ) { _ditaTargetFile = fileName;}
         
-     */
     public  void    execute()
         throws BuildException
     {
@@ -125,7 +119,6 @@ public class MessageBuilder extends Task
     }
 
 
-     */
     private void    processMessages( File input, PrintWriter propertiesPW, XMLWriter ditaWriter )
         throws Exception
     {
@@ -167,7 +160,6 @@ public class MessageBuilder extends Task
         ditaWriter.endTag();
     }
 
-     */
     private void    processSections( PrintWriter propertiesPW, XMLWriter ditaWriter, NodeList nodes )
         throws Exception
     {
@@ -181,7 +173,6 @@ public class MessageBuilder extends Task
         }
     }
 
-     */
     private void    processSection( PrintWriter propertiesPW, XMLWriter ditaWriter, Element section )
         throws Exception
     {
@@ -199,7 +190,6 @@ public class MessageBuilder extends Task
         }
     }
     
-     */
     private void    processFamily( PrintWriter propertiesPW, XMLWriter ditaWriter, Element family )
         throws Exception
     {
@@ -244,7 +234,6 @@ public class MessageBuilder extends Task
         ditaWriter.endTag();
     }
     
-     */
     private void    processMessage( PrintWriter propertiesPW, XMLWriter ditaWriter, Element message )
         throws Exception
     {
@@ -303,14 +292,12 @@ public class MessageBuilder extends Task
         propertiesPW.println( name + "=" + propertyText );
     }
 
-     */
     private String  getSQLState( String name )
     {
         if ( name.length() <= 5 ) { return name; }
         else { return name.substring( 0, 5 ); }
     }
 
-     */
     private String[]    getOptionalSubElements( Element message, String subElementTag )
         throws Exception
     {
@@ -328,7 +315,6 @@ public class MessageBuilder extends Task
         return retval;
     }
 
-     */
     private int countParameters( String text )
     {
         int     argCount = 0;
@@ -349,7 +335,6 @@ public class MessageBuilder extends Task
         return argCount;
     }
 
-     */
     private String  plugInArgs( String message, String[] rawArgs )
     {
         int             count = rawArgs.length;
@@ -365,13 +350,11 @@ public class MessageBuilder extends Task
     }
 
 
-     */
     private void    echo( String text )
     {
         log( text, Project.MSG_WARN );
     }
 
-     */
     private void    finishWriting( FileWriter fw, PrintWriter pw )
         throws IOException
     {
@@ -391,7 +374,6 @@ public class MessageBuilder extends Task
         return (Element) node.getElementsByTagName( childName ).item( 0 );
     }
 
-     */
     private String squeezeText( Element node )
         throws Exception
     {
@@ -401,7 +383,6 @@ public class MessageBuilder extends Task
         return text;
     }
 
-     */
     private static String replaceSpecialChars(java.lang.String input) {
         String output = input.replaceAll("<", "&lt;");
         output = output.replaceAll(">", "&gt;");
@@ -410,7 +391,6 @@ public class MessageBuilder extends Task
     }
 
 
-     */
     private static String escapePropertiesText( java.lang.String input )
     {
         String output = input.replaceAll( "\n", "\\\\n" );
@@ -420,7 +400,6 @@ public class MessageBuilder extends Task
         return output;
     }
 
-     */
     private static String escapeTextWithAQuote( java.lang.String input )
     {
         String output = input.replaceAll( "\'", "\'\'" );
