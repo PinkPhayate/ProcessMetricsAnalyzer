@@ -204,6 +204,9 @@ public class FileAnalizerTest {
 
 			for(Module module : modules) {
 				System.out.println( module.getClassName());
+				System.out.println( module.getModuleContainment().toString());
+				FileWriting.writeFile(module.getModuleContainment(), "./test-result/"+module.getClassName()+".java");
+				
 			}
 		} catch (Exception e) {
 			e.printStackTrace();

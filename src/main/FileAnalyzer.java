@@ -224,12 +224,16 @@ public class FileAnalyzer {
 						if (classname != null ) {
 							/** class script starts */
 							module.putClassName(classname);
-							containment.add( line );
+//							containment.add( line );
 							blockIndicator = 0;
 						}
 					}
 				}
+				containment.add(line);
 				if (line.indexOf("{") != -1){
+					// if '{' are in line, not count
+					//e.g
+					//	argIdx = text.indexOf( '{', argIdx );
 					if(line.indexOf("'{'") == -1 ){
 						blockIndicator += this.countChar(line, "{");
 					}
