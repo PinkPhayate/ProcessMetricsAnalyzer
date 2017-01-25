@@ -45,7 +45,9 @@ public class DiffAnalyzerMain extends Thread{
 		    e.printStackTrace();
 		}
 		if (args.length != 3) {
+			System.out.println("length of argument IS INVARID.");
 			return;
+			
 		}
 
 //		String mainDirecotory = args[0];

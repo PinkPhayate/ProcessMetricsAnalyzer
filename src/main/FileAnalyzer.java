@@ -11,7 +11,6 @@ import lib.FileWriting;
 import test.FileAnalizerTest;
 
 public class FileAnalyzer {
-	int numberOfLine = 0;
 	private final String[] reservedWords = {
 			"static",
 			"abstract",
@@ -31,6 +30,7 @@ public class FileAnalyzer {
 			//			"sealed partial class"
 			); 
 
+	private int numberOfLine = 0;
 	private ArrayList<Module> modules = new ArrayList<Module>();
 	public FileAnalyzer() {
 		//for unit test
@@ -184,10 +184,9 @@ public class FileAnalyzer {
 			this.numberOfLine++;
 		}
 	}
-	private ArrayList<Module> extractClassModuleRecursively( String filename ) {
+	private void extractClassModuleRecursively( String filename ) {
 		List<String> fileStrs = FileReading.readFile(filename);
 
-		ArrayList<Module> modules = new ArrayList<Module>();
 		ArrayList<String>containment = new ArrayList<String>();
 		Module module = new Module( filename );
 		int blockIndicator = 0;
@@ -212,8 +211,7 @@ public class FileAnalyzer {
 					// put beginning position
 					begenningPosition = this.numberOfLine;
 					if( containment.size() > 0) {
-						ArrayList<Module> tmpModules = this.extractClassModuleRecursively(filename);
-						modules.addAll( tmpModules );
+						this.extractClassModuleRecursively(filename);
 						idx = this.numberOfLine;
 						if (line.indexOf("{") != -1) blockIndicator -= this.countChar(line, "{");
 						if (line.indexOf("}") != -1) blockIndicator += this.countChar(line, "}");
@@ -250,7 +248,7 @@ public class FileAnalyzer {
 							module.putPositions(begenningPosition, endingPosition);
 							// put module to ArrayList
 							module.putModuleContainment(containment);
-							modules.add( module);
+							this.modules.add( module);
 						}
 						break;
 					}
@@ -262,9 +260,13 @@ public class FileAnalyzer {
 
 
 		// when looking out end of class, return
-		return modules;
 	}
 
+	private void addModulesAll(ArrayList<Module> modules2) {
+		for( Module module : modules2) {
+			this.modules.add(module);
+		}
+	}
 	private List<String> goStartLine(List<String> fileStrs) {
 		List<String> skippedFileStrs = new ArrayList<String>();
 		for(int i=this.numberOfLine; i< fileStrs.size(); i++) {
