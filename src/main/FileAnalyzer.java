@@ -73,8 +73,13 @@ public class FileAnalyzer {
 	private int confirmComment ( String line ) {
 		//		line = this.removeSpace( line );
 		//	when // in line, return 1
-		if ( line.indexOf("//") != -1 ) {
-			return 1;
+		int position = line.indexOf("//");
+		if (position != -1) {
+			String trmedLine = line.trim();
+			position = trmedLine.indexOf("//");
+			if (position == 0) {
+				return 1;
+			}
 		}
 		//	when */ in line, return 3
 		if ( line.indexOf("*/") != -1 ) {

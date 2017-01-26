@@ -195,17 +195,17 @@ public class FileAnalizerTest {
 	public void testIntegratedExtractClassModule() {
 		try {
 			FileAnalyzer fileAnalyzer  = new FileAnalyzer();
-			String filename = "/Users/Phayate/src/ApacheDerby/10.12/java/build/org/apache/derbyBuild/MessageBuilder.java";
+			String filename = "/Users/phayate/src/ApacheDerby/10.13/java/build/org/apache/derbyBuild/ReleaseNotesGenerator.java";
 			Method method = FileAnalyzer.class.getDeclaredMethod(
 					"extractClassModuleRecursively", String.class );
 			method.setAccessible(true);
-			ArrayList<Module> modules = 
-					(ArrayList<Module>) method.invoke(fileAnalyzer, filename);
+			method.invoke(fileAnalyzer, filename);
 
+			ArrayList<Module> modules = fileAnalyzer.getTestModules();
 			for(Module module : modules) {
 				System.out.println( module.getClassName());
-				System.out.println( module.getModuleContainment().toString());
-				FileWriting.writeFile(module.getModuleContainment(), "./test-result/"+module.getClassName()+".java");
+//				System.out.println( module.getModuleContainment().toString());
+//				FileWriting.writeFile(module.getModuleContainment(), "./test-result/"+module.getClassName()+".java");
 				
 			}
 		} catch (Exception e) {
@@ -233,6 +233,27 @@ public class FileAnalizerTest {
 			e.printStackTrace();
 		}
 
+	}
+	public void testExtractClassModuleRecursively () {
+		try {
+			// put test file name
+			String filename = "/Users/phayate/src/ApacheDerby/10.13/java/build/org/apache/derbyBuild/ReleaseNotesGenerator.java";
+
+			FileAnalyzer fileAnalyzer  = new FileAnalyzer();
+			Method method = FileAnalyzer.class.getDeclaredMethod(
+					"extractClassModuleRecursively", String.class );
+			method.setAccessible(true);
+			ArrayList<Module> modules = 
+					(ArrayList<Module>) method.invoke(fileAnalyzer, filename);
+
+			for (Module module: modules) {
+				System.out.println( module.getClassName() );
+			}
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
 	}
 
 }
