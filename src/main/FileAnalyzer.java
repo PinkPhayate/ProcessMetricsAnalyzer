@@ -71,26 +71,46 @@ public class FileAnalyzer {
 		return str;
 	}
 	private int confirmComment ( String line ) {
+		String trmmedLine = line.trim();
 		//		line = this.removeSpace( line );
 		//	when // in line, return 1
 		int position = line.indexOf("//");
 		if (position != -1) {
-			String trmedLine = line.trim();
-			position = trmedLine.indexOf("//");
+			position = trmmedLine.indexOf("//");
 			if (position == 0) {
 				return 1;
 			}
 		}
+		int beginningPosition = trmmedLine.indexOf("/*");
+		int endingPosition = trmmedLine.indexOf("*/");
+		
+		if(		
+				endingPosition != -1 &&
+				beginningPosition < endingPosition &&
+				0 < beginningPosition  &&
+				endingPosition < trmmedLine.length() -1
+				) {
+//		eg.)	public hoge /**huga*/ {		
+//				this line is not comment line.
+//				but /** public hoge {*/
+//				this is comment line			
+			return 0;			
+		}
+
 		//	when */ in line, return 3
-		if ( line.indexOf("*/") != -1 ) {
+		if ( endingPosition != -1 ) {
 			return 3;
 		}
 		//	when /* in line, return 2
-		if ( line.indexOf("/*") != -1 ) {
+		if ( beginningPosition != -1 ) {
 			return 2;
 		}
 		//	else return 0
 		return 0;
+	}
+	private String removeCommentBlock (String line) {
+		return line;
+
 	}
 	public void extractClassModule (String filename) {
 		List<String> fileStrs = null;
@@ -210,6 +230,7 @@ public class FileAnalyzer {
 			// status code==0 and is not continue -> script block  
 			if ( statusCode > 0 || isContinued ) {
 				// this is comment line
+//				System.out.println(line);	// debug
 			}
 			else {
 				if ( isClassLine ( line ) ) {
@@ -238,11 +259,13 @@ public class FileAnalyzer {
 					//e.g
 					//	argIdx = text.indexOf( '{', argIdx );
 					if(line.indexOf("'{'") == -1 ){
+//						System.out.println(line);	//debug
 						blockIndicator += this.countChar(line, "{");
 					}
 				}
 				if (line.indexOf("}") != -1) {
 					blockIndicator -= this.countChar(line, "}");
+//					System.out.println(line);	// debug
 					if ( blockIndicator == 0) {
 						/** Class module was over */
 						// put end position
