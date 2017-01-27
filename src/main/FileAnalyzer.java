@@ -335,6 +335,10 @@ public class FileAnalyzer {
 		if( PUBLIC > -1) {
 			return true;
 		}
+		// normal class like "class Hoge {"
+		if (CLASS == 0) {
+			return true;
+		}
 
 		return false;
 	}

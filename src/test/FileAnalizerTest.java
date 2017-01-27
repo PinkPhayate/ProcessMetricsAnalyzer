@@ -195,7 +195,7 @@ public class FileAnalizerTest {
 	public void testIntegratedExtractClassModule() {
 		try {
 			FileAnalyzer fileAnalyzer  = new FileAnalyzer();
-			String filename = "/Users/phayate/src/ApacheDerby/10.13/java/build/org/apache/derbyBuild/classlister.java";
+			String filename = "/Users/phayate/src/ApacheDerby/10.13/java/drda/org/apache/derby/impl/drda/DecryptionManager.java";
 			Method method = FileAnalyzer.class.getDeclaredMethod(
 					"extractClassModuleRecursively", String.class );
 			method.setAccessible(true);
