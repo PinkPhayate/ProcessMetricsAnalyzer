@@ -332,18 +332,23 @@ public class FileAnalyzer {
 			int position = list.indexOf( rw );
 			if ( position != -1 ) return true;				
 		}
-		if( PUBLIC > -1) {
-			return true;
-		}
+		if( PUBLIC > -1)  return true;
+
 		// normal class like "class Hoge {"
-		if (CLASS == 0) {
-			return true;
-		}
+		if (CLASS == 0)	return true;
+		// check interface(v2~)
+		if ( isInterface(list) )	return true;
 
 		return false;
 	}
 
 
+	private boolean isInterface(List<String> list) {
+		int INTERFACE = list.indexOf("interface");
+		int PUBLIC = list.indexOf("public");
+		if( PUBLIC == 0 && INTERFACE == 1)	return true;
+		return false;
+	}
 	private List<String> removeTab(List<String> list) {
 		List<String> modifiedList = new ArrayList<String>();
 		for ( String element: list) {
