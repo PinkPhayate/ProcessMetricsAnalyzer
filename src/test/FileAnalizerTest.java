@@ -195,13 +195,14 @@ public class FileAnalizerTest {
 	public void testIntegratedExtractClassModule() {
 		try {
 			FileAnalyzer fileAnalyzer  = new FileAnalyzer();
-			String filename = "/Users/phayate/src/ApacheDerby/10.13/java/client/org/apache/derby/client/am/ClientConnection.java";
+			String filename = "/Users/phayate/src/ApacheDerby/10.13/java/client/org/apache/derby/client/am/ClientJDBCObjectFactory.java";
 			Method method = FileAnalyzer.class.getDeclaredMethod(
 					"extractClassModuleRecursively", String.class );
 			method.setAccessible(true);
 			method.invoke(fileAnalyzer, filename);
 
 			ArrayList<Module> modules = fileAnalyzer.getTestModules();
+			System.out.println( modules.size());
 			for(Module module : modules) {
 				System.out.println( module.getClassName());
 //				System.out.println( module.getModuleContainment().toString());
@@ -211,6 +212,19 @@ public class FileAnalizerTest {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
+
+	}
+	@Test
+	public void testIsBorder () throws Exception {
+		FileAnalyzer fileAnalyzer  = new FileAnalyzer();
+//		String line = "if (trimSql.lastIndexOf(\"}\") >= 0) {";
+		String line = "return trimSql.substring(1, trimSql.lastIndexOf(\"}\"));";
+		String target = "{";
+		Method method = FileAnalyzer.class.getDeclaredMethod(
+				"isBorder", String.class, String.class );
+		method.setAccessible(true);
+		boolean actual = (boolean)method.invoke(fileAnalyzer, line, target);
+		assertEquals(true, actual);
 
 	}
 	@Test

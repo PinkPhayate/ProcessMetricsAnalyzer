@@ -152,7 +152,10 @@ public class FileAnalyzer {
 				if (containment != null ) {
 					containment.add( line );
 				}
-				if ( isClassLine ( line ) ) {
+				List<String> tmp = this.splitLine(line);
+				if ( isClassLine ( tmp ) ||
+						isInterface(tmp)
+						) {
 					// put beginning position
 					begenningPosition = numberOfLine;
 
@@ -233,7 +236,10 @@ public class FileAnalyzer {
 //				System.out.println(line);	// debug
 			}
 			else {
-				if ( isClassLine ( line ) ) {
+				
+				List<String> tmp = this.splitLine(line);
+				if ( isClassLine( tmp ) ||
+						isInterface( tmp ) ) {
 					// put beginning position
 					begenningPosition = this.numberOfLine;
 					if( containment.size() > 0) {
@@ -254,19 +260,10 @@ public class FileAnalyzer {
 					}
 				}
 				containment.add(line);
-				if (line.indexOf("{") != -1){
-					// if '{' are in line, not count
-					//e.g
-					//	argIdx = text.indexOf( '{', argIdx );
-					if ( this.assertNotString(line, "{") ) {
-						blockIndicator += this.countChar(line, "{");
-//						System.out.println(line);	//debug
-					}
-					if(line.indexOf("'{'") == -1 ||
-							line.indexOf("\"{\"") == -1 ){
-					}
+				if ( this.isBorder(line, "{") ) {
+					blockIndicator += this.countChar(line, "{");
 				}
-				if ( this.assertNotString(line, "}") ) {
+				if ( this.isBorder(line, "}") ) {
 					blockIndicator -= this.countChar(line, "}");
 //					System.out.println(line);	// debug
 					if ( blockIndicator == 0) {
@@ -288,17 +285,24 @@ public class FileAnalyzer {
 			}
 			this.numberOfLine++;
 		}
-
-
 		// when looking out end of class, return
 	}
+	private String enoding( String line) {
+		line = line.replaceAll(" ", "");
+		// NOTE: { or } are require escape via \\  
+		line = line.replaceAll("'\\{'", "");
+		line = line.replaceAll("\"\\{\"", "");
+		line = line.replaceAll("'\\}\'", "");
+		line = line.replaceAll("\"\\}\"", "");
+		return line;
+	}
 
-	private boolean assertNotString(String line, String target) {
-		if(line.indexOf("'+target+'") == -1 ||
-				line.indexOf("\"+target+\"") == -1 ){
+	private boolean isBorder(String line, String target) {
+		line = this.enoding(line);
+
+		if( line.indexOf(target) != -1) {
 			return true;
 		}
-
 		return false;
 	}
 	private void addModulesAll(ArrayList<Module> modules2) {
@@ -318,15 +322,21 @@ public class FileAnalyzer {
 		List<String> list = this.removeTab( Arrays.asList(array) );
 
 		int index = list.indexOf("class");
-		if ( index+1 < list.size() ) {
+		if ( index+1 < list.size() && index != -1) {
 			return list.get(index + 1);
 		}
+		// interface ?
+		index = list.indexOf("interface");
+		if ( index+1 < list.size() && index != -1) {
+			return list.get(index + 1);
+		}
+
 		return null;
 	}
-	private boolean isClassLine ( String line ) {
+	private List<String> splitLine ( String line ) {
 		String[] array = line.split(" ");
 		List<String> list = this.removeTab( Arrays.asList(array) );
-		return this.isClassLine( list );
+		return list;
 	}
 
 	/** confirm that line if it is beginning of class */
@@ -347,13 +357,10 @@ public class FileAnalyzer {
 
 		// normal class like "class Hoge {"
 		if (CLASS == 0)	return true;
-		// check interface(v2~)
-		if ( isInterface(list) )	return true;
-
 		return false;
 	}
 
-
+	// adapt version 2.0~
 	private boolean isInterface(List<String> list) {
 		int INTERFACE = list.indexOf("interface");
 		int PUBLIC = list.indexOf("public");
