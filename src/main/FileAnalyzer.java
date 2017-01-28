@@ -258,12 +258,15 @@ public class FileAnalyzer {
 					// if '{' are in line, not count
 					//e.g
 					//	argIdx = text.indexOf( '{', argIdx );
-					if(line.indexOf("'{'") == -1 ){
-//						System.out.println(line);	//debug
+					if ( this.assertNotString(line, "{") ) {
 						blockIndicator += this.countChar(line, "{");
+//						System.out.println(line);	//debug
+					}
+					if(line.indexOf("'{'") == -1 ||
+							line.indexOf("\"{\"") == -1 ){
 					}
 				}
-				if (line.indexOf("}") != -1) {
+				if ( this.assertNotString(line, "}") ) {
 					blockIndicator -= this.countChar(line, "}");
 //					System.out.println(line);	// debug
 					if ( blockIndicator == 0) {
@@ -290,6 +293,14 @@ public class FileAnalyzer {
 		// when looking out end of class, return
 	}
 
+	private boolean assertNotString(String line, String target) {
+		if(line.indexOf("'+target+'") == -1 ||
+				line.indexOf("\"+target+\"") == -1 ){
+			return true;
+		}
+
+		return false;
+	}
 	private void addModulesAll(ArrayList<Module> modules2) {
 		for( Module module : modules2) {
 			this.modules.add(module);
