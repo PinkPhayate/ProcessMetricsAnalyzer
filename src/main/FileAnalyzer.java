@@ -84,9 +84,11 @@ public class FileAnalyzer {
 		
 		if(		
 				endingPosition != -1 &&
-				beginningPosition < endingPosition &&
-				0 < beginningPosition  &&
-				endingPosition < trmmedLine.length() -1
+				endingPosition+2 < trmmedLine.length()
+//				endingPosition != -1 &&
+//				beginningPosition < endingPosition &&
+//				0 < beginningPosition  &&
+//				endingPosition < trmmedLine.length() -1
 				) {
 //		eg.)	public hoge /**huga*/ {		
 //				this line is not comment line.
