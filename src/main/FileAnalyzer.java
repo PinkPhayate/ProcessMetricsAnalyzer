@@ -70,16 +70,8 @@ public class FileAnalyzer {
 		}
 		return str;
 	}
-	private String removeSpace ( String line ) {
-		String[] array = line.split(" ");
-		List<String> list = this.removeTab( Arrays.asList(array) );
-		String str = this.join( list );
-		return str;
-	}
 	private int confirmComment ( String line ) {
 		String trmmedLine = line.trim();
-		//		line = this.removeSpace( line );
-		//	when // in line, return 1
 		int position = line.indexOf("//");
 		if (position != -1) {
 			position = trmmedLine.indexOf("//");
@@ -271,7 +263,6 @@ public class FileAnalyzer {
 				}
 				if ( this.isBorder(line, "}") ) {
 					blockIndicator -= this.countChar(line, "}");
-//					System.out.println(line);	// debug
 					if ( blockIndicator == 0) {
 						/** Class module was over */
 						// put end position
@@ -296,10 +287,10 @@ public class FileAnalyzer {
 	private String enoding( String line) {
 		line = line.replaceAll(" ", "");
 		// NOTE: { or } are require escape via \\  
-		line = line.replaceAll("'\\{'", "");
-		line = line.replaceAll("\"\\{\"", "");
-		line = line.replaceAll("'\\}\'", "");
-		line = line.replaceAll("\"\\}\"", "");
+		line = line.replaceAll("'.*\\{.*'", "");
+		line = line.replaceAll("\".*\\{.*\"", "");
+		line = line.replaceAll("'\\}.*\'", "");
+		line = line.replaceAll("\".*\\}.*\"", "");
 		return line;
 	}
 
@@ -324,8 +315,7 @@ public class FileAnalyzer {
 		return skippedFileStrs;
 	}
 	private String extractClassName(String line) {
-		String[] array = line.split(" ");
-		List<String> list = this.removeTab( Arrays.asList(array) );
+		List<String> list = this.splitLine(line);
 
 		int index = list.indexOf("class");
 		if ( index+1 < list.size() && index != -1) {
@@ -340,11 +330,21 @@ public class FileAnalyzer {
 		return null;
 	}
 	private List<String> splitLine ( String line ) {
+		line = line.replaceAll("\t", " ");
 		String[] array = line.split(" ");
-		List<String> list = this.removeTab( Arrays.asList(array) );
+//		List<String> list = this.removeTab( Arrays.asList(array) );
+		List<String> list = Arrays.asList(array);
+		list = removeElementOnlySpace(list);
 		return list;
 	}
 
+	private List<String> removeElementOnlySpace(List<String> list) {
+		List<String> revicedList = new ArrayList<String> ();
+		for(String e: list) {			
+			if( 0 < e.length() ) revicedList.add(e);
+		}
+		return revicedList;
+	}
 	/** confirm that line if it is beginning of class */
 	private boolean isClassLine ( List<String> list ) {
 		// remove space and null
@@ -371,6 +371,9 @@ public class FileAnalyzer {
 		int INTERFACE = list.indexOf("interface");
 		int PUBLIC = list.indexOf("public");
 		if( PUBLIC == 0 && INTERFACE == 1)	return true;
+		// normal interface like "interface Hoge {"
+		if (INTERFACE == 0)	return true;
+
 		return false;
 	}
 	private List<String> removeTab(List<String> list) {
