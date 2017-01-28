@@ -8,15 +8,11 @@ import java.util.List;
 import difflib.StringUtills;
 import lib.FileReading;
 import lib.FileWriting;
+import property.CsWords;
+import property.JavaWords;
 import test.FileAnalizerTest;
 
 public class FileAnalyzer {
-	private final String[] reservedWords = {
-			"static",
-			"abstract",
-			"partial",
-			"sealed"
-	};
 	private final List<String> MODULE_START = Arrays.asList(
 			"public class",
 			"public static class",
@@ -32,8 +28,18 @@ public class FileAnalyzer {
 
 	private int numberOfLine = 0;
 	private ArrayList<Module> modules = new ArrayList<Module>();
+
+	private ArrayList<String> reservedWords = new ArrayList<String>();
 	public FileAnalyzer() {
 		//for unit test
+	}
+	public FileAnalyzer(String language) {
+		switch(language) {
+		case "java":
+			for (JavaWords w : JavaWords.values()) this.reservedWords.add( w.getWord() );
+		case "cs":
+			for (CsWords w : CsWords.values()) this.reservedWords.add( w.getWord() );		
+		}
 	}
 	public ArrayList<Module> getModules(ArrayList<String> module) {
 		for(String filename: module) {

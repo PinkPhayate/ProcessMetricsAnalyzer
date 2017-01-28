@@ -61,7 +61,7 @@ public class DiffAnalyzerMain extends Thread{
 
 		// file list in directory about later version
 		ArrayList<String> currFileStrs = search.getFileList(cvDirectory);
-		FileAnalyzer fileAnalyzer = new FileAnalyzer();
+		FileAnalyzer fileAnalyzer = new FileAnalyzer(suffix);
 		ArrayList<Module> currentModules = fileAnalyzer.getModules(currFileStrs);
 		fileAnalyzer.saveModules( "current-modules.txt" );
 		System.out.println("Step 1 has finished");
@@ -69,7 +69,7 @@ public class DiffAnalyzerMain extends Thread{
 
 		/** Step 2 get class module in previous version */
 		ArrayList<String> prevFileStrs = search.getFileList(pvDirectory);
-		fileAnalyzer = new FileAnalyzer();
+		fileAnalyzer = new FileAnalyzer(suffix);
 		ArrayList<Module> previousModules = fileAnalyzer.getModules(prevFileStrs);
 		fileAnalyzer.saveModules( "previous-modules.txt" );
 		System.out.println("Step 2 has finished");
