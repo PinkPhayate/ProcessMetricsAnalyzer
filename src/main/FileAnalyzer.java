@@ -303,8 +303,30 @@ public class FileAnalyzer {
 		}
 		// when looking out end of class, return
 	}
+	private String assertBorder(String line, String sig) {
+		int pos = line.indexOf(sig);
+		if (pos == -1) {
+			return line;
+		}
+		String bf = line.substring(0, pos);
+		int count = countChar(bf, "\"");
+		if (count % 2 == 0) {
+			 bf = bf.replaceAll("\"","");			
+		}
+		String af = line.substring(pos);
+		count = countChar(af,"\"");
+		if (count % 2 == 0) {
+			 af = af.replaceAll("\"","");			
+		}
+
+		return bf+af;		
+	}
 	private String enoding( String line) {
 		line = line.replaceAll(" ", "");
+		
+		line = this.assertBorder(line, "{");
+		line = this.assertBorder(line, "}");
+		
 		// NOTE: { or } are require escape via \\  
 		line = line.replaceAll("'.*\\{.*'", "");
 		line = line.replaceAll("\".*\\{.*\"", "");
