@@ -195,7 +195,7 @@ public class FileAnalizerTest {
 	public void testIntegratedExtractClassModule() {
 		try {
 			FileAnalyzer fileAnalyzer  = new FileAnalyzer();
-			String filename = "/Users/kishi-lab/Phayate/ApacheDerby/10.12/java/engine/org/apache/derby/iapi/security/Securable.java";
+			String filename = "/Users/kishi-lab/Phayate/ApacheDerby/10.12/java/testing/org/apache/derbyTesting/functionTests/tests/jdbcapi/DMDBugsTest.java";
 			Method method = FileAnalyzer.class.getDeclaredMethod(
 					"extractClassModuleRecursively", String.class );
 			method.setAccessible(true);
@@ -217,8 +217,8 @@ public class FileAnalizerTest {
 	@Test
 	public void testIsBorder () throws Exception {
 		FileAnalyzer fileAnalyzer  = new FileAnalyzer();
-//		String line = "if (trimSql.lastIndexOf(\"}\") >= 0) {";
-		String line = "return trimSql.substring(1, trimSql.lastIndexOf(\"}\"));";
+//		String line = "    */    protected void tearDown() throws Exception {  ";
+		String line = "		rs = dmd.getTables(\"%\", \"%\", \"%\", new String[] {\"SYNONYM\"});";
 		String target = "{";
 		Method method = FileAnalyzer.class.getDeclaredMethod(
 				"isBorder", String.class, String.class );
@@ -269,5 +269,28 @@ public class FileAnalizerTest {
 		}
 		
 	}
-
+	@Test
+	public void testRemoveCommentBlock() throws Exception {
+		FileAnalyzer fileAnalyzer  = new FileAnalyzer();
+		String line = "    */    protected void tearDown() throws Exception {  ";
+//		String line = "prote/*  sssss */cted void tearDown() throws Exception {  ";
+//		String line = "protected void tearDown() throws Exception {**/		";
+		Method method = FileAnalyzer.class.getDeclaredMethod(
+				"removeCommentBlock", String.class );
+		method.setAccessible(true);
+		String actual = (String)method.invoke(fileAnalyzer, line);
+		System.out.println( actual );
+	}
+	@Test
+	public void testConfirmComment() throws Exception {
+		FileAnalyzer fileAnalyzer  = new FileAnalyzer();
+		String line = "    */    protected void tearDown() throws Exception {  ";
+//		String line = "public abstract class ConstantPoolEntry /*implements PoolEntry*/";
+		Method method = FileAnalyzer.class.getDeclaredMethod(
+				"confirmComment", String.class );
+		method.setAccessible(true);
+		String actual = (String)method.invoke(fileAnalyzer, line);
+		System.out.println( actual );
+	}
+	
 }

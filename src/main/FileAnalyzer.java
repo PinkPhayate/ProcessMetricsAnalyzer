@@ -82,17 +82,19 @@ public class FileAnalyzer {
 		int beginningPosition = trmmedLine.indexOf("/*");
 		int endingPosition = trmmedLine.indexOf("*/");
 		
-		if(		
-				endingPosition != -1 &&
-				beginningPosition < endingPosition &&
-				0 < beginningPosition  &&
-				endingPosition < trmmedLine.length() -1
-				) {
 //		eg.)	public hoge /**huga*/ {		
-//				this line is not comment line.
+//				-> this is not comment line.
 //				but /** public hoge {*/
-//				this is comment line			
-			return 0;			
+//				-> this is comment line			
+		if(		endingPosition != -1 &&
+				endingPosition +1 < trmmedLine.length() -1
+				) {
+			return -3;
+		}
+		if( 	beginningPosition != -1 &&
+				0 < beginningPosition
+				) {
+			return 0;
 		}
 
 		//	when */ in line, return 3
@@ -107,8 +109,21 @@ public class FileAnalyzer {
 		return 0;
 	}
 	private String removeCommentBlock (String line) {
+		String trmmedLine = line.trim();
+		int beginningPosition = trmmedLine.indexOf("/*");
+		int endingPosition = trmmedLine.indexOf("*/");
+		if ( beginningPosition != -1 && endingPosition != -1) {
+			String bf = trmmedLine.substring(0, beginningPosition);
+			String af = trmmedLine.substring(endingPosition+2);
+			String _ = bf + af;
+			return bf + af;
+		}
+		if(		endingPosition != -1 &&
+				endingPosition +1 == trmmedLine.length()  ) {
+			String _ = trmmedLine.substring(endingPosition+2 );
+			return trmmedLine.substring(endingPosition+2 );
+		}
 		return line;
-
 	}
 	public void extractClassModule (String filename) {
 		List<String> fileStrs = null;
@@ -221,11 +236,12 @@ public class FileAnalyzer {
 		boolean isContinued = false;
 		for(int idx=this.numberOfLine;idx<fileStrs.size();idx++) {
 			String line = fileStrs.get(idx);
+			
 			// when line means comment, getting out!
 			int statusCode = this.confirmComment( line );
 			if ( statusCode == 2 ) {
 				isContinued = true;
-			}else if( statusCode == 3 ) {
+			}else if( statusCode == 3 || statusCode == -3 ) {
 				isContinued = false;				
 			}
 			// status code==0 and is not continue -> script block  
@@ -261,8 +277,10 @@ public class FileAnalyzer {
 				containment.add(line);
 				if ( this.isBorder(line, "{") ) {
 					blockIndicator += this.countChar(line, "{");
+//					System.out.println( line);
 				}
 				if ( this.isBorder(line, "}") ) {
+//					System.out.println( line);
 					blockIndicator -= this.countChar(line, "}");
 					if ( blockIndicator == 0) {
 						/** Class module was over */
