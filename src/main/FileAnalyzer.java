@@ -29,7 +29,7 @@ public class FileAnalyzer {
 	private int numberOfLine = 0;
 	private ArrayList<Module> modules = new ArrayList<Module>();
 
-	private ArrayList<String> reservedWords = new ArrayList<String>();
+	private ArrayList<String> reservedWords = new ArrayList<String>(); 
 	public FileAnalyzer() {
 		//for unit test
 	}
@@ -237,7 +237,8 @@ public class FileAnalyzer {
 				
 				List<String> tmp = this.splitLine(line);
 				if ( isClassLine( tmp ) ||
-						isInterface( tmp ) ) {
+						isInterface( tmp ) ||
+						isEnum ( tmp )) {
 					// put beginning position
 					begenningPosition = this.numberOfLine;
 					if( containment.size() > 0) {
@@ -326,6 +327,11 @@ public class FileAnalyzer {
 		if ( index+1 < list.size() && index != -1) {
 			return list.get(index + 1);
 		}
+		// enum?
+		index = list.indexOf("enum");
+		if ( index+1 < list.size() && index != -1) {
+			return list.get(index + 1);
+		}
 
 		return null;
 	}
@@ -373,6 +379,16 @@ public class FileAnalyzer {
 		if( PUBLIC == 0 && INTERFACE == 1)	return true;
 		// normal interface like "interface Hoge {"
 		if (INTERFACE == 0)	return true;
+
+		return false;
+	}
+	// adapt version 2.0~
+	private boolean isEnum(List<String> list) {
+		int ENUM = list.indexOf("enum");
+		int PUBLIC = list.indexOf("public");
+		if( PUBLIC == 0 && ENUM == 1)	return true;
+		// normal interface like "interface Hoge {"
+		if (ENUM == 0)	return true;
 
 		return false;
 	}
