@@ -54,7 +54,7 @@ public class DiffAnalyzerMain extends Thread{
 		String cvDirectory = args[0];
 		String pvDirectory = args[1];
 		String suffix = args[2];
-		String saveFile = "ProcessMetrics.csv";
+		String saveFile = "ProcessMetric.csv";
 
 		/** Step 1 get class module in current version */
 		FileListGetter search = new FileListGetter(suffix);

@@ -29,7 +29,7 @@ public class FileAnalyzer {
 	private int numberOfLine = 0;
 	private ArrayList<Module> modules = new ArrayList<Module>();
 
-	private ArrayList<String> reservedWords = new ArrayList<String>();
+	private ArrayList<String> reservedWords = new ArrayList<String>(); 
 	public FileAnalyzer() {
 		//for unit test
 	}
@@ -82,19 +82,19 @@ public class FileAnalyzer {
 		int beginningPosition = trmmedLine.indexOf("/*");
 		int endingPosition = trmmedLine.indexOf("*/");
 		
-		if(		
-				endingPosition != -1 &&
-				endingPosition+2 < trmmedLine.length()
-//				endingPosition != -1 &&
-//				beginningPosition < endingPosition &&
-//				0 < beginningPosition  &&
-//				endingPosition < trmmedLine.length() -1
-				) {
 //		eg.)	public hoge /**huga*/ {		
-//				this line is not comment line.
+//				-> this is not comment line.
 //				but /** public hoge {*/
-//				this is comment line			
-			return 0;			
+//				-> this is comment line			
+		if(		endingPosition != -1 &&
+				endingPosition +1 < trmmedLine.length() -1
+				) {
+			return -3;
+		}
+		if( 	beginningPosition != -1 &&
+				0 < beginningPosition
+				) {
+			return 0;
 		}
 
 		//	when */ in line, return 3
@@ -109,8 +109,21 @@ public class FileAnalyzer {
 		return 0;
 	}
 	private String removeCommentBlock (String line) {
+		String trmmedLine = line.trim();
+		int beginningPosition = trmmedLine.indexOf("/*");
+		int endingPosition = trmmedLine.indexOf("*/");
+		if ( beginningPosition != -1 && endingPosition != -1) {
+			String bf = trmmedLine.substring(0, beginningPosition);
+			String af = trmmedLine.substring(endingPosition+2);
+			String _ = bf + af;
+			return bf + af;
+		}
+		if(		endingPosition != -1 &&
+				endingPosition +1 == trmmedLine.length()  ) {
+			String _ = trmmedLine.substring(endingPosition+2 );
+			return trmmedLine.substring(endingPosition+2 );
+		}
 		return line;
-
 	}
 	public void extractClassModule (String filename) {
 		List<String> fileStrs = null;
@@ -223,11 +236,12 @@ public class FileAnalyzer {
 		boolean isContinued = false;
 		for(int idx=this.numberOfLine;idx<fileStrs.size();idx++) {
 			String line = fileStrs.get(idx);
+			
 			// when line means comment, getting out!
 			int statusCode = this.confirmComment( line );
 			if ( statusCode == 2 ) {
 				isContinued = true;
-			}else if( statusCode == 3 ) {
+			}else if( statusCode == 3 || statusCode == -3 ) {
 				isContinued = false;				
 			}
 			// status code==0 and is not continue -> script block  
@@ -239,7 +253,8 @@ public class FileAnalyzer {
 				
 				List<String> tmp = this.splitLine(line);
 				if ( isClassLine( tmp ) ||
-						isInterface( tmp ) ) {
+						isInterface( tmp ) ||
+						isEnum ( tmp )) {
 					// put beginning position
 					begenningPosition = this.numberOfLine;
 					if( containment.size() > 0) {
@@ -262,8 +277,10 @@ public class FileAnalyzer {
 				containment.add(line);
 				if ( this.isBorder(line, "{") ) {
 					blockIndicator += this.countChar(line, "{");
+//					System.out.println( line);
 				}
 				if ( this.isBorder(line, "}") ) {
+//					System.out.println( line);
 					blockIndicator -= this.countChar(line, "}");
 					if ( blockIndicator == 0) {
 						/** Class module was over */
@@ -286,8 +303,30 @@ public class FileAnalyzer {
 		}
 		// when looking out end of class, return
 	}
+	private String assertBorder(String line, String sig) {
+		int pos = line.indexOf(sig);
+		if (pos == -1) {
+			return line;
+		}
+		String bf = line.substring(0, pos);
+		int count = countChar(bf, "\"");
+		if (count % 2 == 0) {
+			 bf = bf.replaceAll("\"","");			
+		}
+		String af = line.substring(pos);
+		count = countChar(af,"\"");
+		if (count % 2 == 0) {
+			 af = af.replaceAll("\"","");			
+		}
+
+		return bf+af;		
+	}
 	private String enoding( String line) {
 		line = line.replaceAll(" ", "");
+		
+		line = this.assertBorder(line, "{");
+		line = this.assertBorder(line, "}");
+		
 		// NOTE: { or } are require escape via \\  
 		line = line.replaceAll("'.*\\{.*'", "");
 		line = line.replaceAll("\".*\\{.*\"", "");
@@ -325,6 +364,11 @@ public class FileAnalyzer {
 		}
 		// interface ?
 		index = list.indexOf("interface");
+		if ( index+1 < list.size() && index != -1) {
+			return list.get(index + 1);
+		}
+		// enum?
+		index = list.indexOf("enum");
 		if ( index+1 < list.size() && index != -1) {
 			return list.get(index + 1);
 		}
@@ -375,6 +419,16 @@ public class FileAnalyzer {
 		if( PUBLIC == 0 && INTERFACE == 1)	return true;
 		// normal interface like "interface Hoge {"
 		if (INTERFACE == 0)	return true;
+
+		return false;
+	}
+	// adapt version 2.0~
+	private boolean isEnum(List<String> list) {
+		int ENUM = list.indexOf("enum");
+		int PUBLIC = list.indexOf("public");
+		if( PUBLIC == 0 && ENUM == 1)	return true;
+		// normal interface like "interface Hoge {"
+		if (ENUM == 0)	return true;
 
 		return false;
 	}

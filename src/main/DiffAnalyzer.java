@@ -92,6 +92,10 @@ public class DiffAnalyzer {
 		numTotalFile = currentModules.size();
 		/** iterate module in current version */
 		for (Module currentModule: currentModules) {
+			if(currentModule.getClassName() == "") {
+				System.out.println(currentModule.getFileName());
+			}
+
 			// get module with same class name as same as current version
 			Module previousModule =
 					this.searchModuleByFilePath( previousModules, currentModule );
@@ -126,7 +130,7 @@ public class DiffAnalyzer {
 				module.getEndingPostion() );
 	}
 	private void informProgress( int numOfFinishedFile) {
-		System.out.print("\r");
-		System.out.print("Progress: " +  numOfFinishedFile + " / " + numTotalFile );		
+//		System.out.print("\r");
+//		System.out.print("Progress: " +  numOfFinishedFile + " / " + numTotalFile );		
 	}
 }
