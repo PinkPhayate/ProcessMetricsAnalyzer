@@ -251,10 +251,11 @@ public class FileAnalyzer {
 			}
 			else {
 				
-				List<String> tmp = this.splitLine(line);
-				if ( isClassLine( tmp ) ||
-						isInterface( tmp ) ||
-						isEnum ( tmp )) {
+				List<String> tmp = this.splitLine(line);				
+				if ( isClassLine( tmp ) ) {
+//				if ( isClassLine( tmp ) ||
+//						isInterface( tmp ) ||
+//						isEnum ( tmp )) {
 					// put beginning position
 					begenningPosition = this.numberOfLine;
 					if( containment.size() > 0) {

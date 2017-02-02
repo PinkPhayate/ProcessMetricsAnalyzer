@@ -55,7 +55,7 @@ public class DiffAnalyzerMain extends Thread{
 		String pvDirectory = args[1];
 		String suffix = args[2];
 		String currentVer = extractCurrentVersionString( cvDirectory );
-		String saveFile = "ProcessMetric-"+currentVer+".csv";
+		String saveFile = "ProcessMetrics-"+currentVer+".csv";
 
 		/** Step 1 get class module in current version */
 		FileListGetter search = new FileListGetter(suffix);

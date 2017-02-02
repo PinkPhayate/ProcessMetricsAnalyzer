@@ -22,7 +22,7 @@ public class MetricsManager {
 
 
 		for ( List<String> list: pm ) {
-			String className = list.get(1);
+			String className = list.get(2);
 			int index = this.searchSameClass( className );
 			if (index != -1 ) {
 				// concvert to String
@@ -52,7 +52,11 @@ public class MetricsManager {
 		ArrayList<List<String>> csv = new ArrayList<List<String>>();
 		for ( List<String> list : arrayList ){
 			String kind = list.get( 0 );
-			if (kind.indexOf("Class") != -1 )	csv.add(list);
+			if (kind.indexOf("Class") != -1 ) {
+				String classname =list.get(1);
+				String[] tmp = classname.split(".");
+				csv.add(list);
+			}
 //			if (kind.equals("Class") )	csv.add(list);
 		}
 		return csv;
@@ -69,9 +73,7 @@ public class MetricsManager {
 
 	private int searchSameClass (String className) {
 		for ( List<String> list : this.mfu ) {
-//			if ( className.indexOf( list.get(1) ) != -1 ) {
-//			if ( list.get(1).indexOf( className ) != -1 ) {
-			if ( list.get(2).indexOf( className ) != -1 ) {
+			if ( list.get(1).indexOf( className ) != -1 ) {
 				return this.mfu.indexOf(list);
 			}
 		}
