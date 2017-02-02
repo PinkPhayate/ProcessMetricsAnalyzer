@@ -9,13 +9,17 @@ public class MetricsManager {
 	private ArrayList<List<String>> pm = new ArrayList<List<String>>();
 //	private ArrayList< List<String> > mergedCsv  = new ArrayList< List<String> >();
 	private ArrayList< String > mergedMetrics  = new ArrayList< String >();
+	private ArrayList< Integer > selectedIndexes  = new ArrayList< Integer >();
 
 	public ArrayList< String > mergeMetrics(ArrayList<String> metricsFromUnderstand,
+			ArrayList<Integer> selectedIndexes,
 			ArrayList<String> processMetrics) {
 
 
 		// convert to ArrayLsit< List<String> >
 		this.pm = this.convertCsv( processMetrics );
+		// put indexes point at CK metrics columns
+		this.selectedIndexes = selectedIndexes;
 		this.mfu = this.convertCsv( metricsFromUnderstand );
 		// remove except to Class module info
 		this.mfu = this.extractClassInfo( mfu );
@@ -25,7 +29,7 @@ public class MetricsManager {
 			String className = list.get(2);
 			int index = this.searchSameClass( className );
 			if (index != -1 ) {
-				// concvert to String
+				// convert to String
 				String str = this.join(list) +
 						this.join(this.mfu.get(index));
 				this.mergedMetrics.add( str );
@@ -53,14 +57,22 @@ public class MetricsManager {
 		for ( List<String> list : arrayList ){
 			String kind = list.get( 0 );
 			if (kind.indexOf("Class") != -1 ) {
-				String classname =list.get(1);
-				String[] tmp = classname.split(".");
-				csv.add(list);
+				csv.add(extractCkMetrics(list));
 			}
 //			if (kind.equals("Class") )	csv.add(list);
 		}
 		return csv;
 	}
+
+	private List<String> extractCkMetrics(List<String> list) {
+		List<String> ckMetrics = new ArrayList<String>();
+		for(int idx: this.selectedIndexes) {
+			ckMetrics.add(list.get(idx));
+			
+		}
+		return ckMetrics;
+	}
+
 	private String join ( List<String> array ) {
 		String str = "";
 		for ( String element: array ) {
