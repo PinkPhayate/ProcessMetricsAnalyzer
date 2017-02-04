@@ -66,6 +66,8 @@ public class MetricsManager {
 
 	private List<String> extractCkMetrics(List<String> list) {
 		List<String> ckMetrics = new ArrayList<String>();
+		ckMetrics.add(list.get(0));
+		ckMetrics.add(list.get(1));
 		for(int idx: this.selectedIndexes) {
 			ckMetrics.add(list.get(idx));
 			
