@@ -25,7 +25,7 @@ java(1.8.0_73)
 
 + Mac
 ```terminal
-java -jar DIMA.jar  target_software_repository later_version_directory_name older_version_directory_name suffix
+java -jar DIMA.jar later_version_directory_name older_version_directory_name suffix
 ```
 
 + Windows
@@ -67,7 +67,7 @@ Number of previous class		: 6
 Number of exist module			: 6
 Number of new module			: 2
 ```
-実行時に出力されるProcessMetrics.csvが、ディレクトリ上にあるexProcessMetrics.csvと等しければOK
+サンプル実行時に出力されるProcessMetrics.csvが、ディレクトリ上にあるexProcessMetrics.csvと等しければOK
 
 ## 参考文献
 1.Nagappan N, Ball T. Use of Relative Code Churn Measures to Predict. Proc. 27th Int. Conf. on Softw. Eng., ICSE’5, 2005, pp284-282.

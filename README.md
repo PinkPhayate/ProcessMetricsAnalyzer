@@ -25,11 +25,11 @@ This repository has jar file and you can use by operating below command in your 
 
 + Mac
 ```terminal
-java -jar DIMA.jar  target_software_repository later_version_directory_name older_version_directory_name suffix
+java -jar DIMA.jar later_version_directory_name older_version_directory_name suffix
 ```
 + Windows
 ```terminal
-java -jar DIMA-win.jar  target_software_repository later_version_directory_name older_version_directory_name suffix
+java -jar DIMA-win.jar later_version_directory_name older_version_directory_name suffix
 ```
 - target_software_repository  ->  that repository must have more two versionds per one software.
 - later_version_directory_name
@@ -42,17 +42,17 @@ I have not tested excepting for java and c sharp.
 ### Command
 + Mac
 ```terrminal
-java -jar DIMA.jar ./sample/ curr prev cs
+java -jar DIMA.jar ./sample/curr ./sample/prev cs
 ```
 + Windows
 ```terrminal
-java -jar DIMA-win.jar ./sample/ curr prev cs
+java -jar DIMA-win.jar ./sample/curr ./sample/prev cs
 ```
-
+if you excute above command, output named 'ProcessMwtrics.csv' may equal exProcessMetrics in this default directory
 
 ### Result
 ```report.txt
-Number of files in Directory		: 7
+Number of files in Directory    : 7
 Number of current class			: 8
 Number of previous class		: 6
 Number of exist module			: 6
