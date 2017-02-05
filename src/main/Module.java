@@ -52,7 +52,8 @@ public class Module {
 		return this.fileName;
 	}
 	public String getExtractedFileName() {
-		String[] array = this.fileName.split("/");
+//		String[] array = this.fileName.split("/");
+		String[] array = this.fileName.split("\\\\");
 		return array[array.length - 1];
 	}
 

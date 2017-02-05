@@ -14,12 +14,12 @@ import lib.FileWriting;
 
 public class DiffAnalyzerMain extends Thread{
 	/**
-	 * mainDirecotory :比較するバージョンが双方置いてあるフォルダ cvDirectory ：最新バージョンが置かれているディレクトリ名
-	 * pvDirectory ：過去のバージョンが置かれているディレクトリ名 suffix ：プログラミング言語。ソースコードの語尾を書く。
+	 * mainDirecotory :豈碑ｼ�縺吶ｋ繝舌�ｼ繧ｸ繝ｧ繝ｳ縺悟曙譁ｹ鄂ｮ縺�縺ｦ縺ゅｋ繝輔か繝ｫ繝� cvDirectory �ｼ壽怙譁ｰ繝舌�ｼ繧ｸ繝ｧ繝ｳ縺檎ｽｮ縺九ｌ縺ｦ縺�繧九ョ繧｣繝ｬ繧ｯ繝医Μ蜷�
+	 * pvDirectory �ｼ夐℃蜴ｻ縺ｮ繝舌�ｼ繧ｸ繝ｧ繝ｳ縺檎ｽｮ縺九ｌ縺ｦ縺�繧九ョ繧｣繝ｬ繧ｯ繝医Μ蜷� suffix �ｼ壹�励Ο繧ｰ繝ｩ繝溘Φ繧ｰ險�隱槭�ゅた繝ｼ繧ｹ繧ｳ繝ｼ繝峨�ｮ隱槫ｰｾ繧呈嶌縺上��
 	 * 
-	 * 1. classModuleを全て取得する。 ・クラスが書かれているファイル名 ・クラスモジュール名 ・クラスの始まりの行 ・クラスの終わりの行
-	 * 2. 実験対象バージョンと、過去のバージョン共に、１を行う 3.
-	 * 実験対象バージョンのクラスを一つずつ見ていき、過去のバージョンで一致するクラスがあればdiffを取得する
+	 * 1. classModule繧貞�ｨ縺ｦ蜿門ｾ励☆繧九�� 繝ｻ繧ｯ繝ｩ繧ｹ縺梧嶌縺九ｌ縺ｦ縺�繧九ヵ繧｡繧､繝ｫ蜷� 繝ｻ繧ｯ繝ｩ繧ｹ繝｢繧ｸ繝･繝ｼ繝ｫ蜷� 繝ｻ繧ｯ繝ｩ繧ｹ縺ｮ蟋九∪繧翫�ｮ陦� 繝ｻ繧ｯ繝ｩ繧ｹ縺ｮ邨ゅｏ繧翫�ｮ陦�
+	 * 2. 螳滄ｨ灘ｯｾ雎｡繝舌�ｼ繧ｸ繝ｧ繝ｳ縺ｨ縲�驕主悉縺ｮ繝舌�ｼ繧ｸ繝ｧ繝ｳ蜈ｱ縺ｫ縲�ｼ代ｒ陦後≧ 3.
+	 * 螳滄ｨ灘ｯｾ雎｡繝舌�ｼ繧ｸ繝ｧ繝ｳ縺ｮ繧ｯ繝ｩ繧ｹ繧剃ｸ�縺､縺壹▽隕九※縺�縺阪��驕主悉縺ｮ繝舌�ｼ繧ｸ繝ｧ繝ｳ縺ｧ荳�閾ｴ縺吶ｋ繧ｯ繝ｩ繧ｹ縺後≠繧後�ｰdiff繧貞叙蠕励☆繧�
 	 * 
 	 * 
 	 */
@@ -55,7 +55,7 @@ public class DiffAnalyzerMain extends Thread{
 		String pvDirectory = args[1];
 		String suffix = args[2];
 		String currentVer = extractCurrentVersionString( cvDirectory );
-		String saveFile = "ProcessMetrics-"+currentVer+".csv";
+		String saveFile = "ProcessMetrics.csv";
 
 		/** Step 1 get class module in current version */
 		FileListGetter search = new FileListGetter(suffix);
@@ -116,7 +116,8 @@ public class DiffAnalyzerMain extends Thread{
 	}
 	
 	private static String extractCurrentVersionString (String cvDirectory) {
-		String [] array = cvDirectory.split("/");
+//		String [] array = cvDirectory.split("/");
+		String [] array = cvDirectory.split("\\\\");
 		return array[ array.length-1 ];
 	}
 }
