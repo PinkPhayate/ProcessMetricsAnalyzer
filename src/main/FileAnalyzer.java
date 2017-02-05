@@ -230,7 +230,7 @@ public class FileAnalyzer {
 
 		ArrayList<String>containment = new ArrayList<String>();
 		Module module = new Module( filename );
-		int blockIndicator = 0;
+		int blockIndicator = 100;
 		int begenningPosition = 0;
 		int endingPosition = 0;
 		boolean isContinued = false;

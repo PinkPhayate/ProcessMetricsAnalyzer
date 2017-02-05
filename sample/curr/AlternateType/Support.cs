@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
-using System.Data.Common; 
+using System.Data.Common;
 using System.Reflection;
 using Glimpse.Ado.Message;
 using Glimpse.Core.Message;
@@ -30,10 +30,10 @@ namespace Glimpse.Ado.AlternateType
         {
             var factory = connection.TryGetProviderFactory();
             if (factory != null)
-            { 
+            {
                 if (!(factory is GlimpseDbProviderFactory))
                 {
-                    factory = factory.WrapProviderFactory(); 
+                    factory = factory.WrapProviderFactory();
                 }
             }
             else
@@ -47,9 +47,9 @@ namespace Glimpse.Ado.AlternateType
         public static DbProviderFactory WrapProviderFactory(this DbProviderFactory factory)
         {
             if (!(factory is GlimpseDbProviderFactory))
-            { 
+            {
                 var factoryType = typeof(GlimpseDbProviderFactory<>).MakeGenericType(factory.GetType());
-                return (DbProviderFactory)factoryType.GetField("Instance").GetValue(null);    
+                return (DbProviderFactory)factoryType.GetField("Instance").GetValue(null);
             }
 
             return factory;
@@ -136,15 +136,5 @@ namespace Glimpse.Ado.AlternateType
             command.LogCommandError(commandId, timer, exception, type, false);
         }
 
-        public static void LogCommandError(this GlimpseDbCommand command, Guid commandId, TimeSpan timer, Exception exception, string type, bool isAsync)
-        {
-            if (command.MessageBroker != null && command.TimerStrategy != null)
-            {
-                command.MessageBroker.Publish(
-                    new CommandErrorMessage(command.InnerConnection.ConnectionId, commandId, exception)
-                    .AsTimedMessage(command.TimerStrategy.Stop(timer))
-                    .AsTimelineMessage("Command: Error", AdoTimelineCategory.Command, type));
-            }
-        }
     }
 }

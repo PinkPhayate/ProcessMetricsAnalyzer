@@ -30,17 +30,15 @@ java -jar DIMA.jar  target_software_repository later_version_directory_name olde
 
 + Windows
 ```terminal
-java -jar DIMA-win.jar  target_software_repository later_version_directory_name older_version_directory_name suffix
+java -jar DIMA-win.jar later_version_directory_name older_version_directory_name suffix
 ```
-
-- target_software_repository  ->  ターゲットとなるソフトウェアが置かれているディレクトリ。そのディレクトリに、比較するバージョンどちらもなければいけません。
 
 - later_version_directory_name -> 新しい方のバージョンのソースコードのレポジトリ
 
 - older_version_directory_name -> 古い方ののバージョンのソースコードのレポジトリ
 
 - prefix  ->  ソフトウェアを構成するソースコードのタイプ。現在は１種類のみ対応しています。
-eg.) java, cs	など
+    ex.) java, cs	など
 
 * 現在、この二種類のソフトウェアでのみ、動作を確認しています。
 
@@ -52,23 +50,24 @@ eg.) java, cs	など
 ### コマンド
 + mac
 ```terrminal
-java -jar DIMA.jar ./sample/ curr prev cs
+java -jar DIMA.jar ./sample/curr ./sample/prev cs
 ```
 
 + windows
 ```terrminal
-java -jar DIMA-win.jar ./sample/ curr prev cs
+java -jar DIMA-win.jar ./sample/curr ./sample/prev cs
 ```
 
 
 ### 実行結果
 ```report.txt
-Number of files in Directory		: 7
+Number of files in Directory	: 7
 Number of current class			: 8
 Number of previous class		: 6
 Number of exist module			: 6
 Number of new module			: 2
 ```
+実行時に出力されるProcessMetrics.csvが、ディレクトリ上にあるexProcessMetrics.csvと等しければOK
 
 ## 参考文献
 1.Nagappan N, Ball T. Use of Relative Code Churn Measures to Predict. Proc. 27th Int. Conf. on Softw. Eng., ICSE’5, 2005, pp284-282.
