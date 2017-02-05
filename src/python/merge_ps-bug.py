@@ -1,7 +1,7 @@
 import csv
 import pandas as pd
-bug_info_dir = "/Users/kishi-lab/Dropbox/STUDY/ApacheDerbyBugList/"
-process_metrics_dir = "/Users/kishi-lab/Phayate/ProcessMetricsAnalyzer/"
+bug_info_dir = "/Users/phayate/Dropbox/STUDY/JR/metrics-data/Apache-Derby/bug-info/"
+process_metrics_dir = "/Users/phayate/Dropbox/STUDY/JR/metrics-data/Apache-Derby/process-metrics/"
 bug_df = pd.DataFrame([])
 
 def transform_buglist(version):
@@ -35,7 +35,8 @@ def merge(src_version, bug_version):
     bug_df = pd.read_csv(bug_info_dir + bug_version+'-buglist.csv',header=0)
 
     # get process metrics
-    df = pd.read_csv(process_metrics_dir + "ProcessMetrics-" + src_version + ".csv", header=0)
+    # df = pd.read_csv(process_metrics_dir + "ProcessMetrics-" + src_version + ".csv", header=0)
+    df = pd.read_csv(process_metrics_dir + "ProcessMetrics-db-derby-" + src_version + "-src.csv", header=0)
     # merge
     tmp = df.apply(lambda x: 1 if func(x) else 0, axis=1)
     df = pd.concat([df, tmp], axis=1)
@@ -46,9 +47,9 @@ def merge(src_version, bug_version):
 
 dict = {
 # '10.7':'10.8.1.2',
-'10.8':'10.9.1.0',
-'10.9':'10.10.1.1',
-'10.10':'10.11.1.1',
+'10.8.1.2':'10.9.1.0',
+'10.9.1.0':'10.10.1.1',
+'10.10.1.1':'10.11.1.1',
 }
 
 for key, value in dict.items():

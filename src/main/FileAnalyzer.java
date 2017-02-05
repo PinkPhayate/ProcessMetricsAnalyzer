@@ -235,6 +235,7 @@ public class FileAnalyzer {
 		int endingPosition = 0;
 		boolean isContinued = false;
 		for(int idx=this.numberOfLine;idx<fileStrs.size();idx++) {
+			boolean invalidLine = false;
 			String line = fileStrs.get(idx);
 			
 			// when line means comment, getting out!
@@ -250,6 +251,7 @@ public class FileAnalyzer {
 //				System.out.println(line);	// debug
 			}
 			else {
+				line = this.removeString(line);
 				
 				List<String> tmp = this.splitLine(line);				
 				if ( isClassLine( tmp ) ) {
@@ -260,6 +262,7 @@ public class FileAnalyzer {
 					begenningPosition = this.numberOfLine;
 					if( containment.size() > 0) {
 						this.extractClassModuleRecursively(filename);
+						invalidLine  = true;
 						idx = this.numberOfLine;
 						if (line.indexOf("{") != -1) blockIndicator -= this.countChar(line, "{");
 						if (line.indexOf("}") != -1) blockIndicator += this.countChar(line, "}");
@@ -275,7 +278,9 @@ public class FileAnalyzer {
 						}
 					}
 				}
-				containment.add(line);
+				if (!invalidLine) {
+					containment.add(line);
+				}
 				if ( this.isBorder(line, "{") ) {
 					blockIndicator += this.countChar(line, "{");
 //					System.out.println( line);
@@ -303,6 +308,20 @@ public class FileAnalyzer {
 			this.numberOfLine++;
 		}
 		// when looking out end of class, return
+	}
+	private String removeString(String line) {
+		int count = this.countChar(line, "\"");
+		if(count == 2) {
+			int beginIndex = line.indexOf("\"");
+			int endIndex = line.lastIndexOf("\"");
+			return this.removePartOfLine(line, beginIndex, endIndex);
+		}
+		return line;
+	}
+	private String removePartOfLine(String line, int beginIndex, int endIndex) {
+		String bf = line.substring(0, beginIndex);
+		String af = line.substring( endIndex+1 );
+		return bf+af;
 	}
 	private String assertBorder(String line, String sig) {
 		int pos = line.indexOf(sig);

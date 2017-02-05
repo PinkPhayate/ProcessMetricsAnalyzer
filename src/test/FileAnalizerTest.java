@@ -194,7 +194,7 @@ public class FileAnalizerTest {
 	@Test
 	public void testIntegratedExtractClassModule() {
 		try {
-			String filename = "/Users/phayate/src/ApacheDerby/10.12/java/testing/org/apache/derbyTesting/functionTests/tests/lang/XplainStatisticsTest.java";
+			String filename = "/Users/kishi-lab/Dropbox/ArrayResizerTest.cs";
 			FileAnalyzer fileAnalyzer  = new FileAnalyzer();
 			Method method = FileAnalyzer.class.getDeclaredMethod(
 					"extractClassModuleRecursively", String.class );
@@ -205,10 +205,25 @@ public class FileAnalizerTest {
 			System.out.println( modules.size());
 			for(Module module : modules) {
 				System.out.println( module.getClassName());
-//				System.out.println( module.getModuleContainment().toString());
-//				FileWriting.writeFile(module.getModuleContainment(), "./test-result/"+module.getClassName()+".java");
-				
+				System.out.println( module.getModuleContainment().toString());
+				//				FileWriting.writeFile(module.getModuleContainment(), "./test-result/"+module.getClassName()+".java");
+
 			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
+	}
+	@Test
+	public void testRemoveString() {
+		try {
+			String line = "                    result[i, j] = string.Format(\"({0},{1})\", i, j);";
+			FileAnalyzer fileAnalyzer  = new FileAnalyzer();
+			Method method = FileAnalyzer.class.getDeclaredMethod(
+					"removeString", String.class );
+			method.setAccessible(true);
+			String extractedLine = (String)method.invoke(fileAnalyzer, line);
+			System.out.println( extractedLine );
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -217,7 +232,7 @@ public class FileAnalizerTest {
 	@Test
 	public void testIsBorder () throws Exception {
 		FileAnalyzer fileAnalyzer  = new FileAnalyzer();
-//		String line = "    */    protected void tearDown() throws Exception {  ";
+		//		String line = "    */    protected void tearDown() throws Exception {  ";
 		String line = "		rs = dmd.getTables(\"%\", \"%\", \"%\", new String[] {\"SYNONYM\"});";
 		String target = "{";
 		Method method = FileAnalyzer.class.getDeclaredMethod(
@@ -267,14 +282,14 @@ public class FileAnalizerTest {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		
+
 	}
 	@Test
 	public void testRemoveCommentBlock() throws Exception {
 		FileAnalyzer fileAnalyzer  = new FileAnalyzer();
 		String line = "    */    protected void tearDown() throws Exception {  ";
-//		String line = "prote/*  sssss */cted void tearDown() throws Exception {  ";
-//		String line = "protected void tearDown() throws Exception {**/		";
+		//		String line = "prote/*  sssss */cted void tearDown() throws Exception {  ";
+		//		String line = "protected void tearDown() throws Exception {**/		";
 		Method method = FileAnalyzer.class.getDeclaredMethod(
 				"removeCommentBlock", String.class );
 		method.setAccessible(true);
@@ -285,12 +300,12 @@ public class FileAnalizerTest {
 	public void testConfirmComment() throws Exception {
 		FileAnalyzer fileAnalyzer  = new FileAnalyzer();
 		String line = "    */    protected void tearDown() throws Exception {  ";
-//		String line = "public abstract class ConstantPoolEntry /*implements PoolEntry*/";
+		//		String line = "public abstract class ConstantPoolEntry /*implements PoolEntry*/";
 		Method method = FileAnalyzer.class.getDeclaredMethod(
 				"confirmComment", String.class );
 		method.setAccessible(true);
 		String actual = (String)method.invoke(fileAnalyzer, line);
 		System.out.println( actual );
 	}
-	
+
 }
