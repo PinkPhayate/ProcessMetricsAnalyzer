@@ -87,11 +87,18 @@ public class MetricsManager {
 
 	private int searchSameClass (String className) {
 		for ( List<String> list : this.mfu ) {
-			if ( list.get(1).indexOf( className ) != -1 ) {
+			String classNameMFU = extractClassName(list.get(1));
+			if ( classNameMFU.indexOf( className ) != -1 ) {
+//				if ( list.get(1).indexOf( className ) != -1 ) {
 				return this.mfu.indexOf(list);
 			}
 		}
 		return -1;
 
+	}
+// org.apache.derby.authentication.SystemPrincipal
+	private String extractClassName(String string) {
+		String[] array = string.split("\\.");
+		return array[ array.length-1];
 	}
 }
