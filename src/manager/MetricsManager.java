@@ -28,7 +28,7 @@ public class MetricsManager {
 		for ( List<String> list: pm ) {
 			String className = list.get(2);
 			int index = this.searchSameClass( className );
-			if (index != -1 ) {
+			if (index != -1 && !className.equals("")) {
 				// convert to String
 				String str = this.join(list) +
 						this.join(this.mfu.get(index));
@@ -88,8 +88,7 @@ public class MetricsManager {
 	private int searchSameClass (String className) {
 		for ( List<String> list : this.mfu ) {
 			String classNameMFU = extractClassName(list.get(1));
-			if ( classNameMFU.indexOf( className ) != -1 ) {
-//				if ( list.get(1).indexOf( className ) != -1 ) {
+				if ( classNameMFU.indexOf( className ) != -1 ) {
 				return this.mfu.indexOf(list);
 			}
 		}
