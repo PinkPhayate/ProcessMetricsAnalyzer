@@ -26,7 +26,10 @@ public class MetricsManager {
 
 
 		for ( List<String> list: pm ) {
-			String className = list.get(2);
+			String className = list.get(1);
+			if(className.equals("CsvHeadderName")) {
+				System.out.println();
+			}
 			int index = this.searchSameClass( className );
 			if (index != -1 && !className.equals("")) {
 				// convert to String
@@ -57,7 +60,9 @@ public class MetricsManager {
 		for ( List<String> list : arrayList ){
 			String kind = list.get( 0 );
 			if (kind.indexOf("Class") != -1 ) {
-				csv.add(extractCkMetrics(list));
+				if(kind.indexOf("Unknown") == -1) {
+					csv.add(extractCkMetrics(list));
+				}
 			}
 //			if (kind.equals("Class") )	csv.add(list);
 		}
@@ -70,7 +75,7 @@ public class MetricsManager {
 		ckMetrics.add(list.get(1));
 		for(int idx: this.selectedIndexes) {
 			ckMetrics.add(list.get(idx));
-			
+
 		}
 		return ckMetrics;
 	}
@@ -88,7 +93,8 @@ public class MetricsManager {
 	private int searchSameClass (String className) {
 		for ( List<String> list : this.mfu ) {
 			String classNameMFU = extractClassName(list.get(1));
-				if ( classNameMFU.indexOf( className ) != -1 ) {
+//			classNameMFU = classNameMFU.substring(1, classNameMFU.length()-1);
+			if ( classNameMFU.indexOf( className ) != -1 ) {
 				return this.mfu.indexOf(list);
 			}
 		}

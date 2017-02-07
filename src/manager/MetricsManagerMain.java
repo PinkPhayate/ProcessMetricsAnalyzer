@@ -7,8 +7,19 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.List;
-	
+
+/**
+ * 		String usj = args[0];
+		String pm = args[1];
+		String ver = args[2];
+		String MAIN_DIR = args[3];
+
+ * @author phayate
+ * param1: metrics from understand
+ * param2: process metrics that corrected from my tool 
+ * param3: version 
+ * param4: directory to locate result file
+ */
 
 public class MetricsManagerMain {
 	public static String [] metrics = {
@@ -27,14 +38,14 @@ public class MetricsManagerMain {
 		String usj = args[0];
 		String pm = args[1];
 		String ver = args[2];
-
+		String MAIN_DIR = "C:\\Users\\parrot\\Desktop\\���勤��\\20170207_��Ɨp\\";
 		metricsFromUnderstand = readFile( usj );
 		processMetrics = readFile( pm );
-		
+
 		ArrayList<Integer> selectedIndexes = selectIndexes();
 		MetricsManager metricsManager = new MetricsManager();
 		ArrayList< String > mergedMetrics = metricsManager.mergeMetrics ( metricsFromUnderstand, selectedIndexes, processMetrics );
-		writeFile(mergedMetrics, "mergedMetrics"+ver+".csv");
+		writeFile(mergedMetrics, MAIN_DIR+"mergedMetrics"+ver+".csv");
 
 	}
 	private static ArrayList<Integer> selectIndexes() {
@@ -56,7 +67,7 @@ public class MetricsManagerMain {
 				return idx;
 			}
 		}
-		
+
 		return -1;
 	}
 	public static void writeFile(ArrayList<String> content, String fileName) {
