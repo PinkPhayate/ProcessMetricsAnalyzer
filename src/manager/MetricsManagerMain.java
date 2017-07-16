@@ -38,7 +38,8 @@ public class MetricsManagerMain {
 		String usj = args[0];
 		String pm = args[1];
 		String ver = args[2];
-		String MAIN_DIR = "C:\\Users\\parrot\\Desktop\\���勤��\\20170207_��Ɨp\\";
+		String MAIN_DIR = "/Users/phayate/Dropbox/STUDY/JR/metrics-data/Apache-Derby/";
+//		String MAIN_DIR = "C:\\Users\\parrot\\Desktop\\���勤��\\20170207_��Ɨp\\";
 		metricsFromUnderstand = readFile( usj );
 		processMetrics = readFile( pm );
 

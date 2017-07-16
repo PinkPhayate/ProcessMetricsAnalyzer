@@ -26,7 +26,7 @@ public class MetricsManager {
 
 
 		for ( List<String> list: pm ) {
-			String className = list.get(1);
+			String className = list.get(2);
 			if(className.equals("CsvHeadderName")) {
 				System.out.println();
 			}
@@ -94,7 +94,8 @@ public class MetricsManager {
 		for ( List<String> list : this.mfu ) {
 			String classNameMFU = extractClassName(list.get(1));
 //			classNameMFU = classNameMFU.substring(1, classNameMFU.length()-1);
-			if ( classNameMFU.indexOf( className ) != -1 ) {
+			if ( className.indexOf( classNameMFU ) != -1 ) {
+//				if ( classNameMFU.indexOf( className ) != -1 ) {
 				return this.mfu.indexOf(list);
 			}
 		}
@@ -103,6 +104,7 @@ public class MetricsManager {
 	}
 // org.apache.derby.authentication.SystemPrincipal
 	private String extractClassName(String string) {
+		string = string.replaceAll("\"", "");
 		String[] array = string.split("\\.");
 		return array[ array.length-1];
 	}
