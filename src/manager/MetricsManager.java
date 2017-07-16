@@ -94,7 +94,7 @@ public class MetricsManager {
 		for ( List<String> list : this.mfu ) {
 			String classNameMFU = extractClassName(list.get(1));
 //			classNameMFU = classNameMFU.substring(1, classNameMFU.length()-1);
-			if ( className.indexOf( classNameMFU ) != -1 ) {
+			if ( className.equals(classNameMFU)) {
 //				if ( classNameMFU.indexOf( className ) != -1 ) {
 				return this.mfu.indexOf(list);
 			}

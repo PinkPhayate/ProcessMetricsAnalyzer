@@ -33,6 +33,7 @@ public class MetricsManagerMain {
 	static ArrayList<String> processMetrics = null;
 	public static void main (String args[] ) {
 		if (args.length > 3) {
+			System.out.println("引数が足りません");
 			return ;
 		}
 		String usj = args[0];
