@@ -32,15 +32,15 @@ public class MetricsManagerMain {
 	static ArrayList<String> metricsFromUnderstand = null;
 	static ArrayList<String> processMetrics = null;
 	public static void main (String args[] ) {
-		if (args.length > 3) {
+		if (args.length > 4) {
 			System.out.println("引数が足りません");
 			return ;
 		}
 		String usj = args[0];
 		String pm = args[1];
 		String ver = args[2];
-		String MAIN_DIR = "/Users/phayate/Dropbox/STUDY/JR/metrics-data/Apache-Derby/";
-//		String MAIN_DIR = "C:\\Users\\parrot\\Desktop\\���勤��\\20170207_��Ɨp\\";
+		String MAIN_DIR = args[3];
+//		String MAIN_DIR = "/Users/phayate/Dropbox/STUDY/JR/metrics-data/Apache-Derby/";
 		metricsFromUnderstand = readFile( usj );
 		processMetrics = readFile( pm );
 
