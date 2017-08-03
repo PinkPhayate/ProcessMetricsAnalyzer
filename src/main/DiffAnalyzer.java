@@ -121,7 +121,7 @@ public class DiffAnalyzer {
 		return record;
 	}
 	private String getHeader() {
-		return "fileName,className,isNewModule,M1,M2,M6,M7";
+		return "fileName,className,isNewModule,M1,M2,M6,M7,loc";
 	}
 
 	private ArrayList<String> putClassText(Module module) throws IOException {
