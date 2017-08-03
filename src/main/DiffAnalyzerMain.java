@@ -44,16 +44,17 @@ public class DiffAnalyzerMain extends Thread{
 		} catch (IOException e) {
 		    e.printStackTrace();
 		}
-		if (args.length != 3) {
-			System.out.println("length of argument IS INVARID.");
+		if (args.length != 4) {
+			System.out.println("length of argument is invalid.");
 			return;
 			
 		}
 
 		String cvDirectory = args[0];
 		String pvDirectory = args[1];
-		String suffix = args[2];
-		String saveFile = "ProcessMetrics.csv";
+		String version = args[2];
+		String suffix = args[3];
+		String saveFile = "ProcessMetrics-" + version + ".csv";
 
 		/** Step 1 get class module in current version */
 		FileListGetter search = new FileListGetter(suffix);
