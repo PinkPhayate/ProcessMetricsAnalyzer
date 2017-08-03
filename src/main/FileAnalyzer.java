@@ -186,6 +186,7 @@ public class FileAnalyzer {
 						//						if ( containment == null) {
 						containment = new ArrayList<String>();
 						containment.add( line );
+
 						module.putClassName(classname);
 						blockIndicator = 0;
 						//						}
@@ -401,6 +402,7 @@ public class FileAnalyzer {
 //		List<String> list = this.removeTab( Arrays.asList(array) );
 		List<String> list = Arrays.asList(array);
 		list = removeElementOnlySpace(list);
+		list = removeStringIncludingAtribute(list);
 		return list;
 	}
 
@@ -410,6 +412,18 @@ public class FileAnalyzer {
 			if( 0 < e.length() ) revicedList.add(e);
 		}
 		return revicedList;
+	}
+	
+	private List<String> removeStringIncludingAtribute(List<String> list) {
+		List<String> revicedList = new ArrayList<String> ();
+		for(String e: list) {
+			int pos = e.indexOf("<");
+			if(pos != -1) {
+				e = e.substring(0,pos);				
+			}
+			revicedList.add(e);
+		}
+		return revicedList;		
 	}
 	/** confirm that line if it is beginning of class */
 	private boolean isClassLine ( List<String> list ) {

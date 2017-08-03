@@ -92,7 +92,7 @@ public class DiffAnalyzer {
 		numTotalFile = currentModules.size();
 		/** iterate module in current version */
 		for (Module currentModule: currentModules) {
-			if(currentModule.getClassName() == "") {
+			if(currentModule.getClassName().equals("")) {
 				System.out.println(currentModule.getFileName());
 			}
 

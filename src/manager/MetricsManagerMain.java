@@ -16,8 +16,8 @@ import java.util.ArrayList;
 
  * @author phayate
  * param1: metrics from understand
- * param2: process metrics that corrected from my tool 
- * param3: version 
+ * param2: process metrics that corrected from my tool
+ * param3: version
  * param4: directory to locate result file
  */
 
