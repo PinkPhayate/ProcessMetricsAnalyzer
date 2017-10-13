@@ -21,6 +21,11 @@ public class Module {
 	private double M7 = 0;
 	private double M8 = 0;
 
+	private int codeChurn = 0;
+	private int locAddedLine = 0;
+	private int locDeletedLine = 0;
+	private int locChangedLine = 0;
+
 	private int isNewModule = 0;
 
 	private static String mainDir;
@@ -81,6 +86,11 @@ public class Module {
 		int changedLine = differences.get("changedLine");
 		int deletedLine = differences.get("deletedLine");
 
+		this.codeChurn = newLine + deletedLine;
+		this.locAddedLine = newLine;
+		this.locDeletedLine = deletedLine;
+		this.locChangedLine = deletedLine;
+		
 		this.M1 = newLine + changedLine;
 		if (totalLine != 0) {
 			this.M2 = deletedLine / (double) totalLine;
@@ -94,7 +104,9 @@ public class Module {
 	}
 
 	public String getMetricsList() {
-		return fileName + "," + className + "," + isNewModule + "," + M1 + "," + M2 + "," + M6 + "," + M7 + "," + loc;
+//		return fileName + "," + className + "," + isNewModule + "," + M1 + "," + M2 + "," + M6 + "," + M7 + "," + loc;
+		return fileName + "," + className + "," + isNewModule + "," + codeChurn + "," + locAddedLine + "," + locDeletedLine + "," + locChangedLine + "," + loc;
+
 	}
 
 	/** method for test */
